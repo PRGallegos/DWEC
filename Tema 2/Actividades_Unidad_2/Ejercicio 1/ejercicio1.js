@@ -9,7 +9,7 @@ document.getElementById("enviarBoton").addEventListener("click", function () {
     parrafoMensaje.textContent = mensaje;
     nuevaVentana.document.body.appendChild(parrafoMensaje);
 
-    // Mostrar el tamaño de la ventana
+    // Mostrar y obtener el tamaño de la ventana
     const ancho = nuevaVentana.outerWidth;
     const alto = nuevaVentana.outerHeight;
     const parrafoTamano = nuevaVentana.document.createElement("p");
@@ -17,7 +17,7 @@ document.getElementById("enviarBoton").addEventListener("click", function () {
     nuevaVentana.document.body.appendChild(parrafoTamano);
 
     // Al cerrar la ventana, mostrar una alerta en la ventana principal
-    nuevaVentana.onbeforeunload = function () {
+    nuevaVentana.onbeforeunload = function () { // Función que se ejecuta antes de cerrar la ventana
         alert("Has cerrado la ventana.");
     };
 });
