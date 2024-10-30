@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "NouvellRegular";
+    src: url(../assets/fonts/NouvelRRegular.ttf);
+}
+
+
+body {
+    font-family: "NouvellRegular";
+    background-color: rgba(181, 181, 181, 1);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: royalblue;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    color: #34495e;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+#dado1,
+#dado2 {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    font-family: "NouvellRegular";
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: black;
+    background-color: aqua;
+}
+
+body {
+    padding: 50px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Sub-Ventana
+-->
+<html>
+    <head>
+        <title>Sub-Ventana</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function  copiarAlPadre()
+            {
+                opener.document.getElementById("parrafo").innerHTML= document.getElementById('textocopiar').value;
+            }
+        </script>
+    </head>
+    <body>
+        <div>Sub-Ventana</div>
+        <form  id="formulario">
+            <p>
+                Introduzca texto a copiar en la ventana principal:
+                <input  type="text"  id="textocopiar">
+            </p>
+            <p>
+                <input  type="button"  value="Enviar texto a la ventana padre"  id="enviar" onclick=copiarAlPadre() >
+            </p>
+        </form>
+    </body>
+</html>

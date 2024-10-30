@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Otro ejemplo más Apertura y Cierre de Ventanas para ilustrar ls comunicación entre múltiples ventanas.
+-->
+<html>
+    <head>
+        <title> Comunicación entre múltiples ventanas.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var nuevaVentana;
+            var ventanaCreada=false;
+
+            function  crearNueva()
+            {
+                if  (ventanaCreada==false)
+                {         
+                    nuevaVentana  =  window.open("nueva.html","","height=400,width=800");
+                    ventanaCreada=true;
+                }
+                else
+                    alert("Ventana ya creada!!!");
+            }
+ 
+            function  cerrarNueva()
+            {
+                if  (ventanaCreada==true)
+                {
+                    nuevaVentana.close(); nuevaVentana  =  null;
+                    ventanaCreada=false;
+                }
+                else
+                    alert("Ventana aun no creada!!!");
+            }
+        </script>
+    </head>
+    <body>
+        <p>Comunicación entre múltiples ventanas.</p>
+        <button type="button" id="crear-ventana" onclick=crearNueva()>Crear una sóla Ventana nueva</button>
+        <button type="button" id="cerrar-ventana" onclick=cerrarNueva()>Cerrar Nueva Ventana</button>
+        <p> Texto proveniente de la sub-ventana: </p>
+        <p id="parrafo"> </p>
+    </body>
+</html>
