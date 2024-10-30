@@ -50,6 +50,37 @@ class vegetal extends serVivo {
     }
 }
 
+
+//Clase vegetales tiene un array de objetos de la clase vegetal
+class vegetales {
+    constructor() {
+        this._arrayVegetales = [];
+    }
+
+    get vegetales() {
+        return this._arrayVegetales;
+    }
+
+    set vegetales(nuevoArrayVegetales) {
+        this._arrayVegetales = nuevoArrayVegetales;
+    }
+
+    // Método que ordena por altura de forma ascendente
+    ordenarAltura() {
+        this._arrayVegetales.sort(function (a, b) {
+            return a._altura - b._altura;
+        });
+    }
+
+    toString() {
+        let devolver = "";
+        for (let i = 0; i < this._arrayVegetales.length; i++) {
+            devolver += this._arrayVegetales[i].toString();
+        }
+        return devolver;
+    }
+}
+
 /******************************************************************************* PRUEBAS ***/
 
 
