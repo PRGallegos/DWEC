@@ -1,5 +1,5 @@
 // Clase ser vivo 
-class serVivo {
+class SerVivo {
     constructor(peso) {
         this._peso = peso;
     }
@@ -24,7 +24,7 @@ class serVivo {
 }
 
 // Clase vegetal que hereda de serVivo
-class vegetal extends serVivo {
+class Vegetal extends serVivo {
     constructor(_peso, _altura) {
         super(peso);
         this._altura = altura;
@@ -52,7 +52,7 @@ class vegetal extends serVivo {
 
 
 //Clase vegetales tiene un array de objetos de la clase vegetal
-class vegetales {
+class Vegetales {
     constructor() {
         this._arrayVegetales = [];
     }
@@ -67,20 +67,25 @@ class vegetales {
 
     // Método que ordena por altura de forma ascendente
     ordenarAltura() {
-        this._arrayVegetales.sort(function (a, b) {
+        const comparacion = (a, b) => {
             return a._altura - b._altura;
-        });
+        };
+
+        // Devuelve un array ordenado pero  
+        return this._arrayVegetales.sort(comparacion);
     }
+
+
 
     toString() {
         let devolver = "";
         for (let i = 0; i < this._arrayVegetales.length; i++) {
-            devolver += this._arrayVegetales[i].toString();
+            Vegetales.toString() + "</br>";
         }
         return devolver;
     }
-}
 
+}
 /******************************************************************************* PRUEBAS ***/
 
 
@@ -94,3 +99,25 @@ let planta = new vegetal(10, 12);
 planta.peso = 33;                          // llamando al set de la clase vegetal
 planta.altura = 9;
 document.write(planta.toString());
+
+
+// Probamos la ordenación 
+
+let miArrayVegetales = [];
+miArrayVegetales.push(new vegetal(10, 12), new vegetal(51, 55), new vegetal(72, 65), new vegetal(57, 61));
+
+let misVegetales = new Vegetales(miArrayVegetales);
+
+let miArrayVegetalesOrdenados = misVegetales.ordenarAltura();
+
+// For clásico
+for (let i = 0; i < miArrayVegetalesOrdenados.length; i++) {
+    document.write(miArrayVegetalesOrdenados[i].toString() + "</br>");
+}
+
+
+for (let vegetalOrdenado of miArrayVegetalesOrdenados) {
+    document.write(vegetalOrdenado.toString() + "</br>");
+}
+
+console.time("T1");
