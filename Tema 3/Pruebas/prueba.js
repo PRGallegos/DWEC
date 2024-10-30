@@ -116,8 +116,8 @@ for (let i = 0; i < miArrayVegetalesOrdenados.length; i++) {
 }
 
 
-for (let vegetalOrdenado of miArrayVegetalesOrdenados) {
-    document.write(vegetalOrdenado.toString() + "</br>");
-}
+// for (let vegetalOrdenado of miArrayVegetalesOrdenados) {
+//     document.write(vegetalOrdenado.toString() + "</br>");
+// }
 
 console.time("T1");
