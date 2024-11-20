@@ -13,7 +13,7 @@ class Persona {
 
     set nombre(nombre) {
         if (typeof nombre !== "string" || nombre.trim() === "") {
-            throw new Error("El nombre debe ser una cadena no vacía.");
+            console.log("El nombre debe ser una cadena no vacía.");
         }
         this._nombre = nombre.trim();
     }
@@ -24,7 +24,7 @@ class Persona {
 
     set apellidos(apellidos) {
         if (typeof apellidos !== "string" || apellidos.trim() === "") {
-            throw new Error("Los apellidos deben ser una cadena no vacía.");
+            console.log("Los apellidos deben ser una cadena no vacía.");
         }
         this._apellidos = apellidos.trim();
     }
@@ -36,7 +36,7 @@ class Persona {
     set genero(genero) {
         const generosPermitidos = ["masculino", "femenino", "otro"];
         if (!generosPermitidos.includes(genero.toLowerCase())) {
-            throw new Error("El género debe ser 'masculino', 'femenino' u 'otro'.");
+            console.log("El género debe ser 'masculino', 'femenino' u 'otro'.");
         }
         this._genero = genero.toLowerCase();
     }
@@ -46,8 +46,8 @@ class Persona {
     }
 
     set fechaNacimiento(fechaNacimiento) {
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(fechaNacimiento)) {
-            throw new Error("La fecha de nacimiento debe tener el formato 'YYYY-MM-DD'.");
+        if (!isNaN(fechaNacimiento) && fechaNacimiento.length === 8) {
+            console.log("La fecha de nacimiento debe tener el formato 'YYYY-MM-DD'.");
         }
         this._fechaNacimiento = fechaNacimiento;
     }
@@ -70,11 +70,11 @@ class Estudiante extends Persona {
 
     set notasMatriculadas(notasMatriculadas) {
         if (typeof notasMatriculadas !== "object" || Array.isArray(notasMatriculadas)) {
-            throw new Error("Las notas matriculadas deben ser un objeto.");
+            console.log("Las notas matriculadas deben ser un objeto.");
         }
         for (const [modulo, nota] of Object.entries(notasMatriculadas)) {
             if (typeof nota !== "number" || nota < 0 || nota > 10) {
-                throw new Error(`La nota de ${modulo} debe ser un número entre 0 y 10.`);
+                console.log(`La nota de ${modulo} debe ser un número entre 0 y 10.`);
             }
         }
         this._notasMatriculadas = notasMatriculadas;
@@ -89,17 +89,17 @@ class Estudiante extends Persona {
 
     obtenerNota(nombreModulo) {
         if (!(nombreModulo in this._notasMatriculadas)) {
-            throw new Error(`No se encontró el módulo "${nombreModulo}".`);
+            console.log(`No se encontró el módulo "${nombreModulo}".`);
         }
         return this._notasMatriculadas[nombreModulo];
     }
 
     actualizarNota(nombreModulo, nuevaNota) {
         if (typeof nuevaNota !== "number" || nuevaNota < 0 || nuevaNota > 10) {
-            throw new Error("La nueva nota debe ser un número entre 0 y 10.");
+            console.log("La nueva nota debe ser un número entre 0 y 10.");
         }
         if (!(nombreModulo in this._notasMatriculadas)) {
-            throw new Error(`No se encontró el módulo "${nombreModulo}".`);
+            console.log(`No se encontró el módulo "${nombreModulo}".`);
         }
         this._notasMatriculadas[nombreModulo] = nuevaNota;
     }
