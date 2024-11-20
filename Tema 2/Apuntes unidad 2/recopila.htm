@@ -1,0 +1,2560 @@
+
+<!-- saved from url=(0112)https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4860&dopt=2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script src="./recopila_files/exe_jquery.js.descarga" type="text/javascript"></script>
+<script src="./recopila_files/saved_resource" type="text/javascript"></script>
+<script src="./recopila_files/common.js.descarga" type="text/javascript"></script>
+<script src="./recopila_files/SCORM_API_wrapper.js.descarga" type="text/javascript"></script>
+<script src="./recopila_files/SCOFunctions.js.descarga" type="text/javascript"></script>
+<script src="./recopila_files/exe_highlighter.js.descarga" type="text/javascript"></script>
+<link href="./recopila_files/novideos.css" type="text/css" rel="stylesheet">
+<link href="./recopila_files/base.css" type="text/css" rel="stylesheet">
+<link href="./recopila_files/content.css" type="text/css" rel="stylesheet">
+<link href="./recopila_files/exe_highlighter.css" type="text/css" rel="stylesheet">
+</head>
+<body class=" js js js js js js js js js js js js js js js js js js js js js">
+<div id="outer">
+<div id="main" role="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">Modelo de objetos predefinidos en JavaScript.</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id1">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_66" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="./recopila_files/BWO_032.png" alt="Una mesa con mucha gente trabajando." title="Mesa."></div>
+<div class="elemento_centrado credenciales">©&nbsp;<a title="Stockbyte" href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/CD-DVD%20Num.%20IE008." target="_blank">Stockbyte</a></div>
+</div>
+<p><strong>Antonio</strong>&nbsp;sabe que no es suficiente para poder desarrollar una <span lang="en">web</span> o aplicación mínimamente decente y decide tener una breve conversación con <strong>Ada</strong> y posteriormente decide reunirse con&nbsp; tutor <strong>Juan </strong>con el cual discute sus progresos hasta el momento.</p>
+<p>Como<strong> Antonio</strong> ha alcanzado satisfactoriamente los objetivos de la unidad de introducción y ya sabe los fundamentos del lenguaje de programación JavaScript decide que ya es el momento de aprender los objetos, que no las clases, que&nbsp; le van a permitir gestionar ventanas, marcos, propiedades de los navegadores, de las <acronym title="Universal Resource Locator. Localizador Uniforme de Recursos." lang="en">URL</acronym>, cadenas de texto, matemáticas, fechas,&nbsp; <abbr title="Etcétera.">etc</abbr>. en JavaScript.</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.- Objetos de más alto nivel en Javascript.</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_66" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila_files/CASO_PERSONAJES_08.jpg" alt="Uno de nuestros personajes para los casos prácticos." title="Antonio." height="132" width="200"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> Elaboración Propia</div>
+</div>
+<p><strong>Antonio</strong>, se va a enfrentar a la base de objetos que se utilizan en <span lang="en">JavaScript</span>. Con su tutor <strong>Juan</strong>  no le cabe ninguna duda de que aprenderá a utilizar los objetos que se utilizan el prácticamente todos los <span lang="en">scripts</span> y aplicaciones utilizadas en la <abbr title="World Wide Web">Web</abbr>.  No sólo podrá abrir nuevas ventanas, y saber que página está abierta, o el puerto por donde se ha conectado; también podrá averiguar con que sistema operativo y navegador se han conectado a su web entre otras cosas muy interesantes relacionadas con los enlaces e imágenes que se encuentran en el documento.</p>
+<p>Comprender estos objetos con su propiedades y métodos le va a permitir a Antonio desarrollar <span lang="en">webs</span> y aplicaciones que desarrolle, no solo en este módulo, sino en su futuro. No debe despistarse.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_73" class="block iDevice_content">
+<p>¿Cómo averiguar que navegador estáis utilizando? Es una pregunta recurrente,&nbsp; ya hay&nbsp; diferencias entre los distintos navegadores. Cada navegador dispone de distintos métodos y propiedades, o sea, no todos los navegadores hacen lo mismo de la misma forma. Pero no hay que asustarse.&nbsp; Para evitar este tipo de problemas se puede utilizar el subconjunto definido en ECMAScript. Ya podemos disponer de unos métodos y propiedades que en teoría nos van a dar menos problemas. E incluso Microsoft los soporta.&nbsp; Pero, siempre hay un pero, dentro de lo que es estándar puede incluso darse diferencias sutiles a la hora de implementar, o sea, de como cada motor JavaScript trabaja con cada objeto o <span lang="en">bugs</span> de los mismos. Son pocos, pero seguramente veréis algo extraño alguna vez.</p>
+<p>En resumidas cuentas, leer, comprender y aplicar los conocimientos en éste u otros navegadores y prestar atención a que propiedades y métodos deberéis utilizar.</p>
+<p>Una página <span lang="en">web</span>, es un documento <acronym title="HyperText Markup Language. Lenguaje de Marcas Hipertexto." lang="en">HTML</acronym> que será interpretado por los navegadores de forma gráfica, pero que también va a permitir el acceso al código fuente de la misma.</p>
+<p>El Modelo de Objetos del Documento (<acronym title="Document Objet Model. Modelo de Objetos del Documento." lang="en">DOM</acronym>), permite ver el mismo documento de otra manera, describiendo el contenido del documento como un conjunto de objetos, sobre los que un programa de <span lang="en">JavaScript</span> puede interactuar.</p>
+<p>Según el <acronym title="World Wide Web Consortium. Consorcio World Wide Web." lang="en">W3C</acronym>, el Modelo de Objetos del Documento es una interfaz de programación de aplicaciones (<acronym title="Application Programming Interface. Interfaz de Programación de Aplicaciones." lang="en">API</acronym>), para documentos válidos <acronym title="HyperText Markup Language. Lenguaje de marcas de hipertexto."><acronym title="HyperText Markup Language. Lenguaje de marcas de hipertexto."><acronym title="HyperText Markup Language"><span lang="en">HTML</span></acronym></acronym></acronym> y bien construidos <acronym title="eXtensible Markup Language. Lenguaje de Marcas Extensible." lang="en">XML</acronym>. Define la estructura lógica de los documentos, y el modo en el que se acceden y se manipulan.</p>
+<p>Ahora que ya has visto en la unidad anterior, los fundamentos de la programación, vamos a profundizar un poco más en lo que se refiere a los objetos, que podremos colocar en la mayoría de nuestros documentos.</p>
+<p>Definimos como <strong>objeto</strong>, una entidad con una serie de <strong>propiedades</strong> que definen su estado, y unos <strong>métodos</strong> (funciones), que actúan sobre esas propiedades.</p>
+<p>La forma de acceder a una propiedad de un objeto es la siguiente:</p>
+<p style="text-align: center;"></p>
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>nombreobjeto.propiedad</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>La forma de acceder a un método de un objeto es la siguiente:</p>
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>nombreobjeto.metodo( [parámetros opcionales] )</pre>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>También podemos referenciar a una propiedad de un objeto, por su índice en la creación. Los índices comienzan por 0.</p>
+<p>En esta unidad, nos enfocaremos en objetos de alto nivel, que encontrarás frecuentemente en tus aplicaciones de <span lang="en">JavaScript</span>: window, <code>location</code>, navigator y <code>document</code>. El objetivo, no es solamente indicarte las nociones básicas para que puedas comenzar a realizar tareas sencillas, sino también, el prepararte para profundizar en las propiedades y métodos, gestores de eventos, etc. que encontrarás en unidades posteriores.</p>
+<p>En esta unidad, verás solamente las propiedades básicas, y los métodos de los objetos mencionados anteriormente.</p>
+<p>Te mostramos aquí el gráfico del modelo de objetos de alto nivel, para todos los navegadores que permitan usar <span lang="en">JavaScript</span>.</p>
+<div class="exe-figure exe-image position-center" style="width: 200px;"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/DWEC03_CONT_R01_Jerarquia.png" title="Enlace a la imagen ampliada. " target="_blank"><img src="./recopila_files/DWEC03_CONT_R01_Jerarquia_miniatura.png" alt="Se muestra la jerarquía de objetos que cuelgan del objeto window: navigator, screen, document, location y history." title="Jerarquía de objetos. " class="imagen_ampliable" style="vertical-align: middle;" width="200" height="84"></a>
+<div class="figcaption"><span class="author">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elaboración Propia. </span></div>
+</div>
+<p>Es muy importante que tengas este gráfico en mente porque va a ser la guía a lo largo de toda esta unidad.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id4">
+<div class="iDevice emphasis_autoevaluacionfpd">
+<div class="iDevice_header" style="background-image:url(https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-4_60" action="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4860&amp;dopt=2#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion4_60" class="block question iDevice_content">
+<p><strong>El nombre de un método en <span lang="en">JavaScript</span> siempre lleva paréntesis al final:</strong></p>
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i4_63" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-4_63">Opción 1</a></label><input type="radio" name="option4_60" id="i4_63" onclick="$exe.getFeedback(0,3,&#39;4_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-4_63"><a name="answer-4_63" href="./recopila_files/saved_resource"></a>
+<div id="taans4_63" class="block iDevice_content">
+<p>Sí.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i4_79" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-4_79">Opción 2</a></label><input type="radio" name="option4_60" id="i4_79" onclick="$exe.getFeedback(1,3,&#39;4_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-4_79"><a name="answer-4_79" href="./recopila_files/saved_resource"></a>
+<div id="taans4_79" class="block iDevice_content">
+<p>No.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i4_82" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-4_82">Opción 3</a></label><input type="radio" name="option4_60" id="i4_82" onclick="$exe.getFeedback(2,3,&#39;4_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-4_82"><a name="answer-4_82" href="./recopila_files/saved_resource"></a>
+<div id="taans4_82" class="block iDevice_content">
+<p>Depende de si lleva o no parámetros.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback" role="status">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b4_60" class="feedback js-hidden"><a name="sa0b4_60" href="./recopila_files/saved_resource"></a>
+<div id="taf4_63" class=" iDevice_content">
+<p>Es correcta. Todos los métodos de cualquier objeto en <span lang="en">JavaScript</span> se nombrarán con el nombre del método seguido de paréntesis y sus parámetros opcionales.</p>
+</div>
+</div>
+<div id="sa1b4_60" class="feedback js-hidden"><a name="sa1b4_60" href="./recopila_files/saved_resource"></a>
+<div id="taf4_79" class=" iDevice_content">
+<p>Es incorrecta. Si no lleva paréntesis se consideraría una propiedad.</p>
+</div>
+</div>
+<div id="sa2b4_60" class="feedback js-hidden"><a name="sa2b4_60" href="./recopila_files/saved_resource"></a>
+<div id="taf4_82" class=" iDevice_content">
+<p>No es correcta. Aunque no lleve parámetros tendría que llevar los paréntesis igualmente.</p>
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-4_63">Opción correcta</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa0b4_60">Retroalimentación</a>)</span></li>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-4_79">Incorrecto</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa1b4_60">Retroalimentación</a>)</span></li>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-4_82">Incorrecto</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa2b4_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.1.- Objeto window.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_73" class="block iDevice_content">
+<p>En la jerarquía de objetos, tenemos en la parte superior el objeto window.</p>
+<p>Este objeto está situado justamente ahí, porque es el contenedor principal de todo el contenido que se visualiza en el navegador. Tan pronto como se abre una ventana (window) en el navegador, incluso aunque no se cargue ningún documento en ella, este objeto window ya estará definido en memoria.</p>
+<p>Además de la sección de contenido del objeto window, que es justamente dónde se cargarán los documentos, el campo de influencia de este objeto, abarca también las dimensiones de la ventana, así como todo lo que rodea al área de contenido: las barras de desplazamiento, barra de herramientas, barra de estado, etc.</p>
+<p>Cómo se ve en el gráfico de la jerarquía de objetos, debajo del objeto window tenemos otros objetos como el navigator, <code>screen</code>, history, <code>location</code> y el objeto document. Este objeto document será el que contendrá toda la jerarquía de objetos, que tengamos dentro de nuestra página <span lang="en">HTML</span>.</p>
+<div class="exe-figure exe-image position-center license-pd" style="width: 200px;"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/DWEC03_CONT_R01_Jerarquia.png" title="Enlace a la imagen ampliada de la estructura de objetos. " target="_blank"><img src="./recopila_files/DWEC03_CONT_R01_Jerarquia_miniatura.png" alt="Se muestra la jerarquía de objetos que cuelgan del objeto window: navigator, screen, document, location y history." title="Jerarquía de objetos." class="imagen_ampliable" style="vertical-align: middle;" width="200" height="84"></a>
+<div class="figcaption"><span class="author">Elaboración Propia.</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></div>
+</div>
+<p><br><br></p>
+<p><strong>Atención</strong>: en los navegadores más modernos, los usuarios tienen la posibilidad de abrir las páginas tanto en nuevas pestañas dentro de un navegador, como en nuevas ventanas de navegador. Para <span lang="en">JavaScript</span> tanto las ventanas de navegador, como las pestañas, son ambos objetos window.</p>
+<p><strong>Acceso a propiedades y métodos.</strong></p>
+<p>Para acceder a las propiedades y métodos del objeto window, lo podremos hacer de diferentes formas, dependiendo más de nuestro estilo, que de requerimientos sintácticos. Así, la forma más lógica y común de realizar esa referencia, incluiría el objeto window tal y como se muestra en este ejemplo:</p>
+<div class=" elemento_centrado" style="width: 28em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre> window.nombrePropiedad
+ window.nombreMétodo( [parámetros] )</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p></p>
+<p>Como puedes ver, los parámetros van entre corchetes, indicando que son opcionales y que dependerán del método al que estemos llamando.</p>
+<p>Un objeto window también se podrá referenciar mediante la palabra self, cuando estamos haciendo la referencia desde el propio documento contenido en esa ventana:</p>
+<div class=" elemento_centrado" style="width: 28em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>self.nombrePropiedad
+self.nombreMétodo( [parámetros] )</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p></p>
+<p>Podremos usar cualquiera de las dos referencias anteriores, pero intentaremos dejar la palabra reservada self, para scripts más complejos en los que tengamos múltiples marcos y ventanas.</p>
+<p>Debido a que el objeto window siempre estará presente cuando ejecutemos nuestros <span lang="en">scripts</span>, podremos omitirlo, en referencias a los objetos dentro de esa ventana. Así que, si escribimos:</p>
+<div class=" elemento_centrado" style="width: 28em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>nombrePropiedad
+nombreMétodo( [parámetros] )</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p></p>
+<p>También funcionaría sin ningún problema, porque se asume que esas propiedades o métodos, son del objeto de mayor jerarquía (el objeto window) en el cuál nos encontramos.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis_citasparapensarfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Citas para pensar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_49" class="block iDevice_content">
+<blockquote>
+	<p>
+	“Sólo cerrando las puertas detrás de uno se abren ventanas hacia el porvenir.”<strong><cite class="elemento_derecha" lang="fr">SAGAN, Françoise.</cite></strong>
+	</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.1.1.- Gestión de ventanas.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id7">
+<div class="iDevice emphasis0">
+<div id="ta7_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R02_Ventanas.jpg" alt="Metafora de Ventana" title="Ventana." height="140" width="160"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc" title="CC by-nc" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc</span></a>&nbsp;<a title="Dominic Alves" href="https://www.flickr.com/photos/dominicspics/" target="_blank">Dominic Alves</a></div>
+</div>
+<p>Un <span lang="en">script</span> no creará nunca la ventana principal de un navegador. Es el usuario, quien realiza esa tarea abriendo una <span lang="en">URL</span> en el navegador o un archivo desde el menú de abrir. Pero sin embargo, un <span lang="en">script</span> que esté ejecutándose en una de las ventanas principales del navegador, si que podrá crear o abrir nuevas sub-ventanas.</p>
+<p>El método que genera una nueva ventana es window.open(). Este método contiene hasta tres parámetros, que definen las características de la nueva ventana: la <span lang="en">URL</span> del documento a abrir, el nombre de esa ventana y su apariencia física (tamaño, color,etc.).</p>
+<p>Por ejemplo, si consideramos la siguiente instrucción que abre una nueva ventana de un tamaño determinado y con el contenido de un documento <span lang="en">HTML</span>:</p>
+<div class="elemento_centrado" style="width: 45.6em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var subVentana=window.open("nueva.html","nueva","height=800,width=600");
+</pre>
+</div>
+</div>
+<pre><br>&nbsp;</pre>
+</div>
+</div>
+<p>Lo importante de esa instrucción, es la asignación que hemos hecho en la variable subVentana. De esta forma podremos a lo largo de nuestro código, referenciar a la nueva ventana desde el <span lang="en">script</span> original de la ventana principal. Por ejemplo, si quisiéramos cerrar la nueva ventana desde nuestro <span lang="en">script</span>, simplemente tendríamos que hacer: subVentana.close();</p>
+<p>Aquí si que es necesario especificar subVentana, ya que si escribiéramos window.close(), <code>self.close()</code> o close() estaríamos intentando cerrar nuestra propia ventana (previa confirmación), pero no la subVentana que creamos en los pasos anteriores.</p>
+<p><strong>Véase el siguiente ejemplo que permite abrir y cerrar una sub-ventana:</strong></p>
+<p></p>
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>&lt;!--
+Ejemplo Apertura y Cierre de Ventanas.
+--&gt;
+
+    
+        &lt;title&gt;Apertura y Cierre de Ventanas&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;script&gt; 
+            var nuevaVentana;
+            var ventanaCreada;
+ 
+            function  inicializar()
+            {
+                document.getElementById("crear-ventana").onclick=crearNueva;
+                document.getElementById("cerrar-ventana").onclick=cerrarNueva;
+                ventanaCreada=false;
+            }
+ 
+            function  crearNueva()
+            {
+                if  (ventanaCreada==false)
+                {         
+                    nuevaVentana  =  window.open("http://www.google.es","","height=400,width=800");
+                    ventanaCreada=true;
+                }
+                else
+                    alert("Ventana ya creada!!!");
+            }
+ 
+            function  cerrarNueva()
+            {
+                if  (ventanaCreada==true)
+                {
+                    nuevaVentana.close(); nuevaVentana  =  null;
+                    ventanaCreada=false;
+                }
+                else
+                    alert("Ventana aun no creada!!!");
+            }
+        &lt;/script&gt;
+    
+    
+        &lt;div&gt;Apertura y Cierre de Ventanas&lt;/div&gt;
+        &lt;button type="button" id="crear-ventana"&gt;Crear una sola Ventana nueva&lt;/button&gt;
+        &lt;button type="button" id="cerrar-ventana"&gt;Cerrar Nueva Ventana&lt;/button&gt;     
+    
+</pre>
+</div>
+</div>
+<p><strong>&nbsp;</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.1.2.- Propiedades y métodos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id8">
+<div class="iDevice emphasis0">
+<div id="ta8_73" class="block iDevice_content">
+<p>El objeto window representa una ventana abierta en un navegador. Si un documento contiene marcos (frame o <code>iframe</code>), el navegador crea un objeto window para el documento <acronym title="HyperText Markup Language" lang="en"><span lang="en">HTML</span></acronym>, y un objeto window adicional para para cada marco.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R03_Ventana_abierta.jpg" alt="Una ventana nordica que se abre de abajo hacia arriba" title="Ventana Abierta."></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a>&nbsp;<a title="Quinn Dombrowski" href="https://www.flickr.com/photos/quinnanya/" target="_blank">Quinn Dombrowski</a></div>
+</div>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y sus  descripciones, que pueden ser utilizadas con el objeto Window."><caption>Propiedades del objeto Window</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>closed</td>
+<td>Devuelve un valor <span lang="en">Boolean</span> indicando cuando una ventana ha sido cerrada o no.</td>
+</tr>
+<tr>
+<td>defaultStatus</td>
+<td>Ajusta o devuelve el valor por defecto de la barra de estado de una ventana.</td>
+</tr>
+<tr>
+<td>document</td>
+<td>Devuelve el objeto document para la ventana.</td>
+</tr>
+<tr>
+<td>frames</td>
+<td>Devuelve un <span lang="en">array</span> de todos los marcos (incluidos <span lang="en">iframes</span>) de la ventana actual.</td>
+</tr>
+<tr>
+<td>history</td>
+<td>Devuelve el objeto history de la ventana.</td>
+</tr>
+<tr>
+<td>length</td>
+<td>Devuelve el número de <span lang="en">frames</span> (incluyendo <span lang="en">iframes</span>) que hay en dentro de una ventana.</td>
+</tr>
+<tr>
+<td>location</td>
+<td>Devuelve la Localización del objeto ventana (<span lang="en">URL</span> del fichero).</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Ajusta o devuelve el nombre de una ventana.</td>
+</tr>
+<tr>
+<td>navigator</td>
+<td>Devuelve el objeto navigator de una ventana.</td>
+</tr>
+<tr>
+<td>opener</td>
+<td>Devuelve la referencia a la ventana que abrió la ventana actual.</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Devuelve la ventana padre de la ventana actual.</td>
+</tr>
+<tr>
+<td>self</td>
+<td>Devuelve la ventana actual.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Ajusta el texto de la barra de estado de una ventana.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todos los métodos y  las correspondientes descripciones, del objeto Window."><caption>Métodos del objeto Window</caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>alert()</td>
+<td>Muestra una ventana emergente de alerta y un botón de aceptar.</td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>Elimina el foco de la ventana actual.</td>
+</tr>
+<tr>
+<td>clearInterval()</td>
+<td>Resetea el cronómetro ajustado con setInterval().</td>
+</tr>
+<tr>
+<td>setInterval()</td>
+<td>Llama a una función o evalúa una expresión en un intervalo especificado (en milisegundos).</td>
+</tr>
+<tr>
+<td>close()</td>
+<td>Cierra la ventana actual.</td>
+</tr>
+<tr>
+<td>confirm()</td>
+<td>Muestra una ventana emergente con un mensaje, un botón de aceptar y un botón de cancelar.</td>
+</tr>
+<tr>
+<td>focus()</td>
+<td>Coloca el foco en la ventana actual.</td>
+</tr>
+<tr>
+<td>open()</td>
+<td>Abre una nueva ventana de navegación.</td>
+</tr>
+<tr>
+<td>prompt()</td>
+<td>Muestra una ventana de diálogo para introducir datos.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id9">
+<div class="iDevice emphasis_debesconocerfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_48" class="block iDevice_content">
+<p>El siguiente enlace amplía información sobre el objeto Window y todas sus propiedades y métodos.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a la página de webestilo, con información ampliada del objeto Window." href="http://www.webestilo.com/javascript/js17.phtml">Más información y ejemplos sobre el objeto Window.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.2.- Objeto location.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_73" class="block iDevice_content">
+<p>El objeto location contiene información referente a la <span lang="en">URL</span> actual.</p>
+<p>Este objeto, es parte del objeto window y accedemos a él a través de la propiedad window.location.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R04_URL.jpg" alt="Dirección Web" title="URL Web." height="112" width="200"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a> <a title="Chris Dlugosz" href="https://www.flickr.com/photos/chrisdlugosz/" target="_blank">Chris Dlugosz</a></div>
+</div>
+<p> </p>
+<p>El objeto location contiene información referente a la <span lang="en">URL</span> actual.</p>
+<p>Este objeto, es parte del objeto window y accedemos a él a través de la propiedad window.location.</p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y  sus descripciones, que pueden ser utilizadas con el objeto Location."><caption>Propiedades del objeto Location</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>Cadena que contiene el nombre del enlace, dentro de la <span lang="en">URL</span>.</td>
+</tr>
+<tr>
+<td>host</td>
+<td>Cadena que contiene el nombre del servidor y el número del puerto, dentro de la <span lang="en">URL</span>.</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>Cadena que contiene el nombre de dominio del servidor (o la dirección <acronym title="Internet Protocol." lang="en">IP</acronym>), dentro de la <span lang="en">URL</span>.</td>
+</tr>
+<tr>
+<td>href</td>
+<td>Cadena que contiene la <span lang="en">URL</span> completa.</td>
+</tr>
+<tr>
+<td>pathname</td>
+<td>Cadena que contiene el camino al recurso, dentro de la <span lang="en">URL</span>.</td>
+</tr>
+<tr>
+<td>port</td>
+<td>Cadena que contiene el número de puerto del servidor, dentro de la <span lang="en">URL</span>.</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>Cadena que contiene el protocolo utilizado (incluyendo los dos puntos), dentro de la <span lang="en">URL</span>.</td>
+</tr>
+<tr>
+<td>search</td>
+<td>Cadena que contiene la información pasada en una llamada a un <span lang="en">script</span>, dentro de la <span lang="en">URL</span>.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table class="tabla" summary="Esta tabla muestra todos los métodos y  las correspondientes descripciones, del objeto Location."><caption>Métodos del objeto Location</caption>
+<thead>
+<tr><th scope="col"> </th><th scope="col"> </th></tr>
+</thead>
+<tbody>
+<tr>
+<td>assign()</td>
+<td>Carga un nuevo documento.</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>Vuelve a cargar la <span lang="en">URL</span> especificada en la propiedad href del objeto location.</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>Reemplaza el historial actual mientras carga la <span lang="en">URL</span> especificada en cadenaURL.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id12">
+<div class="iDevice emphasis_citasparapensarfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Citas para pensar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_49" class="block iDevice_content">
+<blockquote>
+	<p>
+	“Mil rutas se apartan del fin elegido, pero hay una que llega a él.”
+	</p>
+	<strong><cite class="elemento_derecha" lang="fr">MONTAIGNE, Michel de.</cite></strong>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id13">
+<div class="iDevice emphasis_debesconocerfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_48" class="block iDevice_content">
+<p>El siguiente enlace amplía información sobre el objeto Location y todas sus propiedades y métodos.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a la página de webestilo, con más información y ejemplos del objeto Location." href="http://www.webestilo.com/javascript/js19.phtml">Más información y ejemplos sobre el objeto Location.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id45">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta45_128" class="block iDevice_content">
+<p>El objeto location puede llevar a confusión pensando que sirve para indicar la posición de un navegador. Para ello se utiliza geolocation.</p>
+<p class="enlace_centrado"><a class="html" title="Geolocalización." href="https://developer.mozilla.org/es/docs/WebAPI/Using_geolocation" target="_blank"> Más información y ejemplos sobre el objeto Location.</a></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.3.- Objeto navigator.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id14">
+<div class="iDevice emphasis0">
+<div id="ta14_73" class="block iDevice_content">
+<p>Este objeto navigator, contiene información sobre el navegador que estamos utilizando cuando abrimos una <span lang="en">URL</span> o un documento local.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R05_Navigator.jpg" alt="Un crucero de nombre Navigator. " title="Navigator."></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a> <a title="Caitlin Regan" href="https://www.flickr.com/photos/caitlinator/" target="_blank">Caitlin Regan</a></div>
+<div class="elemento_centrado credenciales"> </div>
+</div>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y  sus descripciones, que pueden ser utilizadas con el objeto Navigator."><caption>Propiedades del objeto Navigator</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>appCodeName</td>
+<td>Cadena que contiene el nombre en código del navegador.</td>
+</tr>
+<tr>
+<td>appName</td>
+<td>Cadena que contiene el nombre del cliente.</td>
+</tr>
+<tr>
+<td>appVersion</td>
+<td>Cadena que contiene información sobre la versión del cliente.</td>
+</tr>
+<tr>
+<td>cookieEnabled</td>
+<td>Determina si las <span lang="en">cookies</span> están o no habilitadas en el navegador.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>Devuelve el idioma por defecto del navegador. "es" si es español o "en" si es inglés.</td>
+</tr>
+<tr>
+<td>onLine</td>
+<td>Indica si el navegador está offline u online. O sea que se ha desconectado de Internet usando la opción del navegador.</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>Cadena con la plataforma sobre la que se está ejecutando el programa cliente.</td>
+</tr>
+<tr>
+<td>userAgent</td>
+<td>Cadena que contiene la cabecera completa del agente enviada en una petición <acronym title="HyperText Transfer Protocol. Protocolo de Transferencia Hipertexto." lang="en">HTTP</acronym>. Contiene la información de las propiedades appCodeName y <code>appVersion</code>.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table class="tabla" summary="Esta tabla muestra todos los métodos y  las correspondientes descripciones, del objeto Navigator."><caption>Métodos del objeto Navigator</caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>javaEnabled()</td>
+<td>Devuelve true si el cliente permite la utilización de Java, en caso contrario, devuelve false.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id15">
+<div class="iDevice emphasis_debesconocerfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_48" class="block iDevice_content">
+<p>El siguiente enlace amplía información sobre el objeto Navigator y todas sus propiedades y métodos.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a la página de webestilo con más información y ejemplos del objeto Navigator." href="http://www.webestilo.com/javascript/js21.phtml">Más información y ejemplos sobre el objeto Navigator.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id16">
+<div class="iDevice emphasis_autoevaluacionfpd">
+<div class="iDevice_header" style="background-image:url(https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-16_60" action="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4860&amp;dopt=2#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion16_60" class="block question iDevice_content">
+<strong>Si queremos introducir datos a través de una ventana de diálogo en nuestra aplicación de <span lang="en">JavaScript</span> lo haremos con:</strong>
+
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i16_63" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-16_63">Opción 1</a></label><input type="radio" name="option16_60" id="i16_63" onclick="$exe.getFeedback(0,3,&#39;16_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-16_63"><a name="answer-16_63" href="./recopila_files/saved_resource"></a>
+<div id="taans16_63" class="block iDevice_content">
+La propiedad input del objeto window.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i16_90" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-16_90">Opción 2</a></label><input type="radio" name="option16_60" id="i16_90" onclick="$exe.getFeedback(1,3,&#39;16_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-16_90"><a name="answer-16_90" href="./recopila_files/saved_resource"></a>
+<div id="taans16_90" class="block iDevice_content">
+La propiedad userAgent del objeto navigator.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i16_93" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-16_93">Opción 3</a></label><input type="radio" name="option16_60" id="i16_93" onclick="$exe.getFeedback(2,3,&#39;16_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-16_93"><a name="answer-16_93" href="./recopila_files/saved_resource"></a>
+<div id="taans16_93" class="block iDevice_content">
+El método prompt del objeto window.
+
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback" role="status">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b16_60" class="feedback js-hidden"><a name="sa0b16_60" href="./recopila_files/saved_resource"></a>
+<div id="taf16_63" class=" iDevice_content">
+No es correcta. No existe tal propiedad en el objeto window.
+
+</div>
+</div>
+<div id="sa1b16_60" class="feedback js-hidden"><a name="sa1b16_60" href="./recopila_files/saved_resource"></a>
+<div id="taf16_90" class=" iDevice_content">
+Incorrecta. Esa propiedad nos permite consultar información sobre el navegador utilizado.
+
+</div>
+</div>
+<div id="sa2b16_60" class="feedback js-hidden"><a name="sa2b16_60" href="./recopila_files/saved_resource"></a>
+<div id="taf16_93" class=" iDevice_content">
+Muy bien. Este método te permitirá solicitar datos al usuario, mediante una ventana de diálogo que podrás usar en tu aplicación.
+
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-16_63">Incorrecto</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa0b16_60">Retroalimentación</a>)</span></li>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-16_90">Incorrecto</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa1b16_60">Retroalimentación</a>)</span></li>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-16_93">Opción correcta</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa2b16_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.4.- Objeto document.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id17">
+<div class="iDevice emphasis0">
+<div id="ta17_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R07_Document.jpg" alt="Unas carpetas hechas de tela." title="Objeto document." height="148" width="200"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-sa" title="CC by-nc-sa" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-sa</span></a> <a title="infilmity " href="https://www.flickr.com/photos/maxlinkc/" target="_blank">infilmity </a></div>
+</div>
+<p>Cada documento cargado en una ventana del navegador, será un objeto de tipo document.</p>
+<p>El objeto document proporciona a los <span lang="en">scripts</span>, el acceso a todos los elementos <span lang="en">HTML</span> dentro de una página.</p>
+<p>Este objeto forma parte además del objeto window, y puede ser accedido a través de la propiedad window.document o directamente document (ya que podemos omitir la referencia a la window actual).</p>
+<div style="clear: both;"> </div>
+<table class="tabla" summary="Esta tabla muestra las 4 colecciones disponibles dentro del objeto document junto a sus descripciones."><caption>Colecciones del objeto Document</caption>
+<thead>
+<tr><th scope="col">Colección</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>anchors[]</td>
+<td>Es un <span lang="en">array</span> que contiene todos los hiperenlaces del documento.</td>
+</tr>
+<tr>
+<td>forms[]</td>
+<td>Es un <span lang="en">array</span> que contiene todos los formularios del documento.</td>
+</tr>
+<tr>
+<td>images[]</td>
+<td>Es un <span lang="en">array</span> que contiene todas las imágenes del documento.</td>
+</tr>
+<tr>
+<td>links[]</td>
+<td>Es un <span lang="en">array</span> que contiene todos los enlaces del documento.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table class="tabla" summary="Esta tabla muestra las 4 colecciones disponibles dentro del objeto document junto a sus descripciones."><caption>Propiedades del objeto Document</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>cookie</td>
+<td>Devuelve todos los nombres/valores de las <span lang="en">cookies</span> en el documento.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>Cadena que contiene el nombre de dominio del servidor que cargó el documento.</td>
+</tr>
+<tr>
+<td>referrer</td>
+<td>Cadena que contiene la <span lang="en">URL</span> del documento desde el cuál llegamos al documento actual.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Devuelve o ajusta el título del documento.</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>Devuelve la <span lang="en">URL</span> completa del documento.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y  sus descripciones, que pueden ser utilizadas con el objeto Document."><caption>Propiedades del objeto Document</caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>close()</td>
+<td>Cierra el flujo abierto previamente con document.open().</td>
+</tr>
+<tr>
+<td>getElementById()</td>
+<td>Para acceder a un elemento identificado por el id escrito entre paréntesis.</td>
+</tr>
+<tr>
+<td>getElementsByName()</td>
+<td>Para acceder a los elementos identificados por el atributo name escrito entre paréntesis.</td>
+</tr>
+<tr>
+<td>getElementsByTagName()</td>
+<td>Para acceder a los elementos identificados por el tag o la etiqueta escrita entre paréntesis.</td>
+</tr>
+<tr>
+<td>open()</td>
+<td>Abre el flujo de escritura para poder utilizar document.write() o <code>document.writeln</code> en el documento.</td>
+</tr>
+<tr>
+<td>write()</td>
+<td>Para poder escribir expresiones <span lang="en">HTML</span> o código de <span lang="en">JavaScript</span> dentro de un documento.</td>
+</tr>
+<tr>
+<td>writeln()</td>
+<td>Lo mismo que write() pero añade un salto de línea al final de cada instrucción.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id18">
+<div class="iDevice emphasis_debesconocerfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_48" class="block iDevice_content">
+<p>El siguiente enlace amplía información sobre el objeto Document todas sus propiedades y métodos.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a la página de W3Schools, con información y ejemplos completos del objeto Document." href="http://www.w3schools.com/jsref/dom_obj_document.asp">Más información y ejemplos sobre el objeto Document.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.- Marcos.</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id19">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta19_66" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R08_Marcos.jpg" alt="Un montón de fotos y cuadros dentro de sus marcos." title="Marcos" height="148" width="200"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="Ricardo Diaz" href="https://www.flickr.com/photos/ricardodiaz/" target="_blank">Ricardo Diaz</a></div>
+</div>
+<p>Después de estudiar los objetos del apartado anterior <strong>Antonio </strong>ha decidido aplicarse en utilizar los marcos e iframes aunque ya sabe que no se implementan mucho  es siempre interesante comprender porque han dejado de utilizarse e incluso puede decirse que están en desuso, pero por si algún día le toca mantener algún sitio antiguo y porqué el saber no ocupa lugar.  Ha estado pensando que podría abrir varias veces la página de <span lang="en">YouTube.com</span> y mostrarla en la misma página web. Para poder hacerlo deberá estudiar las propiedades y métodos de los objetos implicados.</p>
+<p>De esta forma podrá gestionar los distintos marcos y poder realizar comunicaciones con los mismos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_73" class="block iDevice_content">
+<p>Diréis que esto es una perdida de tiempo, que como ya sabe el alumno Antonio está desfasado y no sirve. Para nada. Si sois capaces de comprender la forma de comunicación entre marcos os será mucho más fácil comprender el tema que todos estáis deseando aprender:  <acronym title="Asynchronous JavaScript And XML" lang="en">AJAX</acronym>. Su necesidad, su utilidad. Y aún así, si queréis introducir otra página web en la vuestra, es la forma más sencilla.</p>
+<p>Por ejemplo, podéis tener un botón que cuando se pulse cambie la página a la que está indicada por ese botón. Es muy satisfactorio, aunque no utilicéis páginas de google, que la mayoría no funcionan en iframes.</p>
+<p>Un objeto frame, representa un marco <span lang="en">HTML</span>. La etiqueta &lt;frame&gt; identifica una ventana particular, dentro de un conjunto de marcos (<span lang="en">frameset</span>).</p>
+<p>Para cada etiqueta &lt;frame&gt; en un documento <span lang="en">HTML</span>, se creará un objeto frame.</p>
+<p>Todo lo anterior se aplicará también al objeto Iframe <code>&lt;iframe&gt;</code>.</p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y sus descripciones que se pueden aplicar al objeto Frame/Iframe."><caption>Propiedades del objeto Frame/Iframe</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>align</td>
+<td>Cadena que contiene el valor del atributo align (alineación) en un iframe.</td>
+</tr>
+<tr>
+<td>contentDocument</td>
+<td>Devuelve el objeto documento contenido en un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>contentWindow</td>
+<td>Devuelve el objeto window generado por un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>frameBorder</td>
+<td>Cadena que contiene el valor del atributo frameborder (borde del marco) de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Cadena que contiene el valor del atributo height (altura) de un iframe.</td>
+</tr>
+<tr>
+<td>longDesc</td>
+<td>Cadena que contiene el valor del atributo longdesc (descripción larga) de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>marginHeight</td>
+<td>Cadena que contiene el valor del atributo marginheight (alto del margen) de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>marginWidth</td>
+<td>Cadena que contiene el valor del atributo marginwidth (ancho del margen) de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Cadena que contiene el valor del atributo name (nombre) de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>noResize</td>
+<td>Cadena que contiene el valor del atributo noresize de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>scrolling</td>
+<td>Cadena que contiene el valor del atributo scrolling (desplazamiento) de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>src</td>
+<td>Cadena que contiene el valor del atributo src (origen) de un frame/<code>iframe</code>.</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Cadena que contiene el valor del atributo width (ancho) de un iframe.</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table class="tabla" summary="Esta tabla muestra los eventos que se pueden aplicar al objeto Frame/Iframe con una breve descripción de los mismos."><caption>Eventos del objeto Frame/Iframe</caption>
+<thead>
+<tr><th scope="col">Evento</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>onload</td>
+<td><span lang="en">Script</span> que se ejecutará inmediatamente después a que se cargue el frame/<code>iframe</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id21">
+<div class="iDevice emphasis_citasparapensarfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Citas para pensar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_49" class="block iDevice_content">
+<blockquote>
+	<p>
+	“Los objetos son los amigos que ni el tiempo, ni la belleza, ni la fidelidad consiguen alterar.”
+	</p>
+	<strong><cite class="elemento_derecha" lang="fr">SAGAN, Françoise.</cite></strong>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.1.- Jerarquías.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id22">
+<div class="iDevice emphasis0">
+<div id="ta22_73" class="block iDevice_content">
+<p>Uno de los aspectos más atractivos de <span lang="en">JavaScript</span> en aplicaciones cliente, es que permite interacciones del usuario en un marco o ventana, que provocarán actuaciones en otros marcos o ventanas. En esta sección te daremos algunas nociones para trabajar con múltiples ventanas y marcos.</p>
+<p><span class="titulo">Marcos: Padres e Hijos.</span></p>
+<p>En el gráfico de jerarquías de objetos, viste como el objeto window está en la cabeza de la jerarquía y puede tener sinónimos como self. En esta sección veremos que, cuando trabajamos con marcos o <span lang="en">iframes</span>, podemos referenciar a las ventanas como: frame, <code>top</code> y parent.</p>
+<p>Aunque el uso de marcos o <span lang="en">iframes</span> es completamente válido en <span lang="en">HTML</span>, en términos de usabilidad y accesibilidad no se recomiendan, por lo que su uso está en verdadero declive. El problema fundamental con los marcos, es que las páginas contenidas en esos marcos no son directamente accesibles, en el sentido de que si navegamos dentro de los <span lang="en">frames</span>, la <span lang="en">URL</span> principal de nuestro navegador no cambia, con lo que no tenemos una referencia directa de la página en la que nos encontramos. Esto incluso es mucho peor si estamos accediendo con dispositivos móviles. Otro problema con los <span lang="en">frames</span> es que los buscadores como <span lang="en">Google</span>, <span lang="en">Bing</span>, etc, no indexan bien los <span lang="en">frames</span>, en el sentido de que si por ejemplo registran el contenido de un <span lang="en">frame</span>, cuando busquemos ese contenido, nos conectará directamente con ese <span lang="en">frame</span> como si fuera la página principal, con lo que la mayoría de las veces no tenemos referencia de la sección del portal o <span lang="en">web</span> en la que nos encontramos.</p>
+<p><span class="titulo">Ejemplo de <span lang="en">Frame</span>:</span></p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;!--
+Ejemplo Apertura y Cierre de Ventanas.
+--&gt;
+
+    
+        &lt;title&gt;Apertura y Cierre de Ventanas&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+ &lt;title&gt;Titulo para todas las páginas de este conjunto de Frames&lt;/title&gt;
+
+
+   &lt;frameset cols="50%,50%"&gt;
+   &lt;frame name="frameIzdo" src="documento1.html" title="Frame  1"&gt;
+   &lt;frame name="frameDcho" src="documento2.html" title="Frame  2"&gt;
+   &lt;noframes&gt;&lt;/noframes&gt;
+&lt;/frameset&gt;
+</pre>
+</div>
+</div>
+<p><span class="titulo">&nbsp;</span></p>
+<p><span style="font-size: 1em;">Este código divide la ventana del navegador en dos marcos de igual tamaño, con dos documentos diferentes en cada columna. Un </span>frameset <span style="font-size: 1em;"> establece las relaciones entre los marcos de la colección. El&nbsp;</span>frameset<span style="font-size: 1em;"> se cargará en la ventana principal (ventana padre), y cada uno de los marcos (</span><span lang="en" style="font-size: 1em;">frames</span><span style="font-size: 1em;">) definidos dentro del </span>frameset<span style="font-size: 1em;">, será un marco hijo (ventanas hijas). Véase la siguiente figura de la jerarquía resultante:</span></p>
+<p>&nbsp;</p>
+<div class="exe-figure exe-image position-center license-pd" style="width: 184px;"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/DWEC03_CONT_R09_Frames.png" title="Enlace a la imagen ampliada de frameset. " target="_blank"><img src="./recopila_files/DWEC03_CONT_R09_Frames_miniatura.PNG" alt="Esquema de la jerarquía de objetos dentro de un frameset. En el nivel superior tenemos el objeto top o parent (frameset), y colgando de él tenemos dos objetos child (frames), y debajo de cada frame tenemos un objeto document." title="Jerarquía de un frameset. " class="imagen_ampliable" style="vertical-align: middle;" width="184" height="160"></a>
+<div class="figcaption"><span class="author">Elaboración Propia.</span> <span class="license"><span class="sep">(</span><span>Dominio público</span><span class="sep">)</span></span></div>
+</div>
+<p></p>
+<p>Fíjate en el gráfico que la ventana padre (la que contiene el frameset), no tiene ningún objeto document (ya que el frameset no puede contener los objetos típicos del <span lang="en">HTML</span> como formularios, controles, etc.) y son los <span lang="en">frames</span> hijos, los que sí tienen objeto document. El objeto document de un marco, es independiente del objeto document del otro marco, y en realidad cada uno de los marcos, será un objeto window independiente.</p>
+<p>Veamos&nbsp; iframe. Los <span lang="en">iframes</span> pueden encontrarse dentro del body y son por lo tanto un poco más flexibles.&nbsp; Veamos un ejemplo:</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;!--
+Frames con iFrames y CSS en HTML5
+--&gt;
+
+
+    &lt;title&gt;Frames con iFrames y CSS en HTML5&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;style&gt;
+   .iframe_terra {
+      float:left;
+      width:20%;
+      height:80%;
+    }
+    .iframe_fire {
+      float:left;
+      width:75%;
+      height:80%;
+    }
+  &lt;/style&gt;
+
+
+  &lt;iframe class="iframe_terra" src="http://terra.es"&gt;&lt;/iframe&gt;
+  &lt;iframe class="iframe_fire" src="https://www.mozilla.org/es-ES/firefox/new/"&gt;&lt;/iframe&gt;
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id23">
+<div class="iDevice emphasis_citasparapensarfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Citas para pensar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_49" class="block iDevice_content">
+<blockquote>“Una sociedad sin jerarquía es una casa sin escalera.”<strong><cite class="elemento_derecha" lang="fr">DAUDET, Alphonse.</cite></strong></blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.2.- Comunicación entre marcos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id24">
+<div class="iDevice emphasis0">
+<div id="ta24_73" class="block iDevice_content">
+<p><span class="titulo">Referencias Padre-Hijos.</span></p>
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R10_Comunicacion.jpg" alt="Una ventana abierta en la que se ve el cielo. " title="Comunicación entre ventanas." height="160" width="184"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a>&nbsp;<a title="Emerson Posadas" href="https://www.flickr.com/photos/toxickore/" target="_blank">Emerson Posadas</a></div>
+</div>
+<p>Desde el momento en el que el documento padre contiene uno o más marcos, ese documento padre mantiene un <span lang="en">array</span> con sus marcos hijo. Podemos acceder a un marco a través de la sintaxis de <span lang="en">array</span> o por el nombre que le hemos dado a ese marco, por el id o con el atributo name que hemos puesto en la marca &lt;frame&gt;.</p>
+<p>Ejemplos de referencias a los marcos hijo:</p>
+<p>(Recordar que todo lo que va entre corchetes [] es opcional).&nbsp;&nbsp;</p>
+<div class=" elemento_centrado" style="width: 43.95em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>     [window.]frames[n].objeto-función-variable-nombre
+     [window.]frames["nombreDelMarco"].objeto-función-variable-nombre
+     [window.]nombreDelMarco.objeto-función-variable-nombre</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>El índice numérico n, que indica el número de <span lang="en">frame</span>, está basado en el orden en el que aparecen en el documento <span lang="en">frameset</span>. Se recomienda que pongamos un nombre a cada <span lang="en">frame</span> en dicho documento, ya que así la referencia a utilizar será mucho más fácil.</p>
+<p><span class="titulo">Referencias Hijo-Padre. </span></p>
+<p>Es bastante más común enlazar scripts al documento padre (<span lang="en">frameset</span>), ya que éste se carga una vez y permanecerá cargado con los mismos datos, aunque hagamos modificaciones dentro de los marcos.</p>
+<p>Desde el punto de vista de un documento hijo (aquel que está en un <span lang="en">frame</span>), su antecesor en la jerarquía será denominado el padre (<span lang="en">parent</span>). Por lo tanto para hacer referencia a elementos del padre se hará:</p>
+<div class=" elemento_centrado" style="width: 26.35em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>parent.objeto-función-variable-nombre</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>Si el elemento al que accedemos en el padre es una función que devuelve un valor, el valor devuelto será enviado al hijo sin ningún tipo de problemas. Por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 25em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var valor=parent.NombreFuncion();</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>Además como la ventana padre está en el <span lang="en">top</span> de la jerarquía de ventanas, opcionalmente podríamos escribir:</p>
+<div class=" elemento_centrado" style="width: 24em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var valor=top.NombreFuncion();</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p><strong>Referencias Hijos-Hijos. </strong></p>
+<p>El navegador necesita un poco más de asistencia cuando queremos que una ventana hija se comunique con una hermana. Una de las propiedades de cualquier ventana o marco es su padre. Por lo tanto, la forma de comunicar dos ventanas o marcos hermanos va a ser siempre referenciándolos a través de su padre, ya que es el único nexo de unión entre ambos (los dos tienen el mismo padre).</p>
+<p>Podemos utilizar alguno de los siguientes formatos:</p>
+<div class=" elemento_centrado" style="width: 42.85em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>parent.frames[n].objeto-función-variable-nombre
+parent.frames["nombreDelMarco"].objeto-función-variable-nombre
+parent.nombreDelMarco.objeto-función-variable-nombre</pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.3.- Comunicación entre múltiples ventanas.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_73" class="block iDevice_content">
+<p>En esta sección, vamos a ver cómo podemos comunicarnos con sub-ventanas, que abrimos empleando el método open() del objeto window.</p>
+<p>Cada objeto window tiene una propiedad llamada opener. Esta propiedad contiene la referencia a la ventana o marco, que ha abierto ese objeto window empleando el método open(). Para la ventana principal el valor de opener será <span lang="en">null</span>.</p>
+<p>Debido a que opener es una referencia válida a la ventana padre que abrió las otras, podemos emplearlo para iniciar la referencia a objetos de la ventana original (padre) desde la ventana hija. Es semejante a lo que vimos con frames, pero en este caso es entre ventanas independientes del navegador.</p>
+<p>En el siguiente ejemplo hay código que quizás no comprendas sino has cursado Programación. No se preocupe.&nbsp; Hay un tema más adelante que trata sobre funciones y sobre eventos.&nbsp; Es bastante autoexplicativo, pero si tienes problemas no dudes en preguntar en el foro.</p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;!--
+Otro ejemplo más Apertura y Cierre de Ventanas para ilustrar ls comunicación entre múltiples ventanas.
+--&gt;
+
+    
+        &lt;title&gt; Comunicación entre múltiples ventanas.&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;script&gt;
+            var nuevaVentana;
+            var ventanaCreada=false;
+
+            function  crearNueva()
+            {
+                if  (ventanaCreada==false)
+                {         
+                    nuevaVentana  =  window.open("nueva.html","","height=400,width=800");
+                    ventanaCreada=true;
+                }
+                else
+                    alert("Ventana ya creada!!!");
+            }
+ 
+            function  cerrarNueva()
+            {
+                if  (ventanaCreada==true)
+                {
+                    nuevaVentana.close(); nuevaVentana  =  null;
+                    ventanaCreada=false;
+                }
+                else
+                    alert("Ventana aun no creada!!!");
+            }
+        &lt;/script&gt;
+    
+    
+        &lt;p&gt;Comunicación entre múltiples ventanas.&lt;/p&gt;
+        &lt;button type="button" id="crear-ventana" onclick="crearNueva()"&gt;Crear una sóla Ventana nueva&lt;/button&gt;
+        &lt;button type="button" id="cerrar-ventana" onclick="cerrarNueva()"&gt;Cerrar Nueva Ventana&lt;/button&gt;
+        &lt;p&gt; Texto proveniente de la sub-ventana: &lt;/p&gt;
+        &lt;p id="parrafo"&gt; &lt;/p&gt;
+    
+</pre>
+</div>
+</div>
+<p><span style="font-size: 1em;">El código html de nueva.html es:</span></p>
+<p></p>
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;!--
+Sub-Ventana
+--&gt;
+
+    
+        &lt;title&gt;Sub-Ventana&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;script&gt;
+            function  copiarAlPadre()
+            {
+                opener.document.getElementById("parrafo").innerHTML= document.getElementById('textocopiar').value;
+            }
+        &lt;/script&gt;
+    
+    
+        &lt;div&gt;Sub-Ventana&lt;/div&gt;
+        &lt;form id="formulario"&gt;
+            &lt;p&gt;
+                Introduzca texto a copiar en la ventana principal:
+                &lt;input type="text" id="textocopiar"&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;input type="button" value="Enviar texto a la ventana padre" id="enviar" onclick="copiarAlPadre()"&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    
+
+</pre>
+</div>
+</div>
+<p></p>
+<p>Si no se abren las ventanas del ejemplo anterior, a lo mejor tienes que desactivar el bloqueador de <span lang="en">pop-ups</span> y volver a probar.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id26">
+<div class="iDevice emphasis_citasparapensarfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Citas para pensar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_49" class="block iDevice_content">
+<blockquote>
+	<p>
+	“No pensábamos en el negocio, sino en Internet como una forma de comunicación global.”
+	</p>
+	<strong><cite class="elemento_derecha" lang="en">YANG, Jerry.</cite></strong>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id27">
+<div class="iDevice emphasis_autoevaluacionfpd">
+<div class="iDevice_header" style="background-image:url(https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-27_60" action="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4860&amp;dopt=2#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion27_60" class="block question iDevice_content">
+<strong>Si queremos comunicar dos marcos que están en una misma ventana lo haremos:
+</strong>
+
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i27_63" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-27_63">Opción 1</a></label><input type="radio" name="option27_60" id="i27_63" onclick="$exe.getFeedback(0,3,&#39;27_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-27_63"><a name="answer-27_63" href="./recopila_files/saved_resource"></a>
+<div id="taans27_63" class="block iDevice_content">
+A través de su padre (<span lang="en">parent</span>).
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i27_81" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-27_81">Opción 2</a></label><input type="radio" name="option27_60" id="i27_81" onclick="$exe.getFeedback(1,3,&#39;27_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-27_81"><a name="answer-27_81" href="./recopila_files/saved_resource"></a>
+<div id="taans27_81" class="block iDevice_content">
+Directamente con el nombre del marco.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i27_84" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-27_84">Opción 3</a></label><input type="radio" name="option27_60" id="i27_84" onclick="$exe.getFeedback(2,3,&#39;27_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-27_84"><a name="answer-27_84" href="./recopila_files/saved_resource"></a>
+<div id="taans27_84" class="block iDevice_content">
+A través del objeto navigator.
+
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback" role="status">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b27_60" class="feedback js-hidden"><a name="sa0b27_60" href="./recopila_files/saved_resource"></a>
+<div id="taf27_63" class=" iDevice_content">
+Correcto. A través de <span lang="en">parent</span> podremos conectar dos marcos hijos para poder acceder a las diferentes propiedades u objetos de cada uno de ellos.
+
+</div>
+</div>
+<div id="sa1b27_60" class="feedback js-hidden"><a name="sa1b27_60" href="./recopila_files/saved_resource"></a>
+<div id="taf27_81" class=" iDevice_content">
+No es correcta, porque dos marcos que son hermanos no conocen sus nombres directamente, si no es a través de la ventana padre.
+
+</div>
+</div>
+<div id="sa2b27_60" class="feedback js-hidden"><a name="sa2b27_60" href="./recopila_files/saved_resource"></a>
+<div id="taf27_84" class=" iDevice_content">
+Incorrecta. El objeto navigator sólo nos permite acceder a las propiedades del navegador, no a las ventanas o marcos que esté mostrando.
+
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-27_63">Opción correcta</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa0b27_60">Retroalimentación</a>)</span></li>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-27_81">Incorrecto</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa1b27_60">Retroalimentación</a>)</span></li>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-27_84">Incorrecto</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa2b27_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.- Objetos nativos en Javascript.</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_66" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila_files/CASO_PERSONAJES_08.jpg" alt="Antonio, de los casos prácticos." title="Antonio."></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc" title="CC by-nc" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc</span></a> Elaboración propia.</div>
+</div>
+<p>El lenguaje <span lang="en">JavaScript</span> es un lenguaje basado en objetos. A <strong>Antonio</strong> le suena un poco el tema de objetos aunque nunca trabajó intensivamente con ellos. Como todos los lenguajes que incorporan sus funciones para realizar acciones, conversiones, etc., en <span lang="en">JavaScript</span> también dispone de unos objetos nativos que le van a permitir a <strong>Antonio</strong> el realizar muchas de esas tareas.</p>
+<p>Estos objetos, hacen referencia al trabajo con cadenas de texto, operaciones matemáticas, números, valores <span lang="en">booleanos</span> y trabajo con fechas y horas.</p>
+<p>Ésto le va a ser muy útil para realizar su aplicación ya que tendrá que realizar diferentes tipos de conversiones de datos, trabajar intensivamente con cadenas y por supuesto con fechas y horas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R12_Numeros.jpg" alt="Los números en una caja. " title="Number." height="239" width="240"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-nd" title="CC by-nc-nd" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-nd</span></a> <a title="Stephen Coles" href="https://www.flickr.com/photos/stewf/" target="_blank">Stephen Coles</a></div>
+</div>
+<p> </p>
+<p>Aunque no hemos visto como crear objetos, sí que ya hemos dado unas pinceladas a lo que son los objetos, propiedades y métodos.</p>
+<p>En esta sección vamos a echar una ojeada a objetos que son nativos en <span lang="en">JavaScript</span>, esto es, aquello que <span lang="en">JavaScript</span> nos da, listos para su utilización en nuestra aplicación.</p>
+<p>Echaremos un vistazo a los objetos String, <code>Math</code>, Number, <code>Boolean</code> y Date.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id30">
+<div class="iDevice emphasis_citasparapensarfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Citas para pensar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_49" class="block iDevice_content">
+<blockquote>
+	<p>
+	“Si me hubieran hecho objeto sería objetivo, pero me hicieron sujeto.”
+	</p>
+	<strong><cite class="elemento_derecha">BERGAMÍN, José.</cite></strong>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice" id="id31">
+<div class="iDevice emphasis_reflexionfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Reflexiona</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta31_40" class="block iDevice_content">
+<p>
+¿Te has parado a pensar alguna vez que nuestro mundo está rodeado de objetos por todas partes? 
+</p>
+<p>
+¿Sabes que prácticamente, todos esos objetos tienen algunas propiedades como pueden ser tamaño, color, peso, tipo de corriente que usan, temperatura, tipo de combustible, etc.? 
+</p>
+<p>
+¿Sabes que también podemos realizar acciones con esos objetos, como pueden ser encender, apagar, mover, abrir, cerrar, subir temperatura, bajar temperatura, marcar número, colgar, etc.?
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.1.- Objeto String.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id33">
+<div class="iDevice emphasis0">
+<div id="ta33_73" class="block iDevice_content">
+<div class="elemento_centrado">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R13_Cadenas.jpg" alt="Cadenas en inglés es string que es lo que se ve en este apartado." title="Cadenas." height="132" width="200"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a>&nbsp;<a title="Gustavo Facci" href="https://www.flickr.com/photos/faccig/" target="_blank">Gustavo Facci</a></div>
+</div>
+<p>&nbsp;</p>
+<p>Una cadena (<span lang="en">string</span>) consta de uno o más caracteres de texto, rodeados de comillas simples o dobles; da igual cuales usemos ya que se considerará una cadena de todas formas, pero en algunos casos resulta más cómodo el uso de unas u otras. Por ejemplo si queremos meter el siguiente texto dentro de una cadena de <span lang="en">JavaScript</span>:</p>
+<div class=" elemento_centrado" style="width: 34.05em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;input type="checkbox" name="coche"&gt;Audi A6</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>Podremos emplear las comillas dobles o simples:</p>
+<p>&nbsp;</p>
+<div class=" elemento_centrado" style="width: 45.6em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var cadena = '&lt;input type="checkbox" name="coche"&gt;Audi A6';
+var cadena = "&lt;input type="checkbox" name="coche"&gt;Audi A6";</pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+<p>Si queremos emplear comillas dobles al principio y fin de la cadena, y que en el contenido aparezcan también comillas dobles, tendríamos que escaparlas con \", por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 45.05em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var cadena = "&lt;input type='\"checkbox\"' name='\"coche\"'&gt;Audi A6";&nbsp;</pre>
+</div>
+</div>
+</div>
+</div>
+<p>Cuando estamos hablando de cadenas muy largas, podríamos concatenarlas con <abbr title="Más.">+</abbr><abbr title="Igual."> =</abbr>, por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 38.45em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var  nuevoDocumento  =  "";
+nuevoDocumento  +=  "";
+nuevoDocumento  +=  ""  ;
+nuevoDocumento  +=  "";
+nuevoDocumento  +=  '&lt;meta http-equiv="content-type" nuevodocumento content="text/html;charset=utf-8"&gt;';</pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+<p>Si queremos concatenar el contenido de una variable dentro de una cadena de texto emplearemos el símbolo + :</p>
+<div class=" elemento_centrado" style="width: 52.2em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>nombreEquipo  =  prompt("Introduce el nombre de tu equipo favorito:","");
+var  mensaje= "El  "  +  nombreEquipo +  "  ha sido el campeón de la Copa del Rey!";
+alert(mensaje);</pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+<p><strong>Caracteres especiales o caracteres de escape.</strong></p>
+<p>La forma en la que se crean las cadenas en <span lang="en">JavaScript</span>, hace que cuando tengamos que emplear ciertos caracteres especiales en una cadena de texto, tengamos que escaparlos, empleando el símbolo \ seguido del carácter.</p>
+<p>Vemos aquí un listado de los caracteres especiales o de escape en <span lang="en">JavaScript</span>:</p>
+<table class="tabla" summary="Esta tabla muestra todos los caracteres especiales y de escape que se pueden utilizar en JavaScript."><caption>Caracteres de escape y especiales en JavaScript</caption>
+<thead>
+<tr><th scope="col">Símbolos</th><th scope="col">Explicación</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>\"</td>
+<td>Comillas dobles.</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>Comilla simple.</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>Barra inclinada.</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>Retroceso.</td>
+</tr>
+<tr>
+<td>\t<code> </code></td>
+<td>Tabulador.</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>Nueva línea.</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>Retorno de Carro</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Avance de página.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis_debesconocerfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_48" class="block iDevice_content">
+<p>El siguiente enlace amplía información sobre el objeto String y todas sus propiedades y métodos.</p>
+<p class="enlace_centrado"><a class="html" title="Acceder a la página de W3Schools, con información ampliada y ejemplos del objeto String." href="http://www.w3schools.com/jsref/jsref_obj_string.asp">Más información y ejemplos sobre el objeto String.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.1.1.- Propiedades y métodos del objeto String.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id35">
+<div class="iDevice emphasis0">
+<div id="ta35_73" class="block iDevice_content">
+<div class="elemento_centrado">
+<div class="elemento_centrado"><img src="./recopila_files/DWEC03_CONT_R14_String.jpg" alt="Una cuerda sobre el agua." title="String." height="134" width="200"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nc-nd" title="CC by-nc-nd" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.es" target="_blank"><span class="transparente">CC by-nc-nd</span></a>&nbsp;<a title="José Manuel Ríos Valiente" href="https://www.flickr.com/photos/josemanuelerre/" target="_blank">José Manuel Ríos Valiente</a></div>
+</div>
+<p>&nbsp;</p>
+<p>Para crear un objeto String lo podremos hacer de la siguiente forma:</p>
+<div class=" elemento_centrado" style="width: 33.5em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var  miCadena = new  String("texto de la cadena");</pre>
+</div>
+</div>
+</div>
+</div>
+<p>O también se podría hacer:</p>
+<div class=" elemento_centrado" style="width: 25.8em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var miCadena = "texto de la cadena";</pre>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Es decir, cada vez que tengamos una cadena de texto, en realidad es un objeto String que tiene propiedades y métodos:</p>
+<div class=" elemento_centrado" style="width: 25.25em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre> cadena.propiedad;
+ cadena.metodo( [parámetros] );</pre>
+</div>
+</div>
+<pre><span style="font-family: HelveticaNeue-Light, &#39;Helvetica Neue Light&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, &#39;Lucida Grande&#39;, sans-serif; font-size: 1em; text-align: justify;">&nbsp;</span></pre>
+</div>
+</div>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y sus descripciones que se pueden aplicar al objeto String."><caption>Propiedades del objeto String</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>Contiene la longitud de una cadena.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todos los métodos y sus descripciones que se pueden aplicar al objeto String."><caption>Métodos del objeto String</caption>
+<thead>
+<tr><th scope="col">Métodos</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>charAt()</td>
+<td>Devuelve el carácter especificado por la posición que se indica entre paréntesis.</td>
+</tr>
+<tr>
+<td>charCodeAt()</td>
+<td>Devuelve el <a class="glosario" href="./recopila_files/saved_resource">unicode<span><em>Unicode.</em>Los sistemas de almacenamiento de caracteres como ASCII permiten hasta 256 caracteres, pero son distintos para cada alfabeto. Unicode proporciona Unicode proporciona un número único para cada carácter. O sea, usando unicode se puede disponer de todos los alfabetos de la tierra. </span></a> del carácter especificado por la posición que se indica entre paréntesis.</td>
+</tr>
+<tr>
+<td>concat()</td>
+<td>Une una o más cadenas y devuelve el resultado de esa unión.</td>
+</tr>
+<tr>
+<td>fromCharCode()</td>
+<td>Convierte valores <span lang="en">Unicode</span> a caracteres.</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td>Devuelve la posición de la primera ocurrencia del carácter buscado en la cadena.</td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td>Devuelve la posición de la última ocurrencia del carácter buscado en la cadena.</td>
+</tr>
+<tr>
+<td>match()</td>
+<td>Busca una coincidencia entre una expresión regular y una cadena y devuelve las coincidencias o <span lang="en">null</span> si no ha encontrado nada.</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>Busca una subcadena en la cadena y la reemplaza por la nueva cadena especificada.</td>
+</tr>
+<tr>
+<td>search()</td>
+<td>Busca una subcadena en la cadena y devuelve la posición dónde se encontró.</td>
+</tr>
+<tr>
+<td>slice()</td>
+<td>Extrae una parte de la cadena y devuelve una nueva cadena.</td>
+</tr>
+<tr>
+<td>split()</td>
+<td>Divide una cadena en un <span lang="en">array</span> de subcadenas.</td>
+</tr>
+<tr>
+<td>substr()</td>
+<td>Extrae los caracteres de una cadena, comenzando en una determinada posición y con el número de caracteres indicado.</td>
+</tr>
+<tr>
+<td>substring()</td>
+<td>Extrae los caracteres de una cadena entre dos índices especificados.</td>
+</tr>
+<tr>
+<td>toLowerCase()</td>
+<td>Convierte una cadena en minúsculas.</td>
+</tr>
+<tr>
+<td>toUpperCase()</td>
+<td>Convierte una cadena en mayúsculas.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Ejemplos de uso:</strong></p>
+<div class=" elemento_centrado" style="width: 47.8em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var cadena="El parapente es un deporte de riesgo medio";
+document.write("La longitud de la cadena es: "+ cadena.length + "&lt;br&gt;");
+document.write(cadena.toLowerCase()+ "&lt;br&gt;");
+document.write(cadena.charAt(3)+ "&lt;br&gt;");
+document.write(cadena.indexOf('pente')+ "&lt;br&gt;");
+document.write(cadena.substring(3,16)+ "&lt;br&gt;");</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.2.- Objeto Math.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_73" class="block iDevice_content">
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 200px;"><img src="./recopila_files/DWEC03_CONT_R15_NumeroPI.jpg" alt="Calculadora científica mostrando el número PI 3.1415926." title="Número PI." style="vertical-align: middle;" width="200" height="148">
+<div class="figcaption"><a href="https://www.flickr.com/photos/conskeptical/" target="_blank" class="author"> Crispin Semmens </a>. <a href="https://www.flickr.com/photos/conskeptical/361555297/" target="_blank" class="title"><em>magic number</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p>Ya vimos anteriormente algunas funciones, que nos permitían convertir cadenas a diferentes formatos numéricos (parseInt, <code>parseFloat</code>). A parte de esas funciones, disponemos de un objeto Math en <span lang="en">JavaScript</span>, que nos permite realizar operaciones matemáticas. El objeto Math no es un constructor (no nos permitirá por lo tanto crear o instanciar nuevos objetos que sean de tipo Math), por lo que para llamar a sus propiedades y métodos, lo haremos anteponiendo Math a la propiedad o el método. Por ejemplo:</p>
+<div class="elemento_centrado" style="width: 40.65em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var x = Math.PI;           // Devuelve el número PI.
+var y = Math.sqrt(16);      // Devuelve la raíz cuadrada de 16.</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+<p></p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y sus descripciones que se pueden aplicar al objeto Math."><caption>Propiedades del objeto Math</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>E</td>
+<td>Devuelve el número Euler (aproximadamente 2.718).</td>
+</tr>
+<tr>
+<td>LN2</td>
+<td>Devuelve el logaritmo neperiano de 2 ( aproximadamente 0.693).</td>
+</tr>
+<tr>
+<td>LN10</td>
+<td>Devuelve el logaritmo neperiano de 10 ( aproximadamente 2.302).</td>
+</tr>
+<tr>
+<td>LOG2E</td>
+<td>Devuelve el logaritmo base 2 de E ( aproximadamente 1.442).</td>
+</tr>
+<tr>
+<td>LOG10E</td>
+<td>Devuelve el logaritmo base 10 de E ( aproximadamente 0.434).</td>
+</tr>
+<tr>
+<td>PI</td>
+<td>Devuelve el número PI ( aproximadamente 3.14159).</td>
+</tr>
+<tr>
+<td>SQRT2</td>
+<td>Devuelve la raíz cuadrada de 2 ( aproximadamente 1.414).</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table class="tabla" summary="Esta tabla muestra todos los métodos y sus descripciones que se pueden aplicar al objeto Math."><caption>Métodos del objeto Math</caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>abs(x)</td>
+<td>Devuelve el valor absoluto de x.</td>
+</tr>
+<tr>
+<td>acos(x)</td>
+<td>Devuelve el arcocoseno de x, en radianes.</td>
+</tr>
+<tr>
+<td>asin(x)</td>
+<td>Devuelve el arcoseno de x, en radianes.</td>
+</tr>
+<tr>
+<td>atan(x)</td>
+<td>Devuelve el arcotangente de x, en radianes con un valor entre -<abbr title="Número PI partido por 2.">PI/2</abbr> y PI/2.</td>
+</tr>
+<tr>
+<td>atan2(y,x)</td>
+<td>Devuelve el arcotangente del cociente de sus argumentos.</td>
+</tr>
+<tr>
+<td>ceil(x)</td>
+<td>Devuelve el número x redondeado al alta hacia el siguiente entero.</td>
+</tr>
+<tr>
+<td>cos(x)</td>
+<td>Devuelve el coseno de x (x está en radianes).</td>
+</tr>
+<tr>
+<td>floor(x)</td>
+<td>Devuelve el número x redondeado a la baja hacia el anterior entero.</td>
+</tr>
+<tr>
+<td>log(x)</td>
+<td>Devuelve el logaritmo neperiando (base E) de x.</td>
+</tr>
+<tr>
+<td>max(x,y,z,...,n)</td>
+<td>Devuelve el número más alto de los que se pasan como parámetros.</td>
+</tr>
+<tr>
+<td>min(x,y,z,...,n)</td>
+<td>Devuelve el número más bajo de los que se pasan como parámetros.</td>
+</tr>
+<tr>
+<td>pow(x,y)</td>
+<td>Devuelve el resultado de x elevado a y.</td>
+</tr>
+<tr>
+<td>random()</td>
+<td>Devuelve un número al azar entre 0 y 1.</td>
+</tr>
+<tr>
+<td>round(x)</td>
+<td>Redondea x al entero más próximo.</td>
+</tr>
+<tr>
+<td>sin(x)</td>
+<td>Devuelve el seno de x (x está en radianes).</td>
+</tr>
+<tr>
+<td>sqrt(x)</td>
+<td>Devuelve la raíz cuadrada de x.</td>
+</tr>
+<tr>
+<td>tan(x)</td>
+<td>Devuelve la tangente de un ángulo.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p><strong>Ejemplos de uso:</strong></p>
+<div class="elemento_centrado" style="width: 41.8em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.write(Math.cos(3) + "&lt;br&gt;");
+document.write(Math.asin(0) + "&lt;br&gt;"); 
+document.write(Math.max(0,150,30,20,38) + "&lt;br&gt;"); 
+document.write(Math.pow(7,2) + "&lt;br&gt;"); 
+document.write(Math.round(0.49) + "&lt;br&gt;");
+document.write("Número aleatorio entre 0 y 1"+Math.random()); // Nunca puede ser 1.0
+document.write("Número aleatorio entre 1 y 100"+Math.random());  </pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.3.- Objeto Number.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id37">
+<div class="iDevice emphasis0">
+<div id="ta37_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY" style="width: 200px;"><img src="./recopila_files/DWEC03_CONT_R16_Number.jpg" alt="Foto en la que se muestran los números 910." title="910." style="float: right;" width="200" height="140">
+<div class="figcaption"><a href="https://www.flickr.com/photos/darwinbell/" target="_blank" class="author">darwin Bell </a>. <a href="https://www.flickr.com/photos/darwinbell/309913845" target="_blank" class="title"><em>Number 910</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY">CC BY</a><span class="sep">)</span></span></div>
+</div>
+<p><br>El objeto Number se usa muy raramente, ya que para la mayor parte de los casos, <span lang="en">JavaScript</span> satisface las necesidades del día a día con los valores numéricos que almacenamos en variables. Pero el objeto Number contiene alguna información y capacidades muy interesantes para programadores más serios.</p>
+<p>Lo primero, es que el objeto Number contiene propiedades que nos indican el rango de números soportados en el lenguaje. El número más alto es 1.79E + 308; el número más bajo es 2.22E-308. Cualquier número mayor que el número más alto, será considerado como infinito positivo, y si es más pequeño que el número más bajo, será considerado infinito negativo.</p>
+<p>Los números y sus valores están definidos internamente en <span lang="en">JavaScript</span>, como valores de doble precisión y de 64 <span lang="en">bits</span>.</p>
+<p>El objeto Number, es un objeto envoltorio para valores numéricos primitivos.</p>
+<p>Los objetos Number son creados con new Number().</p>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y sus descripciones que se pueden utilizar con el objeto Number."><caption>Propiedades del objeto Number</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>Devuelve la función que creó el objeto Number.</td>
+</tr>
+<tr>
+<td>MAX_VALUE</td>
+<td>Devuelve el número más alto disponible en <span lang="en">JavaScript</span>.</td>
+</tr>
+<tr>
+<td>MIN_VALUE</td>
+<td>Devuelve el número más pequeño disponible en <span lang="en">JavaScript</span>.</td>
+</tr>
+<tr>
+<td>NEGATIVE_INFINITY</td>
+<td>Representa a infinito negativo (se devuelve en caso de <span lang="en">overflow</span>).</td>
+</tr>
+<tr>
+<td>POSITIVE_INFINITY</td>
+<td>Representa a infinito positivo (se devuelve en caso de <span lang="en">overflow</span>).</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>Permite añadir nuestras propias propiedades y métodos a un objeto.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todos los métodos y sus descripciones que se pueden utilizar con el objeto Number."><caption>Métodos del objeto Number</caption>
+<thead>
+<tr><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>toExponential(x)</td>
+<td>Convierte un número a su notación exponencial.</td>
+</tr>
+<tr>
+<td>toFixed(x)</td>
+<td>Formatea un número con x digitos decimales después del punto decimal.</td>
+</tr>
+<tr>
+<td>toPrecision(x)</td>
+<td>Formatea un número a la longitud x.</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>
+<p>Convierte un objeto Number en una cadena.</p>
+<ul class="lista_verificacion">
+<li>Si se pone 2 como parámetro se mostrará el número en <a class="glosario" href="./recopila_files/saved_resource">binario<span><em>Binario.</em>Es un sistema de numeración en el que los números se representan utilizando solamente las cifras cero y uno (0 y 1). </span></a>.</li>
+<li>Si se pone 8 como parámetro se mostrará el número en <a class="glosario" href="./recopila_files/saved_resource">octal<span><em>Octal. </em>Es el sistema numérico en base 8 y utiliza los dígitos 0 a 7.</span></a>.</li>
+<li>Si se pone 16 como parámetro se mostrará el número en <a class="glosario" href="./recopila_files/saved_resource">hexadecimal<span><em>Hexadecimal.</em>Es el sistema de numeración posicional que tiene como base el 16. Incluye los dígitos del 0 al 9 y del A al F.</span></a>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>Devuelve el valor primitivo de un objeto Number.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Algunos ejemplos de uso:</strong></p>
+<div class="elemento_centrado" style="width: 32.4em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var num = new Number(13.3714);
+document.write(num.toPrecision(3)+"&lt;br&gt;"); 
+document.write(num.toFixed(1)+"&lt;br&gt;"); 
+document.write(num.toString(2)+"&lt;br&gt;");
+document.write(num.toString(8)+"&lt;br&gt;");
+document.write(num.toString(16)+"&lt;br&gt;"); 
+document.write(Number.MIN_VALUE); 
+document.write(Number.MAX_VALUE);</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id47">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta47_128" class="block iDevice_content">
+<p style="text-align: center;"><a href="http://www.estadisticaparatodos.es/taller/aleatorios/alea_num_js.html" title="Enlace a como generar números aleatórios. " target="_blank" class="html">Generar números aleatorios. </a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.4.- Objeto Boolean.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id38">
+<div class="iDevice emphasis0">
+<div id="ta38_73" class="block iDevice_content">
+<p>El objeto Boolean se utiliza para convertir un valor no Booleano, a un valor Booleano (<span lang="en">true</span> o <span lang="en">false</span>).</p>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 200px;"><img src="./recopila_files/DWEC03_CONT_R17_Boolean.png" alt="Gráfico de reducción de 3-CNF. " title="Booleanos" style="vertical-align: middle;" width="200" height="174">
+<div class="figcaption"><a href="https://en.wikipedia.org/wiki/User:Thore_Husfeldt" target="_blank" class="author">Thore Husfeldt</a>. <a href="https://commons.wikimedia.org/wiki/File:Sat_reduced_to_Clique_from_Sipser.svg" target="_blank" class="title"><em>3-CNF</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-SA">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p></p>
+<div style="width: 100%;">
+<div style="width: 50%; float: left;">
+<div class="elemento_centrado">
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y sus descripciones que se pueden utilizar con el objeto Boolean."><caption>Propiedades del objeto Boolean</caption>
+<thead>
+<tr><th scope="col"></th><th scope="col"></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>Devuelve la función que creó el objeto Boolean.</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>Te permitirá añadir propiedades y métodos a un objeto.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="width: 50%; float: right;">
+<div class="elemento_centrado">
+<table class="tabla" summary="Esta tabla muestra todos los métodos y sus descripciones, que se pueden utilizar con el objeto Boolean."><caption>Métodos del objeto Boolean</caption>
+<thead>
+<tr><th scope="col"></th><th scope="col"></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>toString()</td>
+<td>Convierte un valor Boolean a una cadena y devuelve el resultado.</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>Devuelve el valor primitivo de un objeto Boolean.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+<p></p>
+<p><strong>Algunos ejemplos de uso:</strong></p>
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers elemento_centrado" style="width: 24.15em;">
+<div>
+<pre>var bool = new Boolean(1);
+document.write(bool.toString()); 
+document.write(bool.valueOf());</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id39">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta39_47" class="block iDevice_content">
+<p class="enlace_centrado"><a class="html" title="Acceder a la página de desarrollo web, con información y ejemplos del objeto Boolean." href="http://www.desarrolloweb.com/articulos/777.php">Más información y ejemplos sobre el objeto Boolean.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id40">
+<div class="iDevice emphasis_autoevaluacionfpd">
+<div class="iDevice_header" style="background-image:url(https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div class="question">
+<form name="multi-choice-form-40_60" action="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4860&amp;dopt=2#" onsubmit="return false" class="activity-form">
+<h3 class="js-sr-av">Pregunta</h3>
+<div id="taquestion40_60" class="block question iDevice_content">
+<strong>¿Para usar un objeto Math deberemos instanciarlo antes de poder usarlo?</strong>
+
+</div>
+<div class="iDevice_answers">
+<h4 class="js-sr-av">Respuestas</h4>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i40_63" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-40_63">Opción 1</a></label><input type="radio" name="option40_60" id="i40_63" onclick="$exe.getFeedback(0,2,&#39;40_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-40_63"><a name="answer-40_63" href="./recopila_files/saved_resource"></a>
+<div id="taans40_63" class="block iDevice_content">
+Sí.
+
+</div>
+</div>
+</div>
+<div class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i40_93" class="sr-av"><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-40_93">Opción 2</a></label><input type="radio" name="option40_60" id="i40_93" onclick="$exe.getFeedback(1,2,&#39;40_60&#39;,&#39;multi&#39;)">
+</p>
+<div class="iDevice_answer-content" id="answer-40_93"><a name="answer-40_93" href="./recopila_files/saved_resource"></a>
+<div id="taans40_93" class="block iDevice_content">
+No.
+
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_feedbacks js-feedback" role="status">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<div id="sa0b40_60" class="feedback js-hidden"><a name="sa0b40_60" href="./recopila_files/saved_resource"></a>
+<div id="taf40_63" class=" iDevice_content">
+No es correcto porque este objeto no dispone de constructor, con lo que para usarlo lo llamaremos directamente seguido de su propiedad o método.
+
+</div>
+</div>
+<div id="sa1b40_60" class="feedback js-hidden"><a name="sa1b40_60" href="./recopila_files/saved_resource"></a>
+<div id="taf40_93" class=" iDevice_content">
+Es correcto porque este objeto no dispone de constructor con lo que no podremos crear instancias del mismo.
+
+</div>
+</div>
+</div>
+</form>
+<div class="iDevice_solution feedback js-hidden">
+<h4>Solución</h4>
+<ol>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-40_63">Incorrecto</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa0b40_60">Retroalimentación</a>)</span></li>
+<li><a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#answer-40_93">Opción correcta</a><span> (<a href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64410/mod_scorm/content/0/#sa1b40_60">Retroalimentación</a>)</span></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.5.- Objeto Date.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_73" class="block iDevice_content">
+<div class="exe-figure exe-image position-center license-CC-BY-NC" style="width: 240px;"><img src="./recopila_files/DWEC03_CONT_R19_DateTime.jpg" alt="Reloj que muestra las horas en forma de espiral." title="Fecha y Hora." style="vertical-align: middle;" width="240" height="180">
+<div class="figcaption"><a href="https://www.flickr.com/photos/fotero/" target="_blank" class="author">Fotero</a>. <a href="https://www.flickr.com/photos/fotero/3115636718/" target="_blank" class="title"><em>Cada 24 Horas.</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-NC">CC BY-NC</a><span class="sep">)</span></span></div>
+</div>
+<p>El objeto Date se utiliza para trabajar con fechas y horas. Los objetos Date se crean con new Date().</p>
+<p>Hay 4 formas de instanciar (crear un objeto de tipo Date):</p>
+<div class="elemento_centrado" style="width: 45.6em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var d = new Date();
+var d = new Date(milisegundos);
+var d = new Date(cadena de Fecha);
+var d = new Date(año, mes, día, horas, minutos, segundos, milisegundos);
+     // (el mes comienza en 0, Enero sería 0, Febrero 1, etc.)</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades y sus descripciones, que pueden ser utilizadas con el objeto Date."><caption>Propiedades del objeto Date</caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>Devuelve la función que creó el objeto Date.</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>Te permitirá añadir propiedades y métodos a un objeto.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todos los métodos y sus descripciones, que pueden ser utilizados con el objeto Date."><caption>Métodos del objeto Date</caption>
+<thead>
+<tr><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>getDate()</td>
+<td>Devuelve el día del mes (de 1-31).</td>
+</tr>
+<tr>
+<td>getDay()</td>
+<td>Devuelve el día de la semana (de 0-6).</td>
+</tr>
+<tr>
+<td>getFullYear()</td>
+<td>Devuelve el año (4 dígitos).</td>
+</tr>
+<tr>
+<td>getHours()</td>
+<td>Devuelve la hora (de 0-23).</td>
+</tr>
+<tr>
+<td>getMilliseconds()</td>
+<td>Devuelve los milisegundos (de 0-999).</td>
+</tr>
+<tr>
+<td>getMinutes()</td>
+<td>Devuelve los minutos (de 0-59).</td>
+</tr>
+<tr>
+<td>getMonth()</td>
+<td>Devuelve el mes (de 0-11).</td>
+</tr>
+<tr>
+<td>getSeconds()</td>
+<td>Devuelve los segundos (de 0-59).</td>
+</tr>
+<tr>
+<td>getTime()</td>
+<td>Devuelve los milisegundos desde media noche del 1 de Enero de 1970.</td>
+</tr>
+<tr>
+<td>getTimezoneOffset()</td>
+<td>Devuelve la diferencia de tiempo entre <acronym title="Greenwich Meridian Time. Hora del Meridiano Greenwich." lang="en">GMT</acronym> y la hora local, en minutos.</td>
+</tr>
+<tr>
+<td>getUTCDate()</td>
+<td>Devuelve el día del mes en base a la hora <acronym title="Universal Time Coordinated. Tiempo Universal Coordinado." lang="en">UTC</acronym> (de 1-31).</td>
+</tr>
+<tr>
+<td>getUTCDay()</td>
+<td>Devuelve el día de la semana en base a la hora <span lang="en">UTC</span> (de 0-6).</td>
+</tr>
+<tr>
+<td>getUTCFullYear()</td>
+<td>Devuelve el año en base a la hora <span lang="en">UTC</span> (4 dígitos).</td>
+</tr>
+<tr>
+<td>setDate()</td>
+<td>Ajusta el día del mes del objeto (de 1-31).</td>
+</tr>
+<tr>
+<td>setFullYear()</td>
+<td>Ajusta el año del objeto (4 dígitos).</td>
+</tr>
+<tr>
+<td>setHours()</td>
+<td>Ajusta la hora del objeto (de 0-23).</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Algunos ejemplos de uso:</strong></p>
+<div class="elemento_centrado" style="width: 28.9em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var d = new Date();
+document.write(d.getFullYear()); 
+document.write(d.getMonth()); 
+document.write(d.getDate()); 
+var d2 = new Date(2011,5,28,22,58,0,0);
+d2.setMonth(0); 
+d2.setFullYear(2020);
+// Ahora vamos a ver la fecha en formato español. 
+document.write(d2.toLocaleDateString("es-ES")+"&lt;br&gt;");</pre>
+</div>
+</div>
+<pre><br><br></pre>
+<pre></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id46">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta46_128" class="block iDevice_content">
+<p>Algunas veces hay que poner la fecha en formato localizado. Por ejemplo&nbsp; que ponga Lunes en vez de Monday.</p>
+<p style="text-align: center;"><a href="https://msdn.microsoft.com/es-es/library/ff743760(v=vs.94).aspx" title="Localizar fechas." target="_blank" class="html">Fecha en formato localizado.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">4.- Enlaces de refuerzo y ampliación</h1></div></div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id44">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta44_43" class="block iDevice_content">
+<ul class="lista_verificacion">
+<li>
+<p><a href="https://www.w3schools.com/js/js_htmldom_document.asp" title="Enlace al DOM" class="html">DOM (The Document Object Model)&nbsp;</a></p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/js/js_window.asp" title="Enlace al BOM." class="html">BOM (The Browser Object Model)&lt;br&gt;</a></p>
+</li>
+</ul>
+<ul class="lista_verificacion">
+<li>
+<p><a href="http://www.w3schools.com/jsref/obj_window.asp" title="Enlace al objeto window." class="html">El objeto window</a></p>
+</li>
+<li>
+<p><a href="http://www.w3schools.com/jsref/obj_navigator.asp" title="mlEnlace a navigato" class="html">El objeto navigator<br></a></p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/jsref/dom_obj_document.asp" title="Enlace a objeto document. " class="html">El objeto document</a></p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/tags/tag_iframe.asp" title="Enlace a iFrame. " class="html">Análisis del elemento iframe&nbsp;</a></p>
+</li>
+<li>
+<p>iframe: elementos&nbsp;<span class="destacado_inline resaltado_inline">no soportados en HTML5</span></p>
+<ul>
+<li>
+<p><a class="html" title="Frameset en w3Schools" href="http://www.w3schools.com/tags/tag_frameset.asp"><span style="font-size: 1em;">&nbsp;<span>frameset</span></span></a></p>
+</li>
+<li>
+<p><span style="font-size: 1em;"><a class="html" title="Frame en W3Schools" href="http://www.w3schools.com/tags/tag_frame.asp" target="_blank">&nbsp;<span>frame</span></a></span></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span style="font-size: 1em;"><a href="http://www.w3schools.com/jsref/obj_history.asp" title="El objeto history" class="html">El objeto history.</a><br></span></p>
+</li>
+<li>
+<p><span style="font-size: 1em;"><a href="http://www.w3schools.com/jsref/jsref_obj_string.asp" title="Enlace a String" class="html">El objeto String.</a>&nbsp;</span></p>
+</li>
+<li>
+<p><span style="font-size: 1em;"><a href="http://www.w3schools.com/jsref/jsref_obj_math.asp" title="El objeto Math" class="html">El objeto Math</a>.&nbsp;</span></p>
+</li>
+<li>
+<p><span style="font-size: 1em;"><a href="http://www.w3schools.com/jsref/jsref_obj_number.asp" title="Enlace a Number." class="html">El objeto Number.&nbsp;</a></span></p>
+</li>
+<li>
+<p><span style="font-size: 1em;"><a href="http://www.w3schools.com/jsref/jsref_obj_boolean.asp" title="Enlace a Boolean" class="html">El objeto Boolean.</a>&nbsp;</span></p>
+</li>
+<li>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_date.asp" title="Enlace a Date." class="html"><span style="font-size: 1em;">El objeto Date.&nbsp;</span></a></p>
+</li>
+<li>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_date.asp" title="Enlace a Date." class="html"><span style="font-size: 1em;">Documentación sobre el par JavaScript-HTML_DOM&nbsp;</span></a></p>
+</li>
+<li>
+<p><a href="https://geekytheory.com/temporizadores-en-javascript" title="Enlace a temporizadores." class="html"><span style="font-size: 1em;">Para poder realizar temporizadores, para repetir una serie de acciones.</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">Anexo.- Licencia recursos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id42">
+<div class="iDevice emphasis0">
+<div id="ta42_73" class="block iDevice_content">
+<table class="tabla" summary="Datos de licencia de todos los recursos utilizados en la unidad"><caption>Licencias de recursos utilizados en la Unidad de Trabajo.</caption>
+<tbody>
+<tr><th scope="col">Recurso (1)</th><th scope="col">Datos del recurso (1)</th><th scope="col">Recurso (2)</th><th scope="col">Datos del recurso (2)</th></tr>
+<tr>
+<td class="texto_centrado"><img alt="Dibujo con una mesa redonda de reunión y gente hablando." src="./recopila_files/BWO_032_anexo.png" style="width: 78px; height: 80px;" title="Reunión de Negocios." width="78" height="80"></td>
+<td>
+<p>Autoría: Stockbyte.</p>
+<p>Licencia: Uso educativo no comercial para plataformas públicas de Formación Profesional a distancia.</p>
+<p>Procedencia: CD-DVD Num. IE008.</p>
+</td>
+<td class="texto_centrado"><img alt="Fotografía de una ventana de una cocina abierta." src="./recopila_files/DWEC03_CONT_R02_Ventanas_anexo.jpg" style="width: 91px; height: 80px;" title="Ventanas." width="91" height="80"></td>
+<td>
+<p>Autoría: Dominic's pics.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/dominicspics/819434669/sizes/o/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Fotografía de una ventana abierta." src="./recopila_files/DWEC03_CONT_R03_Ventana_abierta_anexo.jpg" style="width: 120px; height: 79px;" title="Ventana Abierta." width="120" height="79"></td>
+<td>
+<p>Autoría: quinn.anya.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/quinnanya/4399115213/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Fotografía de una pantalla dónde se puede leer la URL www.website.com." src="./recopila_files/DWEC03_CONT_R04_URL_anexo.JPG" style="width: 120px; height: 67px;" title="URL web." width="120" height="67"></td>
+<td>
+<p>Autoría: chrisdlugosz.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/chrisdlugosz/3402955869/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Fotografía de un crucero con el nombre Navigator of the Seas." src="./recopila_files/DWEC03_CONT_R05_Navigator_anexo.JPG" style="width: 120px; height: 79px;" title="Navigator." width="120" height="79"></td>
+<td>
+<p>Autoría: Caitlinator.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/caitlinator/4229768048/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Fotografía en la que se muestra una carpeta de color amarillo que pone My Document." src="./recopila_files/DWEC03_CONT_R07_Document_anexo.jpg" style="width: 108px; height: 80px;" title="Objeto Document." width="108" height="80"></td>
+<td>
+<p>Autoría: infilmity.</p>
+<p>Licencia: CC BY-NC-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/maxlinkc/2870863900/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Se aprecia una pared llena de marcos de fotografías." src="./recopila_files/DWEC03_CONT_R08_Marcos_anexo.JPG" style="width: 108px; height: 80px;" title="Marcos." width="108" height="80"></td>
+<td>
+<p>Autoría: ricardodiaz11.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/ricardodiaz/3208220314/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Ventana abierta que permite la comunicación al exterior." src="./recopila_files/DWEC03_CONT_R10_Comunicacion_anexo.jpg" style="width: 92px; height: 80px;" title="Comunicación ventanas." width="92" height="80"></td>
+<td>
+<p>Autoría: toxickore.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/toxickore/3942435721/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Edificio caracterizado por tener ventanas en todos lados." src="./recopila_files/DWEC03_CONT_R11_Multiples_Ventanas_anexo.JPG" style="width: 108px; height: 80px;" title="Múltiples ventanas." width="108" height="80"></td>
+<td>
+<p>Autoría: zoetnet.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/zoetnet/5063686922/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img src="./recopila_files/DWEC03_CONT_R12_Numeros_anexo.JPG" alt="Numeros." title="Anexo de Numbers" width="100" height="100"></td>
+<td>
+<p>Autoría: Stephen Coles.</p>
+<p>Licencia: CC BY-NC-SA 2.0.</p>
+<p>Procedencia:https://www.flickr.com/photos/pdjsphotos/5577447583/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Fotografía de unas cadenas de hierro oxidadas." src="./recopila_files/DWEC03_CONT_R13_Cadenas_anexo.jpg" style="width: 120px; height: 79px;" title="Cadenas." width="120" height="79"></td>
+<td>
+<p>Autoría: faccig.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/faccig/3579566706/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Fotografía de una cuerda enrollada a un tubo de hierro." src="./recopila_files/DWEC03_CONT_R14_String_anexo.jpg" style="width: 120px; height: 79px;" title="Cuerda (string) o cadena." width="120" height="79"></td>
+<td>
+<p>Autoría: <span style="display: inline-block; font-size: 14px; padding-left: 2px;"><span style="display: inline; font-size: 12px;">CC BY-ND 2.0</span></span></p>
+<p>Licencia:<span style="display: inline-block; font-size: 14px; padding-left: 2px;"><span style="display: inline; font-size: 12px;">CC BY-ND 2.0</span></span>.</p>
+<p>Procedencia: https://www.flickr.com/photos/josemanuelerre/9598180749/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Calculadora científica mostrando el número PI 3.1415926." src="./recopila_files/DWEC03_CONT_R15_NumeroPI_anexo.JPG" style="width: 108px; height: 80px;" title="Numero PI." width="108" height="80"></td>
+<td>
+<p>Autoría: conskeptical.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/conskeptical/361555297/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Foto en la que se muestran los números 910." src="./recopila_files/DWEC03_CONT_R16_Number_anexo.jpg" style="width: 114px; height: 80px;" title="Números." width="114" height="80"></td>
+<td>
+<p>Autoría: Darwin Bell.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/darwinbell/309913845/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img src="./recopila_files/DWEC03_CONT_R17_Boolean_anexo.png" alt="Una operación lógica." title="Booleanos. Anexo. " width="67" height="58"></td>
+<td>
+<p>Autoría: Thore Husfeldt.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: https://commons.wikimedia.org/wiki/File:Sat_reduced_to_Clique_from_Sipser.svg</p>
+</td>
+<td class="texto_centrado"><img src="./recopila_files/DWEC03_CONT_R19_DateTime_anexo.jpg" alt="Reloj en espiral. " title="Reloj. " width="67" height="50"></td>
+<td>
+<p>Autoría: Fotero.</p>
+<p>Licencia: CC BY-NC 2.0.</p>
+<p>Procedencia: https://www.flickr.com/photos/fotero/3115636718/</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+			<div id="outer">
+			<div id="main">
+			<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">Condiciones y términos de uso de los materiales</h1></div></div>
+			<div class="iDevice_wrapper DestacadofpdIdevice" id="id60">
+			<div class="iDevice emphasis0">
+			<div class="iDevice_destacadofpd">
+			<div id="ta60_66" class="block iDevice_content">
+			<div title="Información acerca de la licencia de los materiales">
+			<p align="center" style="margin: 2px 2px;"><strong>Materiales desarrollados inicialmente por el Ministerio de Educación, Cultura y Deporte y actualizados por el profesorado de la Junta de Andalucía bajo licencia Creative Commons <acronym title="Reconocimiento-NoComercial-CompartirIgual">BY-NC-SA.</acronym></strong></p>
+						      <p align="center" style="font-size: 0.8em; margin: 2px 2px;"><strong><img src="./recopila_files/img_para_licencias.png" height="94" alt="Logotipos del Ministerio de Educación, Cultura y Deporte, Junta de Andalucía y licencia Creative Commons"></strong></p>
+                              <p align="center" style="font-size: 0.8em; margin: 2px 2px;"><span>Antes de cualquier uso leer detenidamente el siguente</span> <a href="https://www.juntadeandalucia.es/educacion/gestionafp/documentacion/aviso_legal/aviso_legal_mjda/index.html" target="_blank" title="Enlace externo, se accede al aviso legal de los materiales">Aviso legal</a></p>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="iDevice_wrapper FreeTextIdevice" id="id61">
+			<div class="iDevice emphasis0">
+			<div id="ta61_85" class="block iDevice_content">
+			<h3>Historial de actualizaciones</h3>
+			<table border="0" class="tabla" style="width: 100%;"><tbody><tr><th scope="col">Versión: 01.01.12</th><th scope="col" colspan="2">Fecha de actualización: 01/10/20</th></tr><tr>
+                            <td colspan="3">Actualización de materiales y correcciones menores.</td></tr></tbody></table><table border="0" class="tabla" style="width: 100%;"><tbody><tr><th scope="col">Versión: 01.01.01</th><th scope="col">Fecha de actualización: 13/11/14</th><th scope="col">Autoría: Arturo José Puentes Castellanos</th></tr><tr>
+                            <td colspan="3">Añadidos acrónimos. Añadidos un par de propiedades útiles más en navigator. Añadidos el cambio de linea y el tabulador, además del retorno de carro.<br>
+Corregidas las definiciones. <br>
+Añadido código ejemplo de iframe.<br>
+Añadido estilo dialogado.<br>
+Reformulación de los casos prácticos.<br>
+Añadido un ejemplo de iframe. </td></tr></tbody></table><table border="0" class="tabla" style="width: 100%;"><tbody><tr><th scope="col">Versión: 01.00.00</th><th scope="col" colspan="2">Fecha de actualización: 12/11/13</th></tr><tr>
+                            <td colspan="3">Versión inicial de los materiales.</td></tr></tbody></table>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<script type="text/javascript" src="./recopila_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div>
+
+</body></html>

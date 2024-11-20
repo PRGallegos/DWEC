@@ -1,0 +1,32 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 20px;
+    background-color: #e9ecef;
+    color: #343a40;
+}
+
+h1 {
+    color: #ffc107;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffc107;
+    color: #343a40;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0a800;
+}

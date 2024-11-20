@@ -1,0 +1,33 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 20px;
+    background-color: #fcf7f8;
+    color: #555;
+}
+
+h1 {
+    color: #6c757d;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a6268;
+}
