@@ -40,7 +40,6 @@ class Libro extends Media {
     }
 }
 
-// Clase Pelicula que extiende Media
 class Pelicula extends Media {
     constructor(titulo, director, duracion) {
         super(titulo);
