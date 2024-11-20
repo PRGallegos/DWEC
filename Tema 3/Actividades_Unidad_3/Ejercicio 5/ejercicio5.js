@@ -1,3 +1,4 @@
+// Clase Media
 class Media {
     constructor(titulo, prestado = false, valoraciones = []) {
         this._titulo = titulo;
@@ -30,7 +31,7 @@ class Media {
         return (total / this._valoraciones.length) || 0;
     }
 }
-
+// Clase Libro que extiende Media
 class Libro extends Media {
     constructor(titulo, autor, paginas) {
         super(titulo);
@@ -39,6 +40,7 @@ class Libro extends Media {
     }
 }
 
+// Clase Pelicula que extiende Media
 class Pelicula extends Media {
     constructor(titulo, director, duracion) {
         super(titulo);
