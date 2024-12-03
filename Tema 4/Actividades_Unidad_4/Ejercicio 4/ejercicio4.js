@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Validar Email
         const email = document.getElementById("email");
         const emailError = document.getElementById("emailError");
+
         if (!email.value.includes("@")) {
             valid = false;
             emailError.textContent = "El email no es válido.";
