@@ -1,2 +1,5 @@
 # Archivos comprimidos
 *.zip
+
+# Exámenes
+/Examen_parte_III
