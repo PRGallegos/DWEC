@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad">
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais">
+
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto">
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="confirmPassword">Repetir contraseña:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+
+            <label for="math">Resuelve la operación:</label>
+            <div id="math"></div>
+            <input type="number" id="mathResult" name="mathResult">
+
+            <label>
+                <input type="checkbox" id="accept" name="accept"> Acepto las condiciones
+            </label>
+
+            <button type="submit" id="submitButton" disabled>Crear cuenta</button>
+            <button type="reset">Borrar datos</button>
+        </form>
+    </div>
+    <script src="ej6.js"></script>
+</body>
+
+</html>
