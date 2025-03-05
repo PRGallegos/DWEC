@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Define el contenido HTML de la tarjeta del producto.
             productCard.innerHTML = `
                 <img src="${product.thumbnail}" alt="${product.title}"> <!-- Muestra la imagen del producto -->
-                <sh2>${product.title}</h2> <!-- Muestra el título del producto -->
+                <h2>${product.title}</h2> <!-- Muestra el título del producto -->
                 <p>${product.description}</p> <!-- Muestra la descripción del producto -->
                 <p><strong>Price: $${product.price}</strong></p> <!-- Muestra el precio del producto -->
             `;
