@@ -1,0 +1,49 @@
+<!--
+    2. (5 puntos) Crea un textarea que en tiempo real se indique en un párrafo 
+    arriba el número de palabras según vas escribiendo. 
+    Abajo del textarea aparecerán dos botones "Añadir frase" y "Terminar".
+
+    Al pulsar un botón "Añadir frase":
+    - Se añadirá en la parte inferior la frase. 
+    - Cada frase añadida tendrá un color de letra diferente.
+    - Junto a la frase aparecerá el número de palabras. 
+
+    Al pulsar el botón "Terminar":
+    - Se añadirá en la parte inferior el número de total de frases, el número total de palabras y el número total de letras.
+    - Se deshabilitará el botón "Añadir frase".
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Palabras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Contador de Palabras en Tiempo Real</h1>
+    <p>Palabras: <span id="word-count">0</span></p>
+
+    <textarea id="text-input" placeholder="Escribe aquí..."></textarea>
+
+    <div class="buttons">
+        <button id="add-phrase">Añadir frase</button>
+        <button id="finish">Terminar</button>
+    </div>
+
+    <div id="phrases-container"></div>
+    <div id="summary"></div>
+
+    <!-- Descomentar para mostrar el GIF 
+    <div id="gif-container">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTVkcWE2NzJicjQ2bnNrc3lyZmg5dHJ1dTY2MXpneW5tMWJiazd3dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IPbS5R4fSUl5S/giphy.gif" alt="">
+    </div>
+    -->
+
+    <script src="ej2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1976 @@
+
+<!-- saved from url=(0112)https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4863&dopt=3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script src="./recopila2_files/exe_jquery.js.descarga" type="text/javascript"></script>
+<script src="./recopila2_files/saved_resource" type="text/javascript"></script>
+<script src="./recopila2_files/common.js.descarga" type="text/javascript"></script>
+<script src="./recopila2_files/SCORM_API_wrapper.js.descarga" type="text/javascript"></script>
+<script src="./recopila2_files/SCOFunctions.js.descarga" type="text/javascript"></script>
+<script src="./recopila2_files/exe_highlighter.js.descarga" type="text/javascript"></script>
+<link href="./recopila2_files/noimagesnovideos.css" type="text/css" rel="stylesheet">
+<link href="./recopila2_files/base.css" type="text/css" rel="stylesheet">
+<link href="./recopila2_files/content.css" type="text/css" rel="stylesheet">
+<link href="./recopila2_files/exe_highlighter.css" type="text/css" rel="stylesheet">
+</head>
+<body class=" js js js js js js js js js js js js js js js js js js js js js">
+<div id="outer">
+<div id="main" role="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">Modelo de objetos del documento en javascript.</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id1">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_66" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila2_files/CASO_PERSONAJES_08.jpg" alt="Compañero de los casos prácticos." title="Caso práctico." height="132" width="200"></div>
+<div class="elemento_centrado credenciales">© Elaboración Propia</div>
+</div>
+<p><strong>Antonio</strong> está haciendo muchos avances en su proyecto. Por ejemplo, ya ha realizado casi toda la validación de los formularios de las páginas web empleando <span lang="en">JavaScript</span>, y les ha añadido mensajes de errores de forma dinámica. Ahora se encuentra con un pequeño problema: necesita poder acceder a algunas partes de su documento y modificar contenidos, pero no sabe cómo hacerlo. Le interesaría hacer cosas, como borrar celdas en tablas, añadir o modificar atributos a elementos, modificar contenido textual de cualquier parte del documento, etc. y todo ello usando <span lang="en">JavaScript</span>.</p>
+<p><strong>Juan</strong> le informa que todo eso que solicita se puede hacer con <span lang="en">JavaScript</span>, pero tendrá que hacer uso del <acronym title="Document Object Model. Modelo de Objetos del Documento." lang="en">DOM</acronym> de una forma más intensiva. El <acronym title="Document Object Model. Modelo de Objetos del documento."><span lang="en">DOM</span></acronym> organiza todo el documento en una especie de árbol de elementos, de tal forma que, a través de <span lang="en">JavaScript</span>, podrá acceder a cada uno de esos nodos y modificar su contenido, añadir nuevos nodos, eliminarlos, recorrerlos, etc. Cualquier cambio que realice en el árbol de nodos, es reflejado de forma automática por el navegador web, con lo que las modificaciones son instantáneas de cara al cliente.</p>
+<p>Por último, <strong>Antonio</strong> pregunta si es posible detectar qué botones del ratón han sido pulsados, o si se está utilizando una combinación de teclas en el teclado, ya que, por ejemplo, una de las cosas que quiere hacer en sus formularios es que, cuando se esté dentro de un campo de texto y se pulse <strong>intro</strong> se pase automáticamente al siguiente campo, o que cuando se pulse una combinación de teclas determinada, se realice una tarea que tenga programada en <span lang="en">JavaScript</span>.</p>
+<p><strong>Juan</strong> le responde que para hacer eso tiene que profundizar un poco más en los eventos y, en especial, en el objeto Event, que le permite acceder a nuevas propiedades que le proporcionarán esa información específica que busca. <strong>Juan</strong> además puntualiza que, ahora que se mete de lleno en eventos más específicos, tendrá que tener en cuenta las diferencias entre navegadores, para que sus aplicaciones sean compatibles. Para conseguirlo le da unas indicaciones de cómo tiene que programar los eventos, y que diferencias va a encontrar entre los distintos navegadores.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.- Bases del Modelo de Objetos del Documento (DOM).</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_66" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila2_files/DWEC06_CONT_R01_w3c.jpg" alt="Letras W3C con relleno de múltiples W3C." title="Logotipo W3C." height="108" width="200"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="Max Froumentin " href="https://www.flickr.com/photos/maxf/" target="_blank">Max Froumentin </a> <a title="Logo W3C" href="https://www.flickr.com/photos/maxf/112944254/sizes/o/in/photostream/" target="_blank">Logo W3C</a></div>
+</div>
+<p>El estudio más a fondo del <span lang="en">DOM</span>, va a permitir a <strong>Antonio</strong> llegar a conocer con muchísimo detalle cómo se construye una página web, ya que el <span lang="en">DOM</span> es la base de toda la estructura de cualquier documento. El conocer a fondo el <span lang="en">DOM</span>, qué tipos de nodos contiene, como acceder a ellos para recorrerlos, modificarlos o borrarlos, y ver las diferentes aproximaciones según los navegadores, supondrá un salto cualitativo en su programación con <span lang="en">JavaScript</span>. De esta forma, prácticamente cualquier cosa que se proponga dejará de tener secretos, porque prácticamente todo lo que se vea en la página Web, va a estar accesible a través de <span lang="en">JavaScript</span> empleando las instrucciones de manejo del <span lang="en">DOM</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_73" class="block iDevice_content">
+<p>
+El <span lang="en">DOM</span> (Modelo de Objetos del Documento), es esencialmente una interfaz de programación de aplicaciones (<acronym lang="en" title="Application Programming Interface. Interfaz de Programación de Aplicaciones.">API</acronym>), que proporciona un conjunto estándar de objetos, para representar documentos <acronym lang="en" title="HyperText Markup Language. Lenguaje de Marcado de Hipertexto.">HTML</acronym> y <acronym lang="en" title="Extensible Markup Language. Lenguaje de Marcado Extensible.">XML</acronym>, un modelo estándar sobre cómo pueden combinarse dichos objetos, y una interfaz estándar para acceder a ellos y manipularlos. A través del <span lang="en">DOM</span> los programas pueden acceder y modificar el contenido, estructura y estilo de los documentos <span lang="en">HTML</span> y <span lang="en">XML</span>, que es para lo que se diseñó principalmente. El responsable del <span lang="en">DOM</span> es el <acronym lang="en" title="World Wide Web Consortium. Consorcio World Wide Web.">W3C</acronym>.
+</p>
+<p>
+<strong>El <span lang="en">DOM</span> está separado en 3 partes / niveles:</strong>
+</p>
+<ul class="lista_verificacion">
+	<li><span lang="en">DOM</span> Core – modelo estándar para cualquier documento estructurado.</li>
+	<li><span lang="en">DOM</span> XML – modelo estándar para documentos <span lang="en">XML</span>.</li>
+	<li><span lang="en">DOM</span> <span lang="en">HTML</span> – modelo estándar para documentos <span lang="en">HTML</span>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id4">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta4_70" class="block iDevice_content">
+EL <span lang="en">DOM HTML</span> es un estándar dónde se define cómo acceder, modificar, añadir o borrar elementos <span lang="en">HTML</span>.
+
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_73" class="block iDevice_content">
+<p>En el <acronym title="Document Object Model. Modelo de Objetos del documento."><span lang="en">DOM</span></acronym> se definen los <strong>objetos</strong> y <strong>propiedades</strong> de todos los elementos del documento, y los métodos para acceder a ellos.</p>
+<p>Es importante citar que en el <span lang="en">DOM</span> del <span lang="en">W3C</span>, no se especifican todas las características especiales de los modelos de objeto de exploración. Muchas de las funciones de <span lang="en">Internet Explorer</span> 4 (y posteriores) del modelo de objetos, no forman parte de la especificación <span lang="en">DOM</span> <span lang="en">W3C</span>.</p>
+<p>Debes tener en cuenta que, mientras que los navegadores basados en <span lang="en">Mozilla</span> están haciendo grandes esfuerzos para poner en práctica todos los niveles del <span lang="en">DOM</span> 1 y la mayoría de Nivel 2 del <span lang="en">W3C</span>, <span lang="en">Microsoft</span> (por la razón que os podéis imaginar) sólo realiza una aplicación parcial del <span lang="en">DOM</span> a sus navegadores, aunque con las versiones más modernas se están adaptando poco a poco al estándar. Otros navegadores modernos como <span lang="en">Chrome</span>, Safari, Opera, soportan de forma extensiva el <span lang="en">DOM</span> del <span lang="en">W3C</span>.</p>
+<p>Por suerte para nosotros, <span lang="en">Microsoft</span>&nbsp; está de capa caida añadió un nuevo navegador en <span lang="en">Windows</span> 10: Edge. Este navegador es más compatible, y sin ser perfecto ha dejado de ser compatible con Internet Explorer. De hecho en Windows 10 sigue disponiendo de la última versión de Internet Explorer. Parece que aunque Microsoft no entre tiene entre sus planes portar Edge a otros sistemas operativos ya ha liberado el código fuente de su motor de JavaScript Chakra y parece ser compatible con Linux.&nbsp; Aún así, al final uno de los grandes problemas de los desarrolladores web se mitigará.</p>
+<p>Al igual que otras muchas especificaciones del <span lang="en">W3C</span>, una versión no suele ser suficiente, por lo que la especificación del <span lang="en">DOM</span> sigue el mismo camino. El <span lang="en">DOM</span> está en continua evolución. Las fechas propuestas de las diferentes versiones aportadas por el <span lang="en">W3C</span>, raramente coinciden con las versiones de los navegadores. Por lo que suele ser muy común que muchas versiones de los navegadores incluyan solamente, algunos detalles de las versiones más recientes del <span lang="en">W3C</span>. La primera especificación <span lang="en">DOM</span> nivel 1, fue liberada después de <span lang="en">Netscape</span> 4 e <span lang="en">Internet Explorer</span> 4. La parte de HTML cubierta por la especificación de nivel 1 incluye el llamado <span lang="en">DOM</span> de nivel 0 (aunque no hay ningún estándar publicado con ese nombre). Esta especificación es esencialmente el modelo de objetos implementado en <span lang="en">Navigator</span> 3 (y en parte de <span lang="en">Internet Explorer</span> 3 incluyendo el objeto <span lang="en">image</span>). Quizás la parte omitida que podamos destacar de este modelo de nivel 1, ha sido una especificación del modelo de eventos.</p>
+<p>El <span lang="en">DOM</span> de nivel 2 trabaja sobre los desarrollos de nivel 1. Se han añadido nuevas secciones, estilos, formas de inspección de la jerarquía del documento, y se han publicado como módulos separados. Algunos módulos del nivel 3 del <span lang="en">DOM</span> han alcanzado el estado de "Recomendación". Aunque <span lang="en">Internet Explorer</span> sigue sin implementar una gran mayoría de opciones de los módulos, otros navegadores sí que implementan algunos de los módulos, incluso de los que están en estado de "Borrador".</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_47" class="block iDevice_content">
+<p class="enlace_centrado"><a title="Acceder a web con información sobre el calendario de especificaciones, del DOM en W3C." href="http://www.w3.org/DOM/Activity" class="html">Calendario de actividades del DOM en W3C.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.1.- Objetos del DOM HTML, propiedades y métodos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id7">
+<div class="iDevice emphasis0">
+<div id="ta7_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila2_files/DWEC06_CONT_R02_html.jpg" alt="Foto de un cuello de una persona con un tatuaje de las etiquetas head y body." title="Objeto body html" height="200" width="140"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by" title="CC by" href="http://creativecommons.org/licenses/by/3.0/deed.es" target="_blank"><span class="transparente">CC by</span></a> <a title="webmove" href="https://www.flickr.com/photos/daniello/" target="_blank">webmove</a></div>
+</div>
+<p>En otras unidades ya has trabajado con muchos de los objetos que te presentamos en esta lista. Aquí se muestra la referencia completa de objetos, que puedes encontrar en el Modelo de Objetos del Documento para <acronym title="HyperText Markup Language. Lenguaje de marcas de hipertexto.">HTML</acronym>. Y, al final de la lista, hay un hiperenlace que debes visitar para ampliar información sobre las propiedades y métodos de aquellos objetos que no hayas utilizado hasta este momento.</p>
+<p>Te recuerdo aquí la sintaxis para acceder a las propiedades o métodos de aquellos objetos que estén dentro de nuestro documento:</p>
+<p>document.getElementById(objetoID).propiedad | metodo( [parametros] )</p>
+<p>NOTA: Los datos entre corchetes son opcionales.</p>
+<p><strong>Listado de objetos del <abbr title="Browser Object Model. Modelo de Objeto del Navegador.">DOM</abbr> en <acronym title="HyperText Markup Language.">HTML</acronym>:</strong></p>
+<ul class="lista_verificacion">
+<li>Document</li>
+<li>HTMLElement</li>
+<li>Anchor</li>
+<li>Area</li>
+<li>Base</li>
+<li>Body</li>
+<li>Button</li>
+<li>Event</li>
+<li>Form</li>
+<li>Frame/IFrame</li>
+<li>Frameset</li>
+<li>Image</li>
+<li>Input Button</li>
+<li>Input Checkbox</li>
+<li>Input File</li>
+<li>Input Hidden</li>
+<li>Input Password</li>
+<li>Input Radio</li>
+<li>Input Reset</li>
+<li>Input Submit</li>
+<li>Input Text</li>
+<li>Link</li>
+<li>Meta</li>
+<li>Object</li>
+<li>Option</li>
+<li>Select</li>
+<li>Style</li>
+<li>Table</li>
+<li>TableCell</li>
+<li>TableRow</li>
+<li>Textarea</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id8">
+<div class="iDevice emphasis_debesconocerfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Debes conocer</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_48" class="block iDevice_content">
+<p class="enlace_centrado"><a href="http://www.librosweb.es/ajax/capitulo4.html" title="Acceder a una web donde se amplía información sobre el DOM." class="html">Introducción al DOM.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id9">
+<div class="iDevice emphasis_citasparapensarfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Citas para pensar</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_49" class="block iDevice_content">
+<blockquote>
+	<p>
+	"Por muy alto que sea un árbol, sus hojas siempre caen hacia la raíz."
+	</p>
+	<p>
+		<cite class="elemento_derecha"><strong>Anónimo</strong></cite>
+	</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.2.- El árbol del DOM y tipos de nodos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id10">
+<div class="iDevice emphasis0">
+<div id="ta10_73" class="block iDevice_content">
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="./recopila2_files/DWEC06_CONT_R03_nodos.jpg" alt="Estructura metálica dónde se destacan los nodos de unión de las piezas." title="Estructura del nodo." height="200" width="132"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a>&nbsp;<a title="José Sáez " href="https://www.flickr.com/photos/jssz/" target="_blank">José Sáez </a></div>
+</div>
+<p>&nbsp;</p>
+<p>La tarea más habitual en programación <span lang="en">web</span> suele ser la manipulación de páginas <span lang="en">web</span>, para acceder a su contenido, crear nuevos elementos, hacer animaciones, modificar valores, <abbr title="Etcétera.">etc</abbr>.</p>
+<p>Todas estas tareas se pueden realizar de una forma más sencilla gracias al <acronym title="Document Object Model. Modelo de Objetos del documento.">DOM</acronym>. Los navegadores <span lang="en">web</span> son los encargados de realizar la transformación de nuestro documento, en una estructura jerárquica de objetos, para que podamos acceder con métodos más estructurados a su contenido.</p>
+<p>El <span lang="en">DOM</span> transforma todos los documentos <acronym title="eXtensible HyperText Markup Language. Lenguaje de Marcado de Hipertexto Extensible." lang="en">X<span lang="en">HTML</span></acronym> en un conjunto de elementos, a los que llama <strong>nodos</strong>. En el <acronym title="HyperText Markup Language. Lenguaje de marcas de hipertexto."><span lang="en">HTML</span></acronym> <acronym title="Document Object Model. Modelo de Objetos del documento."><span lang="en">DOM</span></acronym> <strong>cada nodo es un objeto</strong>. Estos nodos están conectados entre sí y representan los contenidos de la página <span lang="en">web</span>, y la relación que hay entre ellos. Cuando unimos todos estos nodos de forma jerárquica, obtenemos una estructura similar a un árbol, por lo que muchas veces se suele referenciar como árbol <span lang="en">DOM</span>, "<strong>árbol de nodos</strong>", etc.</p>
+<p>&nbsp;</p>
+<p>Veamos el siguiente ejemplo de código:</p>
+<div class="elemento_centrado" style="width: 76.4em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>
+
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+&lt;title&gt;Ejemplo de DOM&lt;/title&gt;
+
+
+&lt;p title="Texto de un párrafo"&gt;Esto es un ejemplo de &lt;b&gt;texto HTML&lt;br&gt;que puedes tener&lt;/b&gt; en tu documento.&lt;/p&gt;
+
+</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+<p>Ese código se transformaría en el siguiente árbol de nodos:</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Ampliar imagen." href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64437/mod_scorm/content/0/DWEC06_CONT_R04_arbol.png"><img alt="Árbol de nodos de un documento xhtml. Se muestra la raíz del árbol que contiene document XHTML y de la que cuelgan dos elementos head y body. Debajo del elemento head cuelgan los elementos meta y title y debajo de title cuelga el texto “Ejemplo de DOM”. Debajo del elemento body cuelga  un elemento p que a su vez contiene atributos, texto, otro elemento b y más texto. Debajo del elemento b cuelgan un “texto HTML”, un elemento br y otro texto." class="imagen_ampliable" src="./recopila2_files/DWEC06_CONT_R04_arbol_miniatura.png" style="width: 200px; height: 148px;" title="Árbol de Nodos." height="148" width="200"></a></div>
+</div>
+<p>Cada rectángulo del gráfico representa un nodo del DOM, y las líneas indican cómo se relacionan los nodos entre sí. La raíz del árbol de nodos es un nodo especial, denominado "document". A partir de ese nodo, cada etiqueta <acronym title="eXtensible HyperText Markup Language."><span lang="en">XHTML</span></acronym> se transformará en nodos de tipo "<strong>elemento</strong>" o "<strong>texto</strong>". Los nodos de tipo "texto", contendrán el texto encerrado para esa etiqueta <acronym title="eXtensible HyperText Markup Language.">XHTML</acronym>. Esta conversión se realiza de forma jerárquica. El nodo inmediatamente superior será el <strong>nodo padre</strong> y todos los nodos que están por debajo serán <strong>nodos hijos</strong>.</p>
+<p><strong>Tipos de nodos.</strong></p>
+<p>La especificación del <span lang="en">DOM</span> define 12 tipos de nodos, aunque generalmente nosotros emplearemos solamente cuatro o cinco tipos de nodos:</p>
+<ul class="lista_verificacion">
+<li>Document, es el nodo raíz y del que derivan todos los demás nodos del árbol.</li>
+<li>Element, representa cada una de las etiquetas <span lang="en">XHTML</span>. Es el único nodo que puede contener atributos y el único del que pueden derivar otros nodos.</li>
+<li>Attr, con este tipo de nodos representamos los atributos de las etiquetas <span lang="en">XHTML</span>, es decir, un nodo por cada atributo=valor.</li>
+<li>Text, es el nodo que contiene el texto encerrado por una etiqueta <span lang="en">XHTML</span>.</li>
+<li>Comment, representa los comentarios incluidos en la página <span lang="en">XHTML</span>.</li>
+</ul>
+<p>Los otros tipos de nodos pueden ser: CdataSection, <code>DocumentFragment</code>, DocumentType, <code>EntityReference</code>, Entity, <code>Notation</code> y ProcessingInstruction.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.3.- Acceso a los nodos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_73" class="block iDevice_content">
+<div class="elemento_derecha">&nbsp;</div>
+<div class="elemento_izquierda">
+<div class="elemento_centrado"><img src="./recopila2_files/DWEC06_CONT_R05_lenguajes.jpg" alt="Gráfico con diferentes versiones de HTML y XHTML." title="XHTML, HTML y SGML." height="154" width="180"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-sa" title="CC by-sa" href="http://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank"><span class="transparente">CC by-sa</span></a>&nbsp;<a title=" Jason Priem " href="https://www.flickr.com/photos/26158205@N04/" target="_blank"> Jason Priem </a></div>
+</div>
+<p>Cuando ya se ha construido automáticamente el árbol de nodos del <acronym title="Document Object Model. Modelo de Objetos del documento."><span lang="en">DOM</span></acronym>, ya podemos comenzar a utilizar sus funciones para acceder a cualquier nodo del árbol. El acceder a un nodo del árbol, es lo equivalente a acceder a un trozo de la página de nuestro documento. Así que, una vez que hemos accedido a esa parte del documento, ya podemos modificar valores, crear y añadir nuevos elementos, moverlos de sitio, etc.</p>
+<p>Para acceder a un nodo específico (elemento <acronym title="HTML extensible."><span lang="en">XHTML</span></acronym>) lo podemos hacer empleando dos métodos: o bien a través de los nodos padre, o bien usando un método de acceso directo. A través de los nodos padre partiremos del nodo raíz e iremos accediendo a los nodos hijo, y así sucesivamente hasta llegar al elemento que deseemos. Y para el método de acceso directo, que por cierto es el método más utilizado, emplearemos funciones del <acronym title="Document Object Model. Modelo de Objetos del documento."><span lang="en">DOM</span></acronym>, que nos permiten ir directamente a un elemento sin tener que atravesar nodo a nodo.</p>
+<p>Algo muy importante que tenemos que destacar es, que para que podamos acceder a todos los nodos de un árbol, el árbol tiene que estar completamente construido, es decir, cuando la página <span lang="en">XHTML</span> haya sido cargada por completo, en ese momento es cuando podremos acceder a cualquier elemento de dicha página.</p>
+<p>Consideremos el siguiente ejemplo y veamos las formas de acceso:</p>
+<div class="elemento_centrado" style="width: 36.8em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;input type="text" id="apellidos" name="apellidos"&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<p><span style="font-family: &#39;DejaVu Sans Mono&#39;; font-size: 12px; font-weight: bold;">getElementsByName()</span></p>
+<p>Esta función obtiene una colección, que contiene todos los elementos de la página <span lang="en">XHTML</span> cuyo atributo name coincida con el indicado como parámetro.</p>
+<div class="elemento_centrado" style="width: 36.8em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var elementos = document.getElementsByName("apellidos");</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id12">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta12_70" class="block iDevice_content">
+<p>Una colección no es un <span lang="en">array</span>, aunque se le parezca mucho, ya que aunque puedas recorrerla y referenciar a sus elementos como un <span lang="en">array</span>, no se pueden usar métodos de <span lang="en">array</span>, como push o <code>pop</code>, en la colección.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id13">
+<div class="iDevice emphasis0">
+<div id="ta13_73" class="block iDevice_content">
+<p>Si sólo tenemos un elemento con name="apellidos" para acceder a él haremos: var elemento = document.getElementsByName("apellidos")[0];</p>
+<p>Por ejemplo, si tuviéramos 3 elementos con el atributo name="apellidos" para acceder al segundo elemento haríamos: var segundo = document.getElementsByName("apellidos")[1]; // recordarte que los arrays comienzan en la posición 0.</p>
+<p>Lo que nos permiten estas colecciones de elementos, es el poder recorrerlas fácilmente empleando un bucle, por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 46.15em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>for (var j=1; j&lt;document.getelementsbyname j var elemento='document.getElementsByName("apellidos")[j];'&gt;&lt;/document.getelementsbyname&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&lt;strong&gt;getElementsByTagName()&lt;/strong&gt;</p>
+<p>Esta función es muy similar a la anterior y también devuelve una colección de elementos cuya etiqueta <span lang="en">XHTML</span> coincida con la que se pasa como parámetro. Por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 48.35em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var elementos = document.getElementsByTagName("input");
+// Este array de elementos contendrá todos los elementos input del documento.
+&nbsp;
+var cuarto = document.getElementsByTagName("input")[3];</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>&lt;strong&gt;getElementById()&lt;/strong&gt;</p>
+<p>Esta función es la más utilizada, ya que nos permite acceder directamente al elemento por el <acronym title="Identificador.">ID</acronym>. Entre paréntesis escribiremos la cadena de texto con el ID. Es muy importante que el ID sea único para cada elemento de una misma página. La función nos devolverá únicamente el nodo buscado. Por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 34.05em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var elemento= document.getElementById("apellidos");</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>Si tenemos por ejemplo una tabla con id="datos" y queremos acceder a todas las celdas de esa tabla, tendríamos que combinar getElementById con getElementsByTagName. Por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 31.3em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var miTabla= document.getElementById("datos");
+var filas= miTabla.getElementsByTagName("td");</pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.4.- Acceso a los nodos de tipo atributo.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id14">
+<div class="iDevice emphasis0">
+<div id="ta14_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><img src="./recopila2_files/DWEC06_CONT_R06_atributos.jpg" alt="Los atributos varian en función de cada uno de sus valores." title="Atributos." width="180"></div>
+<div class="elemento_centrado credenciales"><a class="cc-by-nd" title="CC by-nd" href="http://creativecommons.org/licenses/by-nd/3.0/deed.es" target="_blank"><span class="transparente">CC by-nd</span></a>&nbsp;<a title="R. Halfpaap" href="https://www.flickr.com/photos/rayseinefotos/" target="_blank">R. Halfpaap</a>&nbsp;<a title="Hundertwasser House, Vienna" href="https://www.flickr.com/photos/rayseinefotos/14609564110" target="_blank">Hundertwasser House, Vienna</a></div>
+</div>
+<p>Una vez que ya hemos visto cómo acceder a los nodos (elementos <span lang="en">XHTML</span>) en un documento, vamos a ver cómo podemos acceder a los nodos de tipo atributo. Para referenciar un atributo, como por ejemplo el atributo type="text" del campo "apellidos", emplearemos la colección attributes. Dependiendo del navegador, esta colección se podrá cubrir de diferentes maneras y podrán existir muchos pares en la colección, tantos como atributos tenga el elemento. Para buscar el par correcto emplearemos la propiedad nodeName, que nos devolverá el nombre del atributo (en minúsculas cuando trabajamos con <span lang="en">XHTML</span>), y para acceder a su valor usaremos nodeValue.</p>
+<p>En el ejemplo:</p>
+<div class=" elemento_centrado" style="width: 36.8em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;input type="text" id="apellidos" name="apellidos"&gt;</pre>
+</div>
+</div>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>Para imprimir todos los atributos del elemento "apellidos", podríamos hacer un bucle que recorriera todos esos atributos imprimiendo su valor:</p>
+<div class=" elemento_centrado" style="width: 65.4em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.write("&lt;br&gt;El elemento &lt;b&gt;apellidos&lt;/b&gt; contiene los pares atributo -&amp;gt; valor: &lt;br&gt;");
+&nbsp;
+for( var x = 0; x  "+atributo.nodeValue+"&lt;br&gt;");
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<p>También podemos <strong>modificar los valores de un atributo</strong> de un nodo manualmente, por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 59.9em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.getElementById("apellidos").attributes[0].nodeValue="password";
+// En este caso hemos modificado el type del campo apellidos y lo hemos puesto de tipo “password”.</pre>
+</div>
+</div>
+</div>
+</div>
+<p>O también:</p>
+<div class=" elemento_centrado" style="width: 50em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.getElementById("apellidos").attributes["type"].nodeValue="password";
+// hemos puesto el nombre del atributo como referencia en el array de atributos.</pre>
+</div>
+</div>
+</div>
+</div>
+<p>O también:</p>
+<div class=" elemento_centrado" style="width: 55.5em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.getElementById("apellidos").type="password";
+// hemos puesto el atributo como una propiedad del objeto apellidos y lo hemos modificado.</pre>
+</div>
+</div>
+</div>
+</div>
+<p>El método setAttribute() nos permitirá <strong>crear o modificar atributos</strong> de un elemento. Por ejemplo, para ponerle de nuevo al campo "apellidos" type='text' y un value='Cid Blanco', haríamos:</p>
+<div class=" elemento_centrado" style="width: 45.6em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.getElementById("apellidos").setAttribute('type','text');
+document.getElementById("apellidos").setAttribute('value','Cid Blanco');</pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+<p>Si lo que quieres realmente es chequear el valor del atributo y no modificarlo, se puede utilizar getAttribute():</p>
+<div class=" elemento_centrado" style="width: 44.5em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var valor = document.getElementById("apellidos").getAttribute('type');
+// o también
+var valor= document.getElementById("apellidos").type;</pre>
+</div>
+</div>
+</div>
+</div>
+<p>Y si lo que quieres es eliminar un atributo, lo podemos hacer con removeAttribute():</p>
+<div class=" elemento_centrado" style="width: 43.95em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>// &lt;div id="contenedor" align="left" width="200px"&gt; 
+document.getElementById("contenedor").removeAttribute("align"); 
+// Obtendremos como resultado: &lt;div id="contenedor" width="200px"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;pre&gt;&lt;br&gt;&lt;br&gt;&lt;/pre&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id50">
+<div class="iDevice emphasis_autoevaluacionfpd">
+<div class="iDevice_header" style="background-image:url(https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta50_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b50" action="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4863&amp;dopt=3#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b50" class="block iDevice_content">
+<strong>En <span lang="en">XHTML</span> los atributos se escribirán siempre en minúsculas.</strong>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b50"><input type="radio" name="option0b50" id="true0b50" onclick="$exe.getFeedback(0,2,&#39;0b50&#39;,&#39;truefalse&#39;)"> Verdadero</label> 
+<label for="false0b50"><input type="radio" name="option0b50" id="false0b50" onclick="$exe.getFeedback(1,2,&#39;0b50&#39;,&#39;truefalse&#39;)"> Falso</label>
+</p>
+</form>
+<div id="s0b50" class="feedback js-feedback js-hidden" role="status">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b50-result" class="right">Verdadero</strong></p>
+Cuando escribimos los atributos en <span lang="en">HTML</span>, da igual que se pongan en mayúsculas o minúsculas, pero si estamos trabajando con <span lang="en">XHTML</span> deberemos escribirlos siempre en minúsculas (por ejemplo type, value, size, etc.).
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.5.- Acceso a los nodos de tipo texto.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id17">
+<div class="iDevice emphasis0">
+<div id="ta17_73" class="block iDevice_content">
+<p>Para ver cómo podemos acceder a la información textual de un nodo, nos basaremos en el siguiente ejemplo:</p>
+<div class=" elemento_centrado" style="width: 50.55em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;p title="Texto de un párrafo"&gt;Esto es un ejemplo de &lt;b&gt;texto HTML&lt;br&gt;
+que puedes tener&lt;/b&gt; en tu documento.&lt;/p&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<div class="exe-figure exe-image position-center license-CC-BY-NC-SA" style="width: 640px;"><img src="./recopila2_files/DWEC06_CONT_R07_textos.jpg" width="215" height="161" alt="Una hoja con texto. " title="Textos.">
+<div class="figcaption"><a href="https://www.flickr.com/photos/mordicuac/" target="_blank" class="author">Mordi Cuac</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+</div>
+</div>
+<p>Para poder referenciar el fragmento "<em>texto <span lang="en">HTML</span></em>" del nodo P, lo que haremos será utilizar la colección childNodes. Con la colección childNodes accederemos a los nodos hijo de un elemento, ya sean de tipo elemento o texto.</p>
+<p>Aquí puedes ver una imagen del árbol <span lang="en">DOM</span> para ese elemento en cuestión:</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a title="Ampliar imagen." href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64437/mod_scorm/content/0/DWEC06_CONT_R08_arbol.png"><img alt="Árbol de nodos de un documento xhtml. La raíz es un elemento p del que cuelgan: atributos (title=”Texto de un párrafo”), texto (“Esto es un ejemplo de”), un elemento b y otro texto (“en tu documento.”). Debajo del elemento b cuelgan otros tres: un texto (“texto HTML”), un elemento br y un texto (“que puedes tener”)." class="imagen_ampliable" src="./recopila2_files/DWEC06_CONT_R08_arbol_miniatura.png" style="width: 200px; height: 156px;" title="Árbol de Nodos." height="156" width="200"></a></div>
+<div class="elemento_centrado credenciales">&nbsp;</div>
+</div>
+<p>Y el código de JavaScript para mostrar una alerta, con el contenido "texto <span lang="en">HTML</span>", sería:</p>
+<div class=" elemento_centrado" style="width: 55.5em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>window.alert(document.getElementsByTagName("p")[0].childNodes[1].childNodes[0].nodeValue);</pre>
+</div>
+</div>
+</div>
+</div>
+<p>childNodes[1] : selecciona el segundo hijo de &lt;p&gt;&lt;/p&gt; que sería el elemento &lt;b&gt;&lt;/b&gt; (el primer hijo es un nodo de tipo Texto "Esto es un...").</p>
+<p><strong>childNodes[0]</strong> : selecciona el primer hijo del elemento&lt;strong&gt;&lt;b&gt;&lt;/b&gt;&lt;/strong&gt; que es el nodo de texto "texto HTML"</p>
+<p>En lugar de childNodes[0] también podríamos haber utilizado firstChild, el cuál nos devuelve el primer hijo de un nodo.</p>
+<p>Por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 55.5em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>window.alert(document.getElementsByTagName("p")[0].childNodes[1].firstChild.nodeValue);&lt;br&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>El tamaño máximo de lo que se puede almacenar en un nodo de texto, depende del navegador, por lo que muchas veces, si el texto es muy largo, tendremos que consultar varios nodos para ver todo el contenido.</p>
+<p>En el <span lang="en">DOM</span> de <span lang="en">HTML</span>, para acceder al valor de un nodo de texto, o modificarlo, es muy común ver la propiedad innerHTML. Esta propiedad apareció en,&nbsp;al igual que outerHTM, en Internet Explorer. Aunque hasta&nbsp; <span lang="en">HTML5</span> no estaba en el estándar de W3C estas propiedades no &nbsp;estaban soportada por todos los navegadores.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id18">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_47" class="block iDevice_content">
+<p class="enlace_centrado"><a href="http://slayeroffice.com/articles/innerHTML_alternatives" title="Acceder a web sobre uso de métodos del DOM en lugar de emplear la propiedad innerHTML." class="html">Alternativas al uso de innerHTML.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id19">
+<div class="iDevice emphasis0">
+<div id="ta19_73" class="block iDevice_content">
+<p>Para modificar el contenido del nodo, modificaremos la propiedad nodeValue y le asignaremos otro valor. Por ejemplo en el caso anterior si hacemos:</p>
+<div class=" elemento_centrado" style="width: 57.7em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.getElementsByTagName("p")[0].childNodes[1].firstChild.nodeValue = "Texto MODIFICADO";&lt;br&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<p>Veremos que en la página web se ha cambiado la cadena "<strong>texto HTML</strong>", por "<strong>Texto MODIFICADO</strong>".</p>
+<p>También podríamos por ejemplo, mover trozos de texto a otras partes. El siguiente ejemplo mueve el texto "en tu documento" a continuación de "Esto es un ejemplo de":</p>
+<div class=" elemento_centrado" style="width: 41.75em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.getElementsByTagName("p")[0].firstChild.nodeValue += 
+document.getElementsByTagName("p")[0].childNodes[2].nodeValue;
+document.getElementsByTagName("p")[0].childNodes[2].nodeValue="";</pre>
+</div>
+</div>
+</div>
+</div>
+<p>El resultado obtenido sería:</p>
+<div class=" elemento_centrado" style="width: 32.95em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js">
+<div>
+<pre>“Esto es un ejemplo de en tu documento.texto HTML
+que puedes tener”</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.6.- Creación y borrado de nodos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R09_edicion.jpg" width="200" height="148" alt="Elementos usados para escribir. " title="Herramientas de escritura. " style="float: right;">
+<div class="figcaption"><a href="https://www.flickr.com/photos/kankan/102924259/sizes/z/in/photostream/" target="_blank" class="author">Kanko</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank">CC BY</a><span class="sep">)</span></span></div>
+</div>
+<p><span style="font-size: 1em;"><br>La creación y borrado de nodos fue uno de los objetivos para los que se creó el </span><span lang="en" style="font-size: 1em;">DOM</span><span style="font-size: 1em;">. Podremos crear elementos y luego insertarlos en el </span><span lang="en" style="font-size: 1em;">DOM</span><span style="font-size: 1em;">, y la actualización quedará reflejada automáticamente por el navegador. También podremos mover nodos ya existentes (como el párrafo del punto 1.4) simplemente insertándolo en cualquier otro lugar del árbol del </span><span lang="en" style="font-size: 1em;">DOM</span><span style="font-size: 1em;">.</span></p>
+<p>Ten en cuenta que cuando estemos creando nodos de elementos, el elemento debe estar en minúsculas. Aunque en <span lang="en">HTML</span> esto daría igual, el <span lang="en">XHTML</span> sí que es sensible a mayúsculas y minúsculas y tendrá que ir, por lo tanto, en minúsculas.</p>
+<p>Usaremos los métodos createElement(), <code>createTextNode()</code> y appendChild(), que nos permitirán crear un elemento, crear un nodo de texto y añadir un nuevo nodo hijo.</p>
+<p>Ejemplo de creación de un nuevo párrafo, suponiendo que partimos del siguiente código <span lang="en">HTML</span>:</p>
+<div class=" elemento_centrado" style="width: 58.8em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;p title="Texto de un párrafo" id="parrafito"&gt;Esto es un ejemplo de &lt;b&gt;texto HTML&lt;br&gt;
+que puedes tener&lt;/b&gt; en tu documento.&lt;/p&gt;</pre>
+</div>
+</div>
+<pre></pre>
+</div>
+</div>
+<p>Para crear el nuevo párrafo haremos:</p>
+<div class=" elemento_centrado" style="width: 46.7em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var nuevoParrafo = document.createElement('p');
+var nuevoTexto = document.createTextNode('Contenido añadido al párrafo.');
+nuevoParrafo.appendChild(nuevoTexto);
+document.getElementById('parrafito').appendChild(nuevoParrafo);</pre>
+</div>
+</div>
+</div>
+</div>
+<p>Y obtendremos como resultado HTML:</p>
+<div class=" elemento_centrado" style="width: 52.2em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-markup line-numbers">
+<div>
+<pre>&lt;p id="parrafito" title="Texto de un párrafo"&gt;
+Esto es un ejemplo de &lt;b&gt;texto HTML&lt;br&gt;que puedes tener&lt;/b&gt;en tu documento.
+&lt;/p&gt;&lt;p&gt;Contenido añadido al párrafo.&lt;/p&gt; </pre>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Podríamos haber utilizado insertBefore en lugar de appendChild o, incluso, añadir manualmente el nuevo elemento al final de la colección de nodos childNodes. Si usamos replaceChild, incluso podríamos sobrescribir nodos ya existentes. También es posible copiar un nodo usando cloneNode(true). Esto devolverá una copia del nodo, pero no lo añade automáticamente a la colección childNodes.</p>
+<p>Para eliminar un nodo existente, lo podremos hacer con element.removeChild(referencia al nodo hijo).</p>
+<p>Ejemplo de creación de elementos e inserción en el documento:</p>
+<div class=" elemento_centrado" style="width: 44.5em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>//Creamos tres elementos nuevos: p, b, br
+var elementoP = document.createElement('p');
+var elementoB = document.createElement('b');
+var elementoBR = document.createElement('br');
+&nbsp;
+//Le asignamos un nuevo atributo title al elementoP que hemos creado.
+elementoP.setAttribute('title','Parrafo creado desde JavaScript');
+&nbsp;
+//Preparamos los nodos de texto
+var texto1 = document.createTextNode('Con JavaScript se ');
+var texto2 = document.createTextNode('pueden realizar ');
+var texto3 = document.createTextNode('un monton');
+var texto4 = document.createTextNode(' de cosas sobre el documento.');
+&nbsp;
+//Añadimos al elemento B los nodos de texto2, elemento BR y texto3.
+elementoB.appendChild(texto2);
+elementoB.appendChild(elementoBR);
+elementoB.appendChild(texto3);
+&nbsp;
+//Añadimos al elemento P los nodos de texto1, elemento B y texto 4.
+elementoP.appendChild(texto1);
+elementoP.appendChild(elementoB);
+elementoP.appendChild(texto4);
+&nbsp;
+//insertamos el nuevo párrafo como un nuevo hijo de nuestro párrafo
+document.getElementById('parrafito').appendChild(elementoP);</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">1.7.- Propiedades y métodos de los objetos nodo (DOM W3C).</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id21">
+<div class="iDevice emphasis0">
+<div id="ta21_73" class="block iDevice_content">
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 148px;"><img src="./recopila2_files/DWEC06_CONT_R10_w3c.jpg" alt="Logo del Consorcio de la Web. " title="W3C." width="148" height="200">
+<div class="figcaption"><a href="https://www.flickr.com/photos/psd/485103865/sizes/z/in/photostream/" target="_blank" class="author">Paul Downey</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><span style="font-size: 1em;"><br>Básicamente todo lo que se utiliza en la actualidad es DOM 2 y algunas extensiones de DOM 3. ¿Por qué? Una simple respuesta es que DOM 3 fue creado para XHTML. Así que podemos utilizar sin ningún problema la funcionalidad de DOM 2 en la actualidad (a la espera de los cambios que son significativos en el DOM 4).&nbsp; Por suerte, la mayoría de las incompatibilidades entre los distintos navegadores están solucionadas, al menos a partir de Internet Explorer 9.</span></p>
+<p>Por otra parte hay que procurar evitar utilizar funciones específicas de DOM 1 por los problemas inesperados que se puedan dar sobretodo si se utilizan en XHTML.</p>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todas las propiedades de los objetos nodo del DOM nivel 2 del W3C, valores, descripciones y su compatibilidad entre los diferentes navegadores."><caption>Propiedades del objeto nodo<span lang="en"> según W3C<br></span></caption>
+<thead>
+<tr><th scope="col">Propiedad</th><th scope="col">Valor</th><th scope="col">Descripción</th><th scope="col">IE.</th><th scope="col"><span lang="en">Mozilla</span></th><th scope="col"><span lang="en">Webkit</span></th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">nodeName</th>
+<td>String</td>
+<td>Varía según el tipo de nodo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">nodeValue</th>
+<td>String</td>
+<td>Varía según el tipo de nodo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">nodeType</th>
+<td>Integer</td>
+<td>Constante que representa cada tipo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">parentNode</th>
+<td>Object</td>
+<td>Referencia al siguiente contenedor más externo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">childNodes</th>
+<td>Array</td>
+<td>Todos los nodos hijos en orden.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">firstChild</th>
+<td>Object</td>
+<td>Referencia al primer nodo hijo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">lastChild</th>
+<td>Object</td>
+<td>Referencia al último nodo hijo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">previousSibling</th>
+<td>Object</td>
+<td>Referencia al hermano anterior según su orden en el código fuente.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">nextSibling</th>
+<td>Object</td>
+<td>Referencia al hermano siguiente según su orden en el código fuente.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">attributes</th>
+<td>NodeMap</td>
+<td>Array de atributos de los nodos.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">ownerDocument</th>
+<td>Object</td>
+<td>Contiene el objeto document.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">namespaceURI</th>
+<td>String</td>
+<td>URI a la definición de namespace.</td>
+<td>No.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">Prefix</th>
+<td>String</td>
+<td>Prefijo del namespace.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">localName</th>
+<td>String</td>
+<td>Aplicable a los nodos afectados en el namespace.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>
+<p>Sí. No en Chrome 31</p>
+<p>Windows XP 32 bits.</p>
+</td>
+</tr>
+<tr><th scope="row">innerHTML</th>
+<td>String</td>
+<td>Modifica el html de los elementos hijo.</td>
+<td>SÍ.</td>
+<td>Sí.</td>
+<td>Sí</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table class="tabla" summary="Esta tabla muestra todas los métodos de los objetos nodo del DOM nivel 2 del W3C, descripciones y su compatibilidad entre los diferentes navegadores."><caption>Métodos del objeto nodo según <span>W3C</span></caption>
+<thead>
+<tr><th scope="col">Método</th><th scope="col">Descripción</th><th scope="col"><span lang="en">IE.</span></th><th scope="col"><span lang="en">Mozilla</span></th><th scope="col"><span lang="en">Webkit.</span></th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">appendChild(newChild)</th>
+<td>Añade un hijo al final del nodo actual.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">cloneNode(deep) </th>
+<td>Realiza una copia del nodo actual (opcionalmente con todos sus hijos).</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">hasChildNodes()</th>
+<td>Determina si el nodo actual tiene o no hijos (valor <span lang="en">boolean</span>).</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">insertBefore(new, ref)</th>
+<td>Inserta un nuevo hijo antes de otro hijo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">removeChild(old)</th>
+<td>Borra un hijo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">replaceChild(new, old)</th>
+<td>Reemplaza un hijo viejo con el nuevo viejo.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+<td>Sí.</td>
+</tr>
+<tr><th scope="row">isSupported(feature, version)</th>
+<td>Determina cuando el nodo soporta una característica especial.</td>
+<td>SI.</td>
+<td>No.</td>
+<td>Sí Safari. No Chrome.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Básicamente no se recomienda usar isSupported. Está prácticamente abandonado así que no lo uséis.</p>
+<p>Si se profundiza más aparecerán incompatibilidades incluso a nivel de sistema operativo. Para evitar problemas recomiendo que echéis un vistazo al segundo enlace del&nbsp;<strong>Para saber más</strong> que se presenta a continuación. Además se puede ver compatibilidad con navegadores móviles.</p>
+<p></p>
+<p>Habiendo visto todo lo anterior podemos ver un vídeo para ver el recorrido del <acronym title="Document Object Model" lang="en">DOM</acronym>.</p>
+<p></p>
+<div class="elemento_centrado credenciales">Licencia general de Youtube.<br> <a title="Resumen textual" href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64437/mod_scorm/content/0/Resumen_textual_alternativo_para_el_video.html" target="_blank">Resumen textual alternativo</a></div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id22">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_47" class="block iDevice_content">
+<p class="enlace_centrado"><a href="http://www.w3schools.com/xml/dom_node.asp" title="Mas propiedades del Objeto node." target="_blank" class="html">Ampliación de información de propiedades y métodos del objeto Nodo.</a></p>
+<p class="enlace_centrado"><a class="html" title="Mas propiedades del Objeto node." href="http://www.w3schools.com/xml/dom_node.asp" target="_blank">Listado actualizado de compatibilidad de navegadores con propiedades, métodos y clases DOM 2, DOM 3 y DOM 4.</a></p>
+<p class="enlace_centrado"><a class="html" title="Modernizr. Una librería que te ayuda a saber si algo está soportado o no." href="http://modernizr.com/">Para saber si una característica está soportada en nuestro navegador.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.- Gestión de eventos.</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id23">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_66" class="block iDevice_content">
+<p><strong style="font-size: 1em;">Antonio</strong><span style="font-size: 1em;"> ya ha visto en anteriores unidades el modelo de registro de Eventos, y los modelos de disparo de eventos. Ha llegado el momento de profundizar un poco más en los eventos, y ver toda la información y</span></p>
+<div class="exe-figure exe-image float-right" style="width: 148px;"><img src="./recopila2_files/CASO_PERSONAJES_04.jpg" width="200" height="132" alt="Estudiante Juan." title="Juan. " style="float: right;">
+<div class="figcaption"><span class="author">Elaboración Propia. </span></div>
+</div>
+<p><span style="font-size: 1em;"><br>posibilidades que nos dan: cómo detener un evento, o su propagación, incompatibilidades entre navegadores en la gestión de eventos, etc.</span></p>
+<p><strong>Juan</strong> le comenta a <strong>Antonio</strong> que se centre, sobre todo, en el estudio de los eventos del ratón y del teclado, ya que son los más utilizados, y los que pueden suponer diferencias de</p>
+<p>gestión según el tipo de navegador web utilizado.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id24">
+<div class="iDevice emphasis0">
+<div id="ta24_73" class="block iDevice_content">
+<p>Como ya te comentábamos en la unidad anterior 5, sin eventos prácticamente no hay <span lang="en">scripts</span>. En casi todas las páginas <span lang="en">web</span> que incorporan <span lang="en">JavaScript</span>, suele haber eventos programados que disparan la ejecución de dichos <span lang="en">scripts</span>. La razón es muy simple, <span lang="en">JavaScript</span> fue diseñado para añadir interactividad a las páginas: el usuario realiza algo y la página reacciona.</p>
+<p>Por lo tanto, <span lang="en">JavaScript</span> necesita de alguna forma detectar las acciones del usuario, para saber cuando reaccionar. También necesita saber las funciones a ejecutar cuando se producen esas acciones.</p>
+<p>Cuando el usuario hace algo, se produce un evento. También habrá algunos eventos que no están relacionados directamente con acciones de usuario: por ejemplo, el evento de carga (<span lang="en">load</span>) de un documento, que se disparará automáticamente cuando un documento ha sido cargado en el navegador.</p>
+<p>También comentábamos que hay diferencias, en lo que es la gestión de eventos, por unos navegadores u otros. Esas diferencias provocan que los programadores de páginas <span lang="en">web</span>, tengan que tener mucha precaución con los métodos y propiedades que usan, dependiendo del navegador que ejecutará la página de <span lang="en">JavaScript</span>.</p>
+<p>Un ejemplo de solución <a class="glosario" href="./recopila2_files/saved_resource">cross-browser <span><em>cross-browser</em>Se refiere a la capacidad que una web, aplicación web, construcción HTML o script del lado del cliente tiene y que permite que sea soportada por todos los navegadores, es decir que se pueda mostrar o ejecutar de forma correcta en cualquier navegador.</span></a>para asignar un evento, independientemente del navegador utilizado podría ser:</p>
+<div class=" elemento_centrado" style="width: 40.1em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>function crearEvento(elemento, tipoEvento, funcion) {
+    if (elemento.addEventListener) {
+        elemento.addEventListener(tipoEvento, funcion, false);
+    } else if (elemento.attachEvent) {
+        elemento.attachEvent("on" + tipoEvento, funcion);
+    } else {
+        elemento["on" + tipoEvento] = funcion;
+    }
+}
+var miparrafo = document.getElementById("parrafito");
+crearEvento(miparrafo, 'click', function () {
+    alert("hola")
+});</pre>
+</div>
+</div>
+</div>
+</div>
+<p>La función crearEvento, lo primero que intenta hacer es asignar el evento con el método addEventListener() del <span lang="en">W3C</span>, y que soportan los navegadores más modernos; en el caso de que esa opción falle, intenta asignar el evento usando el método de <span lang="en">Internet Explorer</span>; y, si por último esta opción tampoco va, intenta asignar el evento en línea, como un atributo más del objeto.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta25_70" class="block iDevice_content">
+<p>El método addEventListener() no funciona en <span lang="en">Internet Explorer</span> 8, pero sí en cambio está ya implementado en <span lang="en">Internet Explor</span>er 9. Si tienes <span lang="en">Windows XP</span> no podrás usar ese evento ya que la última versión de <acronym title="Internet Explorer.">IE</acronym> que se puede usar en <span lang="en">Windows XP</span> es la 8 y no deja instalar la versión 9. Así que, si aún tienes instalado Windows XP, mi recomendación es que utilices las últimas versiones de <span lang="en">Mozilla Firefox</span> o <span lang="en">Google Chrome</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.1.- Modelos de eventos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id26">
+<div class="iDevice emphasis0">
+<div id="ta26_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R11_burbujeo.jpg" alt="Aire en líquido." title="Burbujas." style="float: right;" width="200" height="148">
+<div class="figcaption"><a href="https://www.flickr.com/photos/hach3/2458624643/sizes/z/in/photostream/" target="_blank" class="author">ILena Gecan</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><span style="font-size: 1em;"><br>Vamos a hacer un pequeño repaso de los modelos de eventos, los cuáles fueron detallados en la unidad 4, apartados 3.1 al 3.4 y la fase de disparo de eventos apartado 3.5.</span></p>
+<p>Veíamos que tenemos <strong>4 modelos de registro de eventos:</strong></p>
+<ul class="lista_verificacion">
+<li>Modelo de <strong>registro de eventos en línea</strong>:
+<ul>
+<li>Los eventos se añaden como un atributo más del objeto.</li>
+<li>No es un modelo recomendado hoy en día, porque el código de <span lang="en">JavaScript</span> está integrado con el <acronym title="HyperText Markup Language. Lenguaje de marcas de hipertexto."><span lang="en">HTML</span></acronym> y lo que se intenta conseguir es tener separación entre la estructura y la programación.</li>
+<li>Ejemplo: &lt;a href="pagina.html" onclick="alertar()"&gt;Pulsa aquí&lt;/a&gt;</li>
+</ul>
+</li>
+<li>Modelo de <strong>registro de eventos tradicional</strong>:
+<ul>
+<li>Los eventos se asignan como una propiedad del objeto y fuera de la estructura <acronym title="HyperText Markup Language. Lenguaje de marcas de hipertexto."><span lang="en">HTML</span></acronym>.</li>
+<li>No es un modelo estándar de registro, pero si utilizado ampliamente por <span lang="en">Netscape</span> y <span lang="en">Microsoft</span>.</li>
+<li>Uso de la palabra reservada &lt;strong&gt;this&lt;/strong&gt;, para hacer referencia al objeto dónde se programó el evento.</li>
+<li>Para asignar un evento se podría hacer: &lt;strong&gt;elemento.evento = hacerAlgo;&lt;/strong&gt;</li>
+<li>Para eliminar ese evento del objeto: &lt;strong&gt;elemento.evento = null;&lt;/strong&gt;</li>
+<li>Ejemplo: document.getElementById("mienlace").onclick = alertar;</li>
+</ul>
+</li>
+<li>Modelo de <strong>registro avanzado de eventos según <span lang="en">W3C</span></strong>:
+<ul>
+<li>Es el estándar propuesto por el <span lang="en">W3C<span>.</span></span></li>
+<li>Para asignar un evento se usa &lt;strong&gt;addEventListener()&lt;/strong&gt;.</li>
+<li>Para eliminar un evento se usa &lt;strong&gt;removeEventListener()&lt;/strong&gt;.</li>
+<li>Se puede programar cuando queremos que se dispare el evento: en la fase de captura o burbujeo.</li>
+<li>Uso de la palabra reservada &lt;strong&gt;this&lt;/strong&gt;, para hacer referencia al objeto dónde se programó el evento.</li>
+<li>Por ejemplo: document.getElementById("mienlace").addEventListener('click',alertar,false);</li>
+</ul>
+</li>
+<li>Modelo de <strong>registro de eventos según <span lang="en">Microsoft</span></strong>:
+<ul>
+<li>Se parece al utilizado por el <span lang="en">W3C<span>.</span></span></li>
+<li>Para asignar un evento se usa attachEvent().</li>
+<li>Para eliminar un evento se usa &lt;strong&gt;detachEvent()&lt;/strong&gt;.</li>
+<li>Aquí los eventos siempre burbujean, no hay forma de captura.</li>
+<li>No se puede usar la palabra reservada &lt;strong&gt;this&lt;/strong&gt;/code&amp;gt;, ya que la función es copiada, no referenciada.</li>
+<li>El nombre de los eventos comienza por<strong> "on"</strong> + <strong>nombre de evento</strong>.</li>
+<li>Por ejemplo: document.getElementById("mienlace").attachEvent('onclick', alertar);</li>
+</ul>
+</li>
+</ul>
+<p>Y tenemos <strong>3 modelos propuestos de disparo de eventos</strong>, que clarificarán el orden de disparo de los mismos, cuando se solapen eventos sobre elementos anidados:</p>
+<ul class="lista_verificacion">
+<li>Modelo de <strong>captura de eventos:</strong>
+<ul>
+<li>En este modelo los eventos se van disparando de afuera hacia adentro. Es decir, primero se disparará el evento asignado al elemento exterior, y continúa descendiendo y disparando los eventos que coincidan, hasta llegar al elemento interior.</li>
+</ul>
+</li>
+<li>Modelo de <strong>burbujeo de eventos</strong>:
+<ul>
+<li>En este modelo los eventos se van disparando desde dentro hacia afuera. Es decir, primero se disparará el evento asignado al elemento interior, y continúa subiendo y disparando los eventos que coincidan, hasta llegar al elemento exterior.</li>
+</ul>
+</li>
+<li>Modelo <strong><span lang="en">W3C</span></strong>:
+<ul>
+<li>En este modelo se integran los dos modelos anteriores. Simplemente se realiza la fase de captura de eventos primero y, cuando termina, se realiza la fase de burbujeo. En este modelo cuando registramos un evento con &lt;strong&gt;addEventListener(evento, funcion, true|false)&lt;/strong&gt; tenemos la opción de indicar cuándo queremos que se dispare el evento:
+<ul>
+<li>en la <strong>fase de captura ( , , true)</strong></li>
+<li>en la <strong>fase de burbujeo ( , , false)</strong></li>
+</ul>
+</li>
+<li>También disponemos de un nuevo método para cancelar eventos con &lt;strong&gt;preventDefault()&lt;/strong&gt;, y de un método para detener la propagación de eventos en la fase de burbujeo, con <strong>stopPropagation()</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.2.- Tipos de eventos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id27">
+<div class="iDevice emphasis0">
+<div id="ta27_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R12_navegadores.jpg" width="200" height="64" alt="Logos de los distintos navegadores. " title="Navegadores." style="float: right;">
+<div class="figcaption"><a href="http://www.flickr.com/photos/smemon/4620148826/sizes/z/in/photostream/" target="_blank" class="author">Sean MacEntee</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank">CC BY</a><span class="sep">)</span></span></div>
+</div>
+<p><span style="font-size: 1em;"><br>Los navegadores anteriores a la versión 4 no tenían acceso al objeto "Evento". Posteriormente, cuando incorporaron los eventos, sólo dejaban asignar algunos tipos de eventos a ciertos elementos </span><span lang="en" style="font-size: 1em;">HTML</span><span style="font-size: 1em;">, pero, hoy en día, ya podemos aplicar tipos de eventos virtualmente a casi cualquier elemento.</span></p>
+<p>Al principio los eventos se solían asociar en línea en la etiqueta <span lang="en">HTML</span>, con un atributo que comenzaba por "on" seguido del tipo del evento, por ejemplo: onClick=..., onSubmit=..., onChange=..., pero hoy en día esa forma de uso está quedando obsoleta, debido a los nuevos modos de registro de eventos propuestos por el <span lang="en">W3C</span>, y que soportan ya la mayoría de navegadores modernos.</p>
+<p><strong>Eventos comunes en el <span lang="en">W3C</span>.</strong></p>
+<p>Hay una colección enorme de eventos que pueden ser generados para la mayor parte de elementos <span lang="en">HTML</span>:</p>
+<ul class="lista_verificacion">
+<li>Eventos de ratón.</li>
+<li>Eventos de teclado.</li>
+<li>Eventos objetos <span lang="en">frame</span>.</li>
+<li>Eventos de formulario.</li>
+<li>Eventos de interfaz de usuario.</li>
+<li>Eventos de mutación (notifican de cualquier cambio en la estructura de un documento).</li>
+</ul>
+<table class="tabla" summary="Esta tabla muestra algunas categorías y tipos de eventos en el modelo W3C, con su descripción, si burbujean o no y si se puede cancelar ese evento."><caption>Algunas categorías y tipos de eventos en el modelo <span lang="en">W3C</span></caption>
+<thead>
+<tr><th scope="col">Categoría</th><th scope="col">Tipo de Evento</th><th scope="col">Descripción</th><th scope="col">Burbujea</th><th scope="col">Se puede cancelar</th></tr>
+</thead>
+<tbody>
+<tr><th id="raton" rowspan="7">Ratón</th><th headers="raton" id="click">click</th>
+<td headers="click">Al hacer click sobre un elemento. Un click se define como mousedown y <code>mouseup</code> sobre la misma localización en pantalla.</td>
+<td headers="click">Sí.</td>
+<td headers="click">Sí.</td>
+</tr>
+<tr><th headers="raton" id="dbclick">dblclick</th>
+<td headers="dbclick">Al hacer doble click sobre un elemento.</td>
+<td headers="dbclick">Sí.</td>
+<td headers="dbclick">Sí.</td>
+</tr>
+<tr><th headers="raton" id="mousedown">mousedown</th>
+<td headers="mousedown">Al mantener presionado el botón del ratón sobre un elemento.</td>
+<td headers="mousedown">Sí.</td>
+<td headers="mousedown">Sí.</td>
+</tr>
+<tr><th headers="raton" id="mousedownmouseup">mousedownmouseup</th>
+<td headers="mousedownmouseup">Al soltar el botón del ratón que estaba sobre un elemento.</td>
+<td headers="mousedownmouseup">Sí.</td>
+<td headers="mousedownmouseup">Sí.</td>
+</tr>
+<tr><th headers="raton" id="mouseover">mouseover</th>
+<td headers="mouseover">Al pasar el ratón justo sobre un elemento.</td>
+<td headers="mouseover">Sí.</td>
+<td headers="mouseover">No.</td>
+</tr>
+<tr><th headers="raton" id="mousemove">mousemove</th>
+<td headers="mousemove">Cuando el ratón se mueve mientras está sobre un elemento.</td>
+<td headers="mousemove">Sí.</td>
+<td headers="mousemove">Sí.</td>
+</tr>
+<tr><th headers="raton" id="mouseout">mouseout</th>
+<td headers="mouseout">Cuando el ratón sale fuera de un elemento.</td>
+<td headers="mouseout">Sí.</td>
+<td headers="mouseout">Sí.</td>
+</tr>
+<tr><th id="teclado" rowspan="3">Teclado</th><th headers="teclado" id="keydown">keydown</th>
+<td headers="keydown">Este evento se dispara justo antes del evento keypress al presionar una tecla.</td>
+<td headers="keydown">Sí.</td>
+<td headers="keydown">Sí.</td>
+</tr>
+<tr><th headers="teclado" id="keypress">keypress</th>
+<td headers="keypress">Este evento se dispara después de keydown al presionar una tecla.</td>
+<td headers="keypress">Sí.</td>
+<td headers="keypress">Sí.</td>
+</tr>
+<tr><th headers="teclado" id="keyup">keyup</th>
+<td headers="keyup">Al soltar una tecla.</td>
+<td headers="keyup">Sí.</td>
+<td headers="keyup">Sí.</td>
+</tr>
+<tr><th id="frame" rowspan="6">
+<p><span lang="en">Frame</span></p>
+<p><span lang="en">HTML</span></p>
+</th><th headers="frame" id="load">load</th>
+<td headers="load">Se dispara cuando se ha terminado de cargar todo el contenido de un documento, incluyendo ventanas, <span lang="en">frames</span>, objetos e imágenes.</td>
+<td headers="load">No.</td>
+<td headers="load">No.</td>
+</tr>
+<tr><th headers="frame" id="unload">unload</th>
+<td headers="unload">Al salir de un documento y modificar el contenido de una ventana.</td>
+<td headers="unload">No.</td>
+<td headers="unload">No.</td>
+</tr>
+<tr><th headers="frame" id="abort">abort</th>
+<td headers="abort">Cuando se detiene la carga de un objeto/imagen antes de que esté completamente cargado.</td>
+<td headers="abort">Sí.</td>
+<td headers="abort">No.</td>
+</tr>
+<tr><th headers="frame" id="error">error</th>
+<td headers="error">Cuando se detiene la carga de un objeto/imagen antes de que esté completamente cargado.</td>
+<td headers="error">Sí.</td>
+<td headers="error">No.</td>
+</tr>
+<tr><th headers="frame" id="resize">resize</th>
+<td headers="resize">Cuando se redimensiona un documento.</td>
+<td headers="resize">Sí.</td>
+<td headers="resize">No.</td>
+</tr>
+<tr><th headers="frame" id="scroll">scroll</th>
+<td headers="scroll">Cuando nos desplazamos por el documento con <span lang="en">scroll</span>.</td>
+<td headers="scroll">Sí.</td>
+<td headers="scroll">No.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_47" class="block iDevice_content">
+<p class="enlace_centrado"><a class="html" title="Acceder a web de ampliación sobre las categorías formulario, interfaz y mutación en el modelo W3C." href="http://en.wikipedia.org/wiki/DOM_events">Categorías de eventos formulario, interfaz y mutación y tipos de eventos en el modelo <span lang="en">W3C</span>.</a></p>
+<p class="enlace_centrado">Muy importante es el siguiente enlace para que vuestras aplicaciones sean cross-browser.</p>
+<p class="enlace_centrado"><a class="html" title="DOM Events Browser Support" href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Compatibilidad de eventos entre navegadores.</a></p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.3.- El objeto Event.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+<p></p>
+<div class="exe-figure exe-image float-right license-CC-BY-NC-SA" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R13_eventos.jpg" width="200" height="132" alt="Teclado." title="Teclas especiales." style="float: right;">
+<div class="figcaption"><a href="http://www.flickr.com/photos/traftery/4662463413/sizes/z/in/photostream/" target="_blank" class="author">Tom Raftery</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><span style="font-size: 1em;"><br>Generalmente, los manejadores de eventos necesitan información adicional para procesar las tareas que tienen que realizar. Si una función procesa, por ejemplo, el evento </span>click<span style="font-size: 1em;">, lo más probable es que necesite conocer la posición en la que estaba el ratón en el momento de realizar el clic; aunque esto quizás tampoco sea muy habitual, a no ser que estemos programando alguna utilidad de tipo gráfico.</span></p>
+<p>Lo que sí es más común es tener información adicional en los eventos del teclado. Por ejemplo, cuando pulsamos una tecla nos interesa saber cuál ha sido la tecla pulsada, o si tenemos a mayores alguna tecla especial pulsada como <abbr title="Alternativa.">Alt</abbr>, <span lang="en">Control</span>, etc.</p>
+<p>Para gestionar toda esa información disponemos del objeto Event, el cuál nos permitirá acceder a esas propiedades adicionales que se generan en los eventos.</p>
+<p>Como siempre, los navegadores gestionan de forma diferente los objetos Event. Por ejemplo, en las versiones antiguas de <span lang="en">Internet Explorer</span>, el objeto Event forma parte del objeto Window, mientras que en otros navegadores como <span lang="en">Firefox</span>, <span lang="en">Chrome</span>, etc., para acceder al objeto Event lo haremos a través de un parámetro, que escribiremos en la función que gestionará el evento.</p>
+<p>Por ejemplo:</p>
+<div class=" elemento_centrado" style="width: 62.1em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>document.getElementById("unparrafo").addEventListener('click',gestionar,false);
+&nbsp;
+// Este ejemplo también funciona correctamente en la versión 9 de Internet Explorer.
+&nbsp;
+function gestionar(miEvento)
+{
+     alert (miEvento.type);  // Mostrará una alerta con el tipo de evento que en este caso es 'click'.
+}</pre>
+</div>
+</div>
+<pre></pre>
+<pre></pre>
+</div>
+</div>
+<p>En el código del ejemplo anterior cuando se produce el evento de click en un párrafo con id="unparrafo", durante la fase de burbujeo, se llamará a la función gestionar. En la función gestionar hemos creado un argumento que le llamamos <strong>miEvento</strong>, y es justamente <strong>en ese argumento que hemos puesto en la función, dónde el navegador de forma automática, pondrá todos los datos referentes al evento que se ha disparado.</strong></p>
+<p>Una vez dentro de la función, mostramos una alerta con el tipo de evento (propiedad type del objeto Event) que se acaba de disparar.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id51">
+<div class="iDevice emphasis_autoevaluacionfpd">
+<div class="iDevice_header" style="background-image:url(https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/icon_autoevaluacionfpd.gif)"><h2 class="iDeviceTitle">Autoevaluación</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta51_54" class="block iDevice_content">
+
+</div>
+<div class="question">
+<form name="true-false-form-0b51" action="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/blocks/recopila/recopila.php?id=4863&amp;dopt=3#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b51" class="block iDevice_content">
+<strong>¿En el modelo de registro de eventos de <span lang="en">Microsoft</span> podemos configurar que un evento se dispare en la fase de captura?</strong>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b51"><input type="radio" name="option0b51" id="true0b51" onclick="$exe.getFeedback(0,2,&#39;0b51&#39;,&#39;truefalse&#39;)"> Verdadero</label> 
+<label for="false0b51"><input type="radio" name="option0b51" id="false0b51" onclick="$exe.getFeedback(1,2,&#39;0b51&#39;,&#39;truefalse&#39;)"> Falso</label>
+</p>
+</form>
+<div id="s0b51" class="feedback js-feedback js-hidden" role="status">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b51-result" class="right">Verdadero</strong></p>
+En <span lang="en">Internet Explorer</span> no se puede programar que un evento se dispare en la fase de captura, ya que en <acronym lang="en">IE</acronym> los eventos siempre burbujean.
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.3.1.- Propiedades y métodos del objeto Event.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id31">
+<div class="iDevice emphasis0">
+<div id="ta31_73" class="block iDevice_content">
+<p><span style="font-size: 1em;">Veamos una lista de propiedades del objeto </span>Event<span style="font-size: 1em;">:</span></p>
+<div class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R15_raton.jpg" width="200" height="112" alt="Ratón fotografiado en primer plano." title="Ratón óptico.">
+<div class="figcaption"><a href="https://www.flickr.com/photos/blakeimeson/3152022489/sizes/z/in/photostream/" target="_blank" class="author">Blake Imeson</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank">CC BY-SA</a><span class="sep">)</span></span></div>
+</div>
+<p style="text-align: center;"></p>
+<table class="tabla" summary="Esta tabla muestra las propiedades y  descripciones del objeto Event."><caption>Propiedades del objeto Event</caption>
+<thead>
+<tr><th scope="col">Propiedades</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">altKey, ctrlKey, metaKey, shiftKey</th>
+<td>Valor booleano que indica si están presionadas alguna de las teclas Alt, <code>Ctrl</code>, Meta o <code>Shift</code> en el momento del evento.</td>
+</tr>
+<tr><th scope="row">bubbles</th>
+<td>Valor booleano que indica si el evento burbujea o no.</td>
+</tr>
+<tr><th scope="row">button</th>
+<td>Valor integer que indica que botón del ratón ha sido presionado o soltado, 0=izquierdo, 2=derecho, 1=medio.</td>
+</tr>
+<tr><th scope="row">cancelable</th>
+<td>Valor booleano que indica si el evento se puede cancelar.</td>
+</tr>
+<tr><th scope="row">charCode</th>
+<td>Indica el carácter <a class="glosario" href="./recopila2_files/saved_resource">Unicode<span><em>Unicode</em>Es un estándar de codificación de caracteres diseñado para facilitar el tratamiento informático, transmisión y visualización de textos de múltiples lenguajes y disciplinas técnicas además de textos clásicos de lenguas muertas. El término Unicode proviene de los tres objetivos perseguidos: universali</span></a> de la tecla presionada.</td>
+</tr>
+<tr><th scope="row">clientX, clientY</th>
+<td>Devuelve las coordenadas de la posición del ratón en el momento del evento.</td>
+</tr>
+<tr><th scope="row">currentTarget</th>
+<td>El elemento al que se asignó el evento. Por ejemplo si tenemos un evento de click en un divA que contiene un hijo divB. Si hacemos clic en divB, <code>currentTarget</code> referenciará a divA (el elemento dónde se asignó el evento) mientras que target devolverá divB, el elemento dónde ocurrió el evento.</td>
+</tr>
+<tr><th scope="row">eventPhase</th>
+<td>Un valor <span lang="en">integer</span> que indica la fase del evento que está siendo procesada. Fase de captura (1), en destino (2) o fase de burbujeo (3).</td>
+</tr>
+<tr><th scope="row">layerX, layerY </th>
+<td>Devuelve las coordenadas del ratón relativas a un elemento posicionado absoluta o relativamente. Si el evento ocurre fuera de un elemento posicionado se usará la esquina superior izquierda del documento.</td>
+</tr>
+<tr><th scope="row">pageX, pageY</th>
+<td>Devuelve las coordenadas del ratón relativas a la esquina superior izquierda de una página.</td>
+</tr>
+<tr><th scope="row">relatedTarget</th>
+<td>En un evento de "mouseover" indica el nodo que ha abandonado el ratón. En un evento de "mouseout" indica el nodo hacia el que se ha movido el ratón.</td>
+</tr>
+<tr><th scope="row">screenX, screenY</th>
+<td>Devuelve las coordenadas del ratón relativas a la pantalla dónde se disparó el evento.</td>
+</tr>
+<tr><th scope="row">target</th>
+<td>El elemento dónde se originó el evento, que puede diferir del elemento que tenga asignado el evento. Véase currentTarget.</td>
+</tr>
+<tr><th scope="row">timestamp </th>
+<td>Devuelve la hora (en milisegundos desde epoch) a la que se creó el evento. Por ejemplo cuando se presionó una tecla. No todos los eventos devuelven timestamp.</td>
+</tr>
+<tr><th scope="row">type </th>
+<td>Una cadena de texto que indica el tipo de evento "click", "<code>mouseout</code>", "mouseover", etc.</td>
+</tr>
+<tr><th scope="row">which</th>
+<td>Indica el Unicode de la tecla presionada. Idéntico a charCode, excepto que esta propiedad también funciona en <span lang="en">Netscape</span> 4.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Veamos una lista de métodos del objeto Event:</p>
+<table class="tabla" summary=" Esta tabla muestra los métodos y descripciones del objeto Event."><caption>Métodos del objeto Event</caption>
+<thead>
+<tr><th scope="col">Métodos</th><th scope="col">Descripción</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">preventDefault()</th>
+<td>Cancela cualquier acción asociada por defecto a un evento.</td>
+</tr>
+<tr><th scope="row">stopPropagation()</th>
+<td>
+<p>Evita que un evento burbujee.</p>
+<p>Por ejemplo si tenemos un divA que contiene un divB hijo. Cuando asignamos un evento de click a divA, si hacemos click en divB, por defecto se dispararía también el evento en divA en la fase de burbujeo. Para evitar ésto se puede llamar a stopPropagation() en <code>divB</code>. Para ello creamos un evento de click en divB y le hacemos stopPropagation()</p>
+.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.3.2.- Eventos del teclado en JavaScript.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id32">
+<div class="iDevice emphasis0">
+<div id="ta32_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY-NC-SA" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R16_evento_teclado.jpg" alt="Foto de una mano pulsando una combinación de teclas en el teclado." title="Pulsando una tecla del teclado. " style="float: right;" width="200" height="148">
+<div class="figcaption"><a href="https://www.flickr.com/photos/traftery/" target="_blank" class="author">Tom Raftery</a>. <a href="https://www.flickr.com/photos/traftery/4662463413/" target="_blank" class="title"><em>Command and control</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><br>Uno de los eventos más complicados de gestionar en <span lang="en">JavaScript</span> son los eventos de teclado, debido a que suele haber bastantes incompatibilidades entre navegadores, teclados, idiomas, etc.</p>
+<p>Para el teclado disponemos de 3 tipos de eventos: keydown, <code>keypress</code> y keyup. Y además disponemos de dos tipos de teclas: las especiales (<span lang="en">Shift</span>, <span lang="en">Alt</span>, <span lang="en">AltGr</span>, <span lang="en">Enter</span>, etc.) y las teclas <strong>normales</strong>, que contienen letras, números, y símbolos.</p>
+<p>En el <strong>proceso de pulsación de una tecla</strong> se generan tres eventos seguidos: keydown, <code>keypress</code> y keyup. Y para cada uno de ellos disponemos de las propiedades keyCode y <code>charCode</code>. Para saber la tecla que se ha pulsado lo más cómodo es acceder al evento keypress.</p>
+<ul class="lista_verificacion">
+<li>keydown: se produce al presionar una tecla y mantenerla presionada.
+<ul>
+<li>Su comportamiento es el mismo en todos los navegadores.</li>
+<li>Propiedad keyCode: devuelve el código interno de la tecla.</li>
+<li>Propiedad charCode: no está definida.</li>
+</ul>
+</li>
+<li>keypress: se produce en el instante de presionar la tecla.
+<ul>
+<li>Propiedad keyCode: devuelve el código interno de las teclas especiales, para las teclas normales no está definido.</li>
+<li>Propiedad charCode: devuelve 0 para las teclas especiales o el código del carácter de la tecla pulsada para las teclas normales.
+<p>(En <span lang="en">Internet Explorer</span> keyCode devuelve el carácter de la tecla pulsada, y charCode no está definido).</p>
+</li>
+</ul>
+</li>
+<li>keyup: se produce al soltar una tecla presionada .
+<ul>
+<li>Su comportamiento es el mismo en todos los navegadores.
+<ul>
+<li>Propiedad keyCode: devuelve el código interno de la tecla.</li>
+<li>Propiedad charCode: no está definida.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Ejemplo que mueve el foco de un campo de texto a otro, dentro de un formulario, al pulsar la tecla <span lang="en">ENTER</span> dentro de cada campo:</p>
+<div class="elemento_centrado" style="width: 39.55em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>&lt;form name="formulario" id="formulario"&gt;
+&nbsp;
+     &lt;label for="nombre"&gt;
+          Nombre: 
+     &lt;/label&gt;
+&nbsp;
+&lt;input type="text" id="nombre" name="nombre"&gt;
+&nbsp;
+     &lt;label for="apellidos"&gt;
+          Apellidos: 
+     &lt;/label&gt;
+&nbsp;
+&lt;input type="text" id="apellidos" name="apellidos"&gt;
+&nbsp;
+     &lt;label for="provincia"&gt;
+          Provincia: 
+     &lt;/label&gt;
+&nbsp;
+     &lt;input type="text" id="provincia" name="provincia"&gt;
+&nbsp;
+     &lt;input type="button" id="enviar" value="Enviar"&gt;
+&lt;/form&gt;
+&nbsp;
+&lt;script&gt;
+&nbsp;
+function cambiar(evt)
+{
+     if (evt.keyCode==13)  // Código de la tecla Enter
+          if (this.nextSibling.nextSibling.type=="text")
+               this.nextSibling.nextSibling.focus();
+}
+&nbsp;
+var inputs=document.getElementsByTagName("input");
+&nbsp;
+for (i=0; i&lt;inputs.length; i++)
+{
+     inputs[i].addEventListener("keypress",cambiar,false);
+}
+&nbsp;
+&lt;/script&gt;</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+<p>En la estructura <span lang="en">HTML</span> del formulario, los campos del formulario no llevan saltos de línea entre unos y otros, por las siguientes razones:</p>
+<ul class="lista_verificacion">
+<li>this.nextSibling - hace referencia al siguiente hermano al actual (la siguiente etiqueta <span lang="en">label</span> del siguiente campo).</li>
+<li>this.nextSibling.nextSibling - hermano siguiente, al hermano del elemento actual. (será otro elemento <span lang="en">input</span>. Si pusiéramos un salto de línea entra campos <span lang="en">input</span> entonces ya ese this.nextSibling.nextSibling ya no sería un campo <span lang="en">input</span> y sería un nodo de texto con el carácter del salto de línea que hemos puesto como separador de los campos <span lang="en">input</span>).</li>
+</ul>
+<div class="enlace_centrado"><a class="presentacion" href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64437/mod_scorm/content/0/DWEC06_CONT_R16_Animacion.swf"> Eventos de teclado en formularios </a> <span class="tamano">(18.3 MB)</span> <a class="credenciales" title="Resumen textual alternativo para " eventos="" de="" teclado="" en="" formularios="" href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64437/mod_scorm/content/0/DWEC06_Descripcion_Presentacion_Eventos_teclado_formularios.html">Resumen textual alternativo</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">2.3.3.- Eventos del ratón en JavaScript.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id40">
+<div class="iDevice emphasis0">
+<div id="ta40_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R17_evento_raton.jpg" alt="Un ratón al lado de un tochpad. " title="Generadores de eventos. " style="float: right;" width="200" height="134">
+<div class="figcaption"><a href="https://www.flickr.com/photos/jamiesrabbits/" target="_blank" class="author">Jamie</a>. <a href="https://www.flickr.com/photos/jamiesrabbits/5730561541/" target="_blank" class="title"><em>Computer</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY">CC BY</a><span class="sep">)</span></span></div>
+</div>
+<p><br>Los eventos del ratón son uno de los eventos más importantes en <span lang="en">JavaScript</span>.</p>
+<p>Cada vez que un usuario hace click en un elemento, al menos se disparan tres eventos y en el siguiente orden:</p>
+<ol>
+<li>&lt;strong&gt;mousedown&lt;/strong&gt;, cuando el usuario presiona el botón del ratón sobre el elemento.</li>
+<li>&lt;strong&gt;mouseup&lt;/strong&gt;, cuando el usuario suelta el botón del ratón.</li>
+<li>&lt;strong&gt;click&lt;/strong&gt;, cuando el usuario pulsa y suelta el botón sobre el elemento.</li>
+</ol>
+<p>En general, los eventos de mousedown y <code>mouseup</code> son mucho más útiles que el evento click.</p>
+<p>Si por ejemplo presionamos el botón sobre un elemento A, nos desplazamos y soltamos el botón sobre otro elemento B, se detectarán solamente los eventos de mousedown sobre A y mouseup sobre B, pero no se detectará el evento de click. Ésto quizás pueda suponer un problema, dependiendo del tipo de interacción que quieras en tu aplicación. Generalmente a la hora de registrar eventos, se suele hacer para mousedown y <code>mouseup</code>, a menos de que quieras el evento de click y no ningún otro.</p>
+<p>El evento de dblclick no se usa muy a menudo. Incluso si lo usas, tienes que ser muy prudente y no registrar a la vez click y <code>dblclick</code> sobre el mismo elemento, para evitar complicaciones.</p>
+<p>El evento de mousemove funciona bastante bien, aunque tienes que tener en cuenta que la gestión de este evento le puede llevar cierto tiempo al sistema para su procesamiento. Por ejemplo si el ratón se mueve 1 pixel, y tienes programado el evento de mousemove, para cada movimiento que hagas, ese evento se disparará, independientemente de si el usuario realiza o no realiza ninguna otra opción. En ordenadores antiguos ésto puede ralentizar el sistema, ya que para cada movimiento del ratón estaría realizando las tareas adicionales programadas en la función. Por lo tanto se recomienda utilizar este evento sólo cuando haga falta, y desactivarlo cuando hayamos terminado.</p>
+<p>Otros eventos adicionales del ratón son los de mouseover y <code>mouseout</code>, que se producen cuando el ratón entra en la zona del elemento o sale del elemento. Si, por ejemplo, tenemos tres contenedores anidados divA, divB y divC: si programamos un evento de mouseover sobre el divA y nos vamos moviendo hacia el contenedor interno, veremos que ese evento sigue disparándose cuando estemos sobre divB o entremos en divC. Ésta reacción se debe al burbujeo de eventos. Ni en divB o divC tenemos registrado el evento de mouseover, pero cuando se produce el burbujeo de dicho evento, se encontrará que tenemos registrado ese evento en el contenedor padre divA y por eso se ejecutará.</p>
+<p>Muchas veces es necesario saber de dónde procede el ratón y hacia dónde va, y para ello W3C añadió la propiedad relatedTarget a los eventos de mouseover y <code>mouseout</code>. Esta propiedad contiene el elemento desde dónde viene el ratón en el caso de mouseover, o el elemento en el que acaba de entrar en el caso de mouseout.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id41">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta41_47" class="block iDevice_content">
+<p class="enlace_centrado"><a href="http://www.quirksmode.org/dom/w3c_events.html#targets" title="Acceder tabla de compatibilidades entre las propiedades de origen y destino de los eventos." class="html">Propiedades de destino y origen del objeto Event.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id42">
+<div class="iDevice emphasis0">
+<div id="ta42_73" class="block iDevice_content">
+<p>Para saber los botones del ratón que hemos pulsado, disponemos de las propiedades which y <code>button</code>. Y para detectar correctamente el botón pulsado, lo mejor es hacerlo en los eventos de mousedown o <code>mouseup</code>. Which es una propiedad antigua de <span lang="en">Netscape</span>, así que simplemente vamos a citar button que es la propiedad propuesta por el W3C:</p>
+<p>Los valores de la propiedad button pueden ser:</p>
+<ul class="lista_verificacion">
+<li><strong>Botón izquierdo</strong>: 0</li>
+<li><strong>Botón medio</strong>: 1</li>
+<li><strong>Botón derecho</strong>: 2</li>
+</ul>
+<p>También es muy interesante conocer la posición en la que se encuentra el ratón, y para ello disponemos de un montón de propiedades que nos facilitan esa información:</p>
+<ul class="lista_verificacion">
+<li>clientX, clientY: devuelven las coordenadas del ratón relativas a la ventana.</li>
+<li>offsetX, offsetY: devuelven las coordenadas del ratón relativas al objeto destino del evento.</li>
+<li>pageX, pageY: devuelven las coordenadas del ratón relativas al documento. Estas coordenadas son las más utilizadas.</li>
+<li>screenX, screenY: devuelven las coordenadas del ratón relativas a la pantalla.</li>
+</ul>
+<p>Ejemplo que muestra las coordenadas del ratón al moverlo en el documento:</p>
+<div class="elemento_centrado" style="width: 55.5em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>&lt;input type="text" id="coordenadas" name="coordenadas" size="12"&gt;
+
+&lt;script&gt;
+
+function mostrarCoordenadas(elEvento){
+     document.getElementById("coordenadas").value=elEvento.clientX+" : "+elEvento.clientY;
+}
+
+document.addEventListener('mousemove',mostrarCoordenadas,false);
+
+&lt;/script&gt;
+&nbsp;</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id43">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta43_47" class="block iDevice_content">
+<p class="enlace_centrado"><a href="http://www.w3schools.com/jsref/dom_obj_event.asp" title="Acceder ampliación sobre las diferentes propiedades en las que se pueden consultar las coordenadas X e Y del ratón, desde distintas perspectivas." class="html">Tabla de propiedades de posicionamiento del ratón.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.- Aplicaciones Cross-Browser (multi-cliente).</h1></div></div>
+<div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis_casopracticofpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Caso práctico</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_66" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY" style="width: 180px;"><img src="./recopila2_files/DWEC06_CONT_R18_cross1.jpg" alt="Dos corredores saltando obstáculos." title="Salto de obstáculos." style="float: right;" width="180" height="160">
+<div class="figcaption"><a href="https://www.flickr.com/photos/dirkhansen/" target="_blank" class="author">SD Dirk</a>. <a href="https://www.flickr.com/photos/dirkhansen/4618264411" target="_blank" class="title"><em>Steeplechase</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY">CC BY</a><span class="sep">)</span></span></div>
+</div>
+<p><br>Antonio ha estado programando diferentes eventos en su proyecto y haciendo pruebas en diferentes navegadores, y ha visto que algunas cosas no funcionaban o no lo hacían correctamente. Sobre todo al probar ciertas instrucciones en <span lang="en">Internet Explorer</span>, en la versión 8 algunas cosas no funcionan, mientras que sí funcionaban en la versión 9, y claro, si adapta el código para que funcione en <span lang="en">Internet Explorer</span> dejará de funcionar en <span lang="en">Firefox</span>, <span lang="en">Chrome</span>, etc.</p>
+<p>Habla con Juan y le pregunta qué puede hacer para que su aplicación pueda funcionar en cualquier tipo de navegador, y Juan le responde que su aplicación tendría que ser cross-browser, es decir, multi-cliente y, de esa forma, el código estaría preparado para ejecutarse en un navegador u otro. Le da una serie de recomendaciones e información para que pueda adaptar las partes de código conflictivas, para que sean totalmente compatibles entre los diferentes navegadores.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_73" class="block iDevice_content">
+<p>
+Cuando hablamos de aplicaciones <span lang="en">cross-browser</span>, nos estamos refiriendo a aplicaciones que se vean exactamente igual en cualquier navegador.
+</p>
+<p>
+Como bien sabes los navegadores son desarrollados por diferentes empresas de software, cada una con sus propios intereses y, desde siempre, han sido patentes las diferencias entre unos y otros. El <span lang="en">W3C</span> define estándares para <span lang="en">HTML</span>, <acronym lang="en" title="Hojas de estilo en cascada. Hojas de Estilo en Cascada.">CSS</acronym> y <span lang="en">JavaScript</span>, pero muchas veces estas empresas interpretan el estándar de forma distinta, o incluso, a veces, agregan funcionalidades o etiquetas que no están contempladas ni permitidas en el estándar.
+</p>
+<p>
+El <span lang="en">W3C</span> ha ido mejorando y actualizando los estándares, definiendo nuevos niveles del <span lang="en">DOM</span>, y por el otro lado,  las empresas desarrolladoras de software también se van adaptando, cada vez más, a los estándares propuestos por el <span lang="en">W3C</span>.
+</p>
+<p>
+La historia de <span lang="en">cross-browser</span> comenzó con la "guerra de navegadores" al final de 1990 entre <span lang="en">Netscape Navigator</span> y <span lang="en">Microsoft Internet Explorer</span> y, por lo tanto, también entre <span lang="en">JavaScript</span> y JScript (los primeros lenguajes de scripting implementados en estos navegadores respectivamente). <span lang="en">Netscape Navigator</span> era el navegador <span lang="en">web</span> más usado en ese momento, y <span lang="en">Microsoft</span> había sacado <span lang="en">Mosaic</span> para crear <span lang="en">Internet Explorer</span> 1.0. Nuevas versiones de estos navegadores fueron surgiendo rápidamente, y debido a la feroz competencia entre ellos, muchas veces se añadieron características nuevas, sin ningún tipo de coordinación o control entre fabricantes. La introducción de estas nuevas características a menudo tuvo prioridad sobre la corrección de errores, dando como resultado navegadores inestables, bloqueos, navegadores que no cumplen el estándar y fallos de ejecución, llegando incluso a provocar cierres accidentales de las aplicaciones o del navegador.
+</p>
+<p>
+Durante todo ese tiempo los programadores de páginas <span lang="en">web</span> han sido los encargados de ir parcheando estas diferencias para conseguir que sus aplicaciones se ejecuten de la misma forma en unos u otros navegadores, independientemente de la versión o fabricante utilizado. Estas soluciones que se adaptan a cualquier tipo de navegador son las que se conocen como "soluciones <span lang="en">cross-browser</span>".
+</p>
+<p>
+Las soluciones <span lang="en">cross-browser</span> no sólo se aplican a <span lang="en">JavaScript</span>, sino que también se pueden aplicar a otras tecnologías como <span lang="en">CSS</span> o, incluso, <span lang="en">HTML</span>. Lo que se busca por lo tanto es que, esas incompatibilidades o diferencias entre navegadores no sean apreciables por el cliente, y que la página <span lang="en">web</span> o aplicación funcione indistintamente en cualquier navegador sin producir fallos o efectos indeseados.
+</p>
+<p>
+En Internet puedes encontrar múltiples páginas con tablas donde ver las incompatibilidades entre navegadores a nivel de, <span lang="en">CSS</span> 2, <span lang="en">CSS</span> 3, base del <span lang="en">DOM</span>, <span lang="en">DOM</span> <span lang="en">HTML</span>, eventos del <span lang="en">DOM</span>, etc. En estas tablas se muestran todas las características de cada tecnología, se ven las diferentes versiones de navegadores, y se indica si soportan o no,   cada una de las características, propiedades, métodos, etc. A continuación, tienes un enlace muy interesante que es una referencia completa, que te permitirá consultar si ciertas propiedades o métodos que utilizas en <span lang="en">JavaScript</span>, son compatibles en todos los navegadores.
+</p>
+
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id37">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta37_47" class="block iDevice_content">
+<p class="enlace_centrado"><a href="http://www.quirksmode.org/compatibility.html" title="Acceder a web de referencia de compatibilidades entre navegadores web a nivel de CSS, DOM y eventos." class="html">Tablas de compatibilidades entre navegadores.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.1.- Métodos para programar aplicaciones cross-browser (parte I).</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id39">
+<div class="iDevice emphasis0">
+<div id="ta39_73" class="block iDevice_content">
+<p></p>
+<div class="exe-figure exe-image float-right license-CC-BY-NC-SA" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R19_cross2.jpg" alt="Dos caballos al galope en una competición por llegar el primero." title="Al galope." style="float: right;" width="200" height="132">
+<div class="figcaption"><a href="https://www.flickr.com/photos/vironevaeh/" target="_blank" class="author">Karen Blaha</a> - <a href="https://www.flickr.com/photos/vironevaeh/3476965061/" target="_blank" class="title"><em>https://www.flickr.com/photos/vironevaeh/3476965061/</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY-NC-SA">CC BY-NC-SA</a><span class="sep">)</span></span></div>
+</div>
+<p><br>A la hora de realizar aplicaciones multi-cliente con <span lang="en">JavaScript</span> deberemos tener en cuenta el tipo de navegador que estamos utilizando para que el código se ejecute correctamente. Por ejemplo, si quisiéramos acceder a los nombres de clases <span lang="en">CSS</span> empleados por un determinado elemento, dependiendo de si es <acronym title="Internet Explorer"><span lang="en">IE</span></acronym> u otro navegador, tendríamos que usar className o <code>classList</code> respectivamente:</p>
+<p></p>
+<p></p>
+<div class="elemento_centrado" style="width: 73.65em; margin-top: 50px;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>if (navigator.appName.indexOf("Explorer") != -1) // Es un navegador IE
+{
+     // Usaremos className en lugar de classList
+     this.parentNode.childNodes[i].className =      this.parentNode.childNodes[i].className.replace(/\bseleccionado\b/,'');
+}
+else     // Es un navegador W3C
+     this.parentNode.childNodes[i].classList.remove("seleccionado");</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>En <span lang="en">JavaScript</span>, podemos ejecutar bloques de código dependiendo de una condición determinada. En nuestro caso en el tema de <span lang="en">cross-browsing</span>, podríamos comprobar el tipo de navegador que estamos utilizando para ejecutar nuestro código de <span lang="en">JavaScript</span>, y dependiendo de eso, ejecutaríamos el código compatible con ese navegador. Por ejemplo, aquí te muestro una función para crear un evento:</p>
+<div class=" elemento_centrado" style="width: 37.9em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>function crearEvento(elemento, evento, funcion)
+{
+     if (typeof elemento.addEventListener !== 'undefined')
+     {
+          // evento compatible con W3C
+     }
+     else if (typeof elem.attachEvent !== 'undefined')
+     {
+          // evento compatible con Internet Explorer
+     }
+}</pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+<p>La función anterior es una función <span lang="en">cross-browser</span> muy simplificada para crear eventos. Pero ¿qué pasaría en el siguiente caso?</p>
+<div class=" elemento_centrado" style="width: 59.9em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var elementos = document.getElementsByTagName('div');     // supongamos que nos devuelve 5000 divs
+var i, longitud = elementos.length;
+for (i = 0; i </pre>
+</div>
+</div>
+<pre><br><br></pre>
+</div>
+</div>
+<p>En este caso el navegador estaría comprobando 5000 veces if (typeof elemento.addEventListener !== 'undefined') …. - una vez para cada elemento de la colección <em>elementos</em>, lo cuál supone una gran pérdida de tiempo. Estaría mejor si, de alguna manera, pudiéramos decirle al navegador: "Cuando sepas si addEventListener() está soportado por este navegador, no continúes comprobando para las otras 4999 iteraciones".</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">3.1.1.- Métodos para programar aplicaciones cross-browser (parte II).</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id44">
+<div class="iDevice emphasis0">
+<div id="ta44_73" class="block iDevice_content">
+<div class="exe-figure exe-image float-right license-CC-BY" style="width: 200px;"><img src="./recopila2_files/DWEC06_CONT_R21_pensando.jpg" alt="Una chica pensando en cómo programar una función cross-browser en JavaScript." title="Pensando en una función cross-browser." style="float: right;" width="200" height="132">
+<div class="figcaption"><a href="https://www.flickr.com/photos/ulrick/" target="_blank" class="author">Ulrick</a>. <a href="https://www.flickr.com/photos/ulrick/3322151285/" target="_blank" class="title"><em>Sustainability C-Function</em></a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" rel="license nofollow" target="_blank" title="Creative Commons BY">CC BY</a><span class="sep">)</span></span></div>
+</div>
+<p><br>Para evitar el hacer la comprobación que citamos anteriormente 4999 veces, debemos crear funciones separadas que contengan la lógica de <span lang="en">cross-browser</span>, y luego envolviendo esas funciones con otra mayor que devuelva la función apropiada a ejecutar. La parte más ingeniosa de este código es que la parte externa del código de la función (la decisión del tipo de navegador que estamos utilizando) será ejecutada solamente una vez, independientemente del número de llamadas que hagamos; eso es, en cierto modo, la "<em>parte condicional de <a class="glosario" href="./recopila2_files/saved_resource">compilación<span><em>Compilación</em>La compilación consiste en una técnica para mejorar el rendimiento de sistemas de programación, de tal forma que se obtiene código máquina a partir del código fuente con lo que se mejora la ejecución de las aplicaciones. Los compiladores son los encargados de realizar este proceso. El lenguaje JavaS</span></a>"</em>. Un ejemplo de una función <span lang="en">cross-browser</span> para crear eventos podría ser:</p>
+<p>&nbsp;</p>
+<div class="elemento_centrado" style="width: 61.550000000000004em;">
+<div class="texto_izquierda">
+<pre>&nbsp;</pre>
+<div class="highlighted-code language-js line-numbers">
+<div>
+<pre>var crearEvento = function()
+{
+&nbsp;
+     function w3c_crearEvento(elemento, evento, mifuncion) {
+          elemento.addEventListener(evento, mifuncion, false);
+     } 
+&nbsp;
+     function ie_crearEvento(elemento, evento, mifuncion) {
+          var fx = function() {
+               mifuncion.call(elemento); 
+          };
+&nbsp;
+          // Cuando usamos attachEvent dejamos de tener acceso 
+          // al objeto this en mifuncion. Para solucionar eso
+          // usaremos el método call() del objeto Function, que nos permitirá
+          // asignar el puntero this para su uso dentro de la función. El primer
+          // parámetro que pongamos en call será la referencia que se usará como 
+          // objeto this dentro de nuestra función mifuncion. De esta manera solucionamos el problema
+          // de acceder a this usando attachEvent en Internet Explorer.
+&nbsp;
+          elemento.attachEvent('on' + evento, fx);
+     }
+&nbsp;
+     if (typeof window.addEventListener !== 'undefined') {
+&nbsp;
+          return w3c_crearEvento;
+     } 
+     else if (typeof window.attachEvent !== 'undefined') {
+ 
+          return ie_crearEvento;
+     }
+&nbsp;
+}();     // </pre>
+</div>
+</div>
+<pre><br>&nbsp;</pre>
+<pre>&nbsp;</pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>En este código se ha separado la lógica para <span lang="en">IE</span> y los navegadores <acronym title="World Wide Web Consortium."><span lang="en">W3C</span></acronym>. Se han desarrollado dos funciones, una para navegadores <span lang="en">Internet Explorer</span>, y otra para compatibles <span lang="en">W3C</span>. Según el tipo de navegador se devolverá una u otra función. La parte más crítica está en el uso de }(); al final del código. Es importante darse cuenta lo que está pasando aquí: estamos declarando una función crearEvento, con el código: var crearEvento= function() {, e inmediatamente después, estamos ejecutando esa función al final de su declaración con } (); . De esta forma aunque llamemos a crearEvento múltiples veces en nuestro código, sólo se comprobará el tipo de navegador una sola vez con lo que se acelera la ejecución del código. Puedes comprobar el código de la función que se devolvería en tu navegador con: alert(crearEvento.toString()).</p>
+<p>Por suerte, en un breve tiempo esto ya no será necesario ya que el nuevo navegador de Microsoft será practicamente compatible con Webkit y sus productos ( Chrome, Opera, Safari).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper DestacadofpdIdevice" id="id45">
+<div class="iDevice emphasis0">
+<div class="iDevice_destacadofpd">
+<div id="ta45_70" class="block iDevice_content">
+<p>Para entender mejor la asignación del evento en <span lang="en">Internet Explorer</span>, debes recordar que cualquier función en <span lang="en">JavaScript</span> es un objeto y como tal tiene sus propiedades y métodos. Entre los métodos de una función podemos tener &lt;strong&gt;toString()&lt;/strong&gt; (que nos devuelve el código fuente de una función), métodos &lt;strong&gt;call()&lt;/strong&gt;, &lt;strong&gt;apply()&lt;/strong&gt;, etc.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id46">
+<div class="iDevice emphasis_parasabermasfpd">
+<div class="iDevice_header"><h2 class="iDeviceTitle">Para saber más</h2></div>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta46_47" class="block iDevice_content">
+<p class="enlace_centrado"><a href="http://www.librosweb.es/ajax/capitulo3.html" title="Acceder explicación ampliada de los métodos call y apply en JavaScript." class="html">Los métodos call y apply en <span lang="en">JavaScript</span>.</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">4.- Enlaces de refuerzo y ampliación.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id53">
+<div class="iDevice emphasis0">
+<div id="ta53_154" class="block iDevice_content">
+<p style="text-align: center;"><strong><span style="text-decoration: underline;">Enlaces de refuerzo y ampliación sobre eventos táctiles, multitouch y métodos de objetos del DOM en dispositivos móviles.</span></strong></p>
+<p>El tema de DOM tiene muchas posibilidades pero a veces los dispositivos móviles disponen de más opciones como lo es la programación multitouch, pero a veces no tienen todas las opciones de las que se dispone en equipo sobremesa.&nbsp;</p>
+<ul class="lista_verificacion">
+<li><a title="Tutorial de Mozilla en español." class="html" href="https://developer.mozilla.org/es/docs/DOM/Touch_events" target="_blank">Para aprender sobre eventos táctiles.</a></li>
+<li><a title="Tutorial de html5rocks en inglés." class="html" href="https://www.html5rocks.com/en/mobile/touch/" target="_blank">Tutorial para desarrollo multi touch. </a></li>
+<li><a title="Para saber más para móviles." class="html" href="https://quirksmode.org/dom/html/mobile.html">Para saber más sobre que métodos de DOM funcionan bien en dispositivos móviles.</a></li>
+<li>Videotutorial explicativo en español sobre la utilización de los métodos: createelement(), setattribute() y removechild().</li>
+</ul>
+<p></p>
+<div class="elemento_centrado"><br>
+<div class="elemento_centrado credenciales">Licencia general de Youtube.<br> <a title="Resumen textual" href="https://educacionadistancia.juntadeandalucia.es/formacionprofesional/pluginfile.php/64437/mod_scorm/content/0/Resumen_textual_alternativo_para_el_video_de_child.html" target="_blank">Resumen textual alternativo</a></div>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">Anexo.- Licencias de recursos.</h1></div></div>
+<div class="iDevice_wrapper FreeTextfpdIdevice" id="id47">
+<div class="iDevice emphasis0">
+<div id="ta47_73" class="block iDevice_content">
+<table class="tabla" summary="Datos de licencia de todos los recursos utilizados en la unidad"><caption>Licencias de recursos utilizados en la Unidad de Trabajo.</caption>
+<tbody>
+<tr><th scope="col">Recurso (1)</th><th scope="col">Datos del recurso (1)</th><th scope="col">Recurso (2)</th><th scope="col">Datos del recurso (2)</th></tr>
+<tr>
+<td class="texto_centrado"><img alt="Letras W3C con relleno de múltiples W3C." src="./recopila2_files/DWEC06_CONT_R01_w3c_anexo.jpg" style="width: 120px; height: 65px;" title="Logotipo W3C." width="120" height="65"></td>
+<td>
+<p>Autoría: maxf.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/maxf/112944254/sizes/o/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Foto de un cuello de una persona con un tatuaje de las etiquetas head y body." src="./recopila2_files/DWEC06_CONT_R02_html_anexo.jpg" style="width: 56px; height: 80px;" title="Objeto body HTML." width="56" height="80"></td>
+<td>
+<p>Autoría: webmove.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/daniello/422213306/sizes/m/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Estructura metálica dónde se destacan los nodos de unión de las piezas." src="./recopila2_files/DWEC06_CONT_R03_nodos_anexo.jpg" style="width: 53px; height: 80px;" title="Estructura de nodos." width="53" height="80"></td>
+<td>
+<p>Autoría: jssz.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/jssz/5294325254/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Gráfico con diferentes versiones de HTML y XHTML." src="./recopila2_files/DWEC06_CONT_R05_lenguajes_anexo.jpg" style="width: 93px; height: 80px;" title="Diferentes versiones HTML y XHTML." width="93" height="80"></td>
+<td>
+<p>Autoría: obscure allusion.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/26158205@N04/4500611033/sizes/m/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Imagen de una pared de un edificio con el atributo color distinto en diferentes zonas de la pared." src="./recopila2_files/DWEC06_CONT_R06_atributos_anexo.jpg" style="width: 53px; height: 80px;" title="Atributos diferentes." width="53" height="80"></td>
+<td>
+<p>Autoría: gapysphoto.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/gapys/2733857032/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Fotografía de un fragmento de texto de un artículo." src="./recopila2_files/DWEC06_CONT_R07_textos_anexo.jpg" style="width: 107px; height: 80px;" title="Información de tipo texto." width="107" height="80"></td>
+<td>
+<p>Autoría: mordicuac.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/mordicuac/116862762/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Bolígrafos y gomas de borrar para editar cualquier documento de texto." src="./recopila2_files/DWEC06_CONT_R09_edicion_anexo.jpg" style="width: 108px; height: 80px;" title="Edición y borrado." width="108" height="80"></td>
+<td>
+<p>Autoría: Kanko.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/kankan/102924259/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Gorra con el logotipo de W3C bordado." src="./recopila2_files/DWEC06_CONT_R10_w3c_anexo.jpg" style="width: 59px; height: 80px;" title="W3C." width="59" height="80"></td>
+<td>
+<p>Autoría: psd.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/psd/485103865/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Montón de burbujas." src="./recopila2_files/DWEC06_CONT_R11_burbujeo_anexo.jpg" style="width: 108px; height: 80px;" title="Burbujas." width="108" height="80"></td>
+<td>
+<p>Autoría: h3_six.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/hach3/2458624643/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Se muestran 4 tipos de los navegadores más usados." src="./recopila2_files/DWEC06_CONT_R12_navegadores_anexo.jpg" style="width: 120px; height: 38px;" title="Logotipos de navegadores." width="120" height="38"></td>
+<td>
+<p>Autoría: smemo87.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/smemon/4620148826/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Fotografía de un teclado en el que destacan teclas especiales como ALT, CTRL." src="./recopila2_files/DWEC06_CONT_R13_eventos_anexo.jpg" style="width: 120px; height: 79px;" title="Teclas especiales de un teclado." width="120" height="79"></td>
+<td>
+<p>Autoría: Tom Raftery.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/traftery/4662463413/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Imagen de cerca  de un ratón óptico." src="./recopila2_files/DWEC06_CONT_R15_raton_anexo.jpg" style="width: 120px; height: 67px;" title="Ratón óptico." width="120" height="67"></td>
+<td>
+<p>Autoría: blakeimeson.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/blakeimeson/3152022489/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Foto de una mano pulsando una combinación de teclas en el teclado." src="./recopila2_files/DWEC06_CONT_R16_evento_teclado_anexo.jpg" style="width: 108px; height: 80px;" title="Pulsando una tecla en el teclado." width="108" height="80"></td>
+<td>
+<p>Autoría: Rodrigo Galindez.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/rodrigogalindez/317692720/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Explicación interactiva en la que el usuario podrá seleccionar y ver las diferentes secciones del código fuente, que se muestra en el apartado 2.3.2 de la unidad, así como su análisis usando la herramienta Firebug." src="./recopila2_files/DWEC06_CONT_R16_Animacion_anexo.jpg" style="width: 114px; height: 80px;" title="Explicación interactiva de eventos de teclado en JavaScript." width="114" height="80"></td>
+<td>
+<p>Autoría: Rafael Veiga Cid.</p>
+<p>Licencia: CC BY-NC-SA 2.0.</p>
+<p>Procedencia: Elaboración Propia.</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Una mano está pulsando el botón de un ratón." src="./recopila2_files/DWEC06_CONT_R17_evento_raton_anexo.jpg" style="width: 120px; height: 79px;" title="Pulsación botón del ratón." width="120" height="80"></td>
+<td>
+<p>Autoría:&nbsp; Jamiei.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: https://www.flickr.com/photos/jamiesrabbits/5730561541/</p>
+</td>
+<td class="texto_centrado"><img alt="Dos corredores saltando obstáculos." src="./recopila2_files/DWEC06_CONT_R18_cross1_anexo.jpg" style="width: 90px; height: 80px;" title="Salto de obstáculos." width="90" height="80"></td>
+<td>
+<p>Autoría: SD Dirk.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/dirkhansen/4618264411/sizes/z/in/photostream/</p>
+</td>
+</tr>
+<tr>
+<td class="texto_centrado"><img alt="Dos caballos al galope en una competición por llegar el primero." src="./recopila2_files/DWEC06_CONT_R19_cross2_anexo.jpg" style="width: 120px; height: 79px;" title="Al galope." width="120" height="79"></td>
+<td>
+<p>Autoría: Vironevaeh.</p>
+<p>Licencia: CC BY-SA 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/vironevaeh/3476965061/sizes/z/in/photostream/</p>
+</td>
+<td class="texto_centrado"><img alt="Una chica pensando en cómo programar una función cross-browser en JavaScript." src="./recopila2_files/DWEC06_CONT_R21_pensando_anexo.jpg" style="width: 120px; height: 79px;" title="Pensando en la función cross-browser." width="120" height="79"></td>
+<td>
+<p>Autoría: Ulrick.</p>
+<p>Licencia: CC BY 2.0.</p>
+<p>Procedencia: http://www.flickr.com/photos/ulrick/3322151285/sizes/z/in/photostream/</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div><script type="text/javascript">document.body.className+=" js"</script>
+			<div id="outer">
+			<div id="main">
+			<div id="nodeDecoration"><div id="headerContent"><h1 id="nodeTitle">Condiciones y términos de uso de los materiales</h1></div></div>
+			<div class="iDevice_wrapper DestacadofpdIdevice" id="id60">
+			<div class="iDevice emphasis0">
+			<div class="iDevice_destacadofpd">
+			<div id="ta60_66" class="block iDevice_content">
+			<div title="Información acerca de la licencia de los materiales">
+			<p align="center" style="margin: 2px 2px;"><strong>Materiales desarrollados inicialmente por el Ministerio de Educación, Cultura y Deporte y actualizados por el profesorado de la Junta de Andalucía bajo licencia Creative Commons <acronym title="Reconocimiento-NoComercial-CompartirIgual">BY-NC-SA.</acronym></strong></p>
+						      <p align="center" style="font-size: 0.8em; margin: 2px 2px;"><strong><img src="./recopila2_files/img_para_licencias.png" height="94" alt="Logotipos del Ministerio de Educación, Cultura y Deporte, Junta de Andalucía y licencia Creative Commons"></strong></p>
+                              <p align="center" style="font-size: 0.8em; margin: 2px 2px;"><span>Antes de cualquier uso leer detenidamente el siguente</span> <a href="https://www.juntadeandalucia.es/educacion/gestionafp/documentacion/aviso_legal/aviso_legal_mjda/index.html" target="_blank" title="Enlace externo, se accede al aviso legal de los materiales">Aviso legal</a></p>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="iDevice_wrapper FreeTextIdevice" id="id61">
+			<div class="iDevice emphasis0">
+			<div id="ta61_85" class="block iDevice_content">
+			<h3>Historial de actualizaciones</h3>
+			<table border="0" class="tabla" style="width: 100%;"><tbody><tr><th scope="col">Versión: 01.01.10</th><th scope="col" colspan="2">Fecha de actualización: 04/03/21</th></tr><tr>
+                            <td colspan="3">Actualización de materiales y correcciones menores.</td></tr></tbody></table><table border="0" class="tabla" style="width: 100%;"><tbody><tr><th scope="col">Versión: 01.01.00</th><th scope="col">Fecha de actualización: 28/02/15</th><th scope="col">Autoría: Arturo José Puentes Castellanos</th></tr><tr>
+                            <td colspan="3">1. Se han corregido erratas y algunos enlaces rotos.<br>
+2. Se han actualizado muchísimas afirmaciones que no eran correctas en los navegadores en la actualidad. <br>
+3. Se han añadido conceptos nuevos y líneas de futuro.<br>
+4. Se ha comenzado el traslado de las imágenes al nuevo formato de propiedad.<br>
+5. Múltiples correcciones menores.</td></tr></tbody></table><table border="0" class="tabla" style="width: 100%;"><tbody><tr><th scope="col">Versión: 01.00.00</th><th scope="col" colspan="2">Fecha de actualización: 30/04/14</th></tr><tr>
+                            <td colspan="3">Versión inicial de los materiales.</td></tr></tbody></table>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<script type="text/javascript" src="./recopila2_files/_fpd_js.js.descarga"></script><div style="page-break-before: always;"></div></div></div>
+
+</body></html>

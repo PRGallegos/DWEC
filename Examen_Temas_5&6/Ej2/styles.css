@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    background-color: #ffffff;
+    color: #b8860b;
+    text-align: center;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000000;
+    text-shadow: none;
+}
+
+p {
+    font-size: 18px;
+    color: #8b6508;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Courier New", monospace;
+    border-radius: 5px;
+    border: 2px solid #b8860b;
+    background-color: #fff8dc;
+    color: #8b6508;
+    outline: none;
+    resize: none;
+}
+
+textarea:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px #ffd700;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: "Courier New", monospace;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 5px;
+    background: #fff8dc;
+    color: #b8860b;
+    transition: all 0.3s ease-in-out;
+}
+
+#add-phrase {
+    border-color: #b8860b;
+}
+
+#add-phrase:hover {
+    background-color: #b8860b;
+    color: #fff;
+}
+
+#add-phrase:disabled {
+    background-color: #e6d8ad;
+    border-color: #c0a060;
+    color: #999;
+    cursor: not-allowed;
+}
+
+#finish {
+    border-color: #ffd700;
+}
+
+#finish:hover {
+    background-color: #ffd700;
+    color: #000;
+}
+
+#phrases-container {
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phrase {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: #fff8dc;
+    border-left: 4px solid;
+    width: 80%;
+}
+
+/******************************************************************************* Golden colors ***/
+.phrase:nth-child(1) {
+    border-color: #b8860b;
+    color: #b8860b;
+}
+
+.phrase:nth-child(2) {
+    border-color: #cd9b1d;
+    color: #cd9b1d;
+}
+
+.phrase:nth-child(3) {
+    border-color: #daa520;
+    color: #daa520;
+}
+
+.phrase:nth-child(4) {
+    border-color: #eec900;
+    color: #eec900;
+}
+
+.phrase:nth-child(5) {
+    border-color: #ffd700;
+    color: #ffd700;
+}
+
+#summary {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #b8860b;
+}
+
+/******************************************************************************* GIF ***/
+#gif-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#gif-container img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffd700;
+}
